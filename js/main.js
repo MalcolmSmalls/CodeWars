@@ -345,7 +345,7 @@ const stringToNumber = string => {
 
 // console.log(reverseWords("The quick brown fox jumps over the lazy dog."))
 
-//--------------------------------------------------------------------------------------------------------------
+//Mumbling-----------------------------------------------------------------------------------------------------------
 
 
 // This time no story, no theory. The examples below show you how to write function accum:
@@ -360,6 +360,7 @@ const stringToNumber = string => {
 
 const accum = s => {
   let newString = ""
+  s = s.toLowerCase()
   for(i=0;i<s.length;i++){
     newString += `${s[i].repeat(i+1)} `
   }
@@ -368,6 +369,7 @@ const accum = s => {
     newArr[i] = newArr[i][0].toUpperCase() + newArr[i].substring(1);
   }
   let newNewString = newArr.join("-")
+  return newNewString
 }
 
 
@@ -381,4 +383,4 @@ const accum = s => {
 // }
 
 
-console.log(accum("abcd"))
+console.log(accum("ZpglnRxqenU"))
