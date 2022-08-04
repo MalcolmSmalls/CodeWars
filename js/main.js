@@ -355,3 +355,30 @@ const stringToNumber = string => {
 // accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+
+
+const accum = s => {
+  let newString = ""
+  for(i=0;i<s.length;i++){
+    newString += `${s[i].repeat(i+1)} `
+  }
+  let newArr = newString.trim().split(" ")
+  for(i=0;i<newArr.length;i++){
+    newArr[i] = newArr[i][0].toUpperCase() + newArr[i].substring(1);
+  }
+  let newNewString = newArr.join("-")
+}
+
+
+
+
+// const accum = s => {
+//   let results = s.charAt(0.repeat(10))
+//   console.log(results)
+  // let letters = s.split('').join("-")
+  // console.log(letters)
+// }
+
+
+console.log(accum("abcd"))
