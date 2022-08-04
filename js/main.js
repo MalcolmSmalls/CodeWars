@@ -374,12 +374,9 @@ const accum = s => {
 
 
 
-
-// const accum = s => {
-//   let results = s.charAt(0.repeat(10))
-//   console.log(results)
-  // let letters = s.split('').join("-")
-  // console.log(letters)
+// MOST CLEVER SOLUTION
+// function accum(s) {
+//   return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
 // }
 
 
