@@ -358,26 +358,54 @@ const stringToNumber = string => {
 
 
 
-const accum = s => {
-  let newString = ""
-  s = s.toLowerCase()
-  for(i=0;i<s.length;i++){
-    newString += `${s[i].repeat(i+1)} `
-  }
-  let newArr = newString.trim().split(" ")
-  for(i=0;i<newArr.length;i++){
-    newArr[i] = newArr[i][0].toUpperCase() + newArr[i].substring(1);
-  }
-  let newNewString = newArr.join("-")
-  return newNewString
-}
-
-
-
-// MOST CLEVER SOLUTION
-// function accum(s) {
-//   return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+// const accum = s => {
+//   let newString = ""
+//   s = s.toLowerCase()
+//   for(i=0;i<s.length;i++){
+//     newString += `${s[i].repeat(i+1)} `
+//   }
+//   let newArr = newString.trim().split(" ")
+//   for(i=0;i<newArr.length;i++){
+//     newArr[i] = newArr[i][0].toUpperCase() + newArr[i].substring(1);
+//   }
+//   let newNewString = newArr.join("-")
+//   return newNewString
 // }
 
 
-console.log(accum("ZpglnRxqenU"))
+
+// // MOST CLEVER SOLUTION
+// // function accum(s) {
+// //   return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+// // }
+
+
+// console.log(accum("ZpglnRxqenU"))
+
+// Categorize New Member
+
+//The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+// To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+// Input
+// Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+// Output
+// Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+// Example
+// input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+const openOrSenior = data => {
+  data.forEach((age, i) => {
+    if(age[1][i] < 55){ 
+      console.log('Open')
+    }else{
+      console.log('Senior')
+    }
+  })
+}
+
+console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
