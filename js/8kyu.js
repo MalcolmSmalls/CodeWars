@@ -80,3 +80,27 @@
 // function twoSort(s) {
 //     return s.sort()[0].split('').join('***');
 //   }
+
+
+//------------------------------------------------------------------------------------------Find the smallest integer in the array
+
+
+
+// const findSmallestInt = args => args.sort((a,b)=>a-b)[0]
+    
+// class SmallestIntegerFinder {
+//   findSmallestInt(args) {
+//     return args.sort((a,b)=>a-b)[0]
+//   }
+// }
+
+// console.log(findSmallestInt([78,56,232,12,8]))
+
+
+// OTHER SOLUTIONS
+
+// class SmallestIntegerFinder {
+//     findSmallestInt(args) {
+//       return Math.min(...args)
+//     }
+//   }
