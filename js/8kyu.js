@@ -127,3 +127,43 @@
 // function makeNegative(num) {
 //     return -Math.abs(num);
 //   }
+
+
+
+//---------------------------------------------------------------------------------------------------Capitalization and Mutability
+// DESCRIPTION:
+// Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+// Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+
+// Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+
+// function capitalizeWord(word) {
+//     return word[0].toUpperCase() + word.substring(1);
+//   }
+
+// console.log(capitalizeWord('tupac'))
+
+//----------------------------------------------------------------------------------------------------------------Square(n) Sum
+
+// DESCRIPTION:
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+// const squareSum = numbers =>{
+//     let newArr = []
+//     numbers.forEach(x => {
+//         newArr.push(x**2)})
+//     return newArr.reduce((acc,curr)=>acc+curr,0) 
+// }
+
+// console.log(squareSum([]))
+
+// OTHER SOLUTION
+
+// function squareSum(numbers){
+//     return numbers.reduce(function(sum, n){
+//       return (n*n) + sum;
+//     }, 0)
+//   }
