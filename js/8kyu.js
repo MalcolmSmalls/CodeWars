@@ -490,12 +490,39 @@
 // -34: 34
 
 
-function opposite(number) {
-  if(number < 0){
-    return Math.abs(number)
-  }else{
-    return -number
-  }
-}
+// function opposite(number) {
+//   if(number < 0){
+//     return Math.abs(number)
+//   }else{
+//     return -number
+//   }
+// }
 
-console.log(opposite(4))
+// console.log(opposite(4))
+
+//Other Solutions 
+
+// function opposite(number) {
+//   return(-number);
+// }
+
+//You only need one - Beginner---------------------------------------------------------------------------------------
+// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+
+// Array can contain numbers or strings. X can be either.
+
+// Return true if the array contains the value, false if not.
+
+// function check(a, x) {
+//   return a.includes(x)
+// }
+// console.log(check([101, 45, 75, 105, 99, 107], 107))
+
+
+//Returning Strings-----------------------------------------------------------------------------------------------------
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+
+const greet = name => `Hello, ${name} how are you doing today?`
