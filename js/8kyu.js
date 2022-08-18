@@ -311,10 +311,167 @@
 // countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
 // countBy(2,5) === [2,4,6,8,10]
 
-function countBy(x, n) {
-    let z = [];
-    for(i=0;i<n;i++){
-      z.push(x+n)}
+// function countBy(x, n) {
+//     let z = [];
+//     for(i=0;i<n;i++){
+//       z.push(x+n)}
   
-    return z;
-  }
+//     return z;
+//   }
+
+//Powers of 2-------------------------------------------------
+
+
+//Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+
+// Examples
+// n = 0  ==> [1]        # [2^0]
+// n = 1  ==> [1, 2]     # [2^0, 2^1]
+// n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+
+
+// function powersOfTwo(n){
+//   let results = []
+//   for(i=1;i<=n+1;i++){
+//     results.push(2**(i-1))
+//   }
+//   return results
+// }
+
+
+// powersOfTwo(1)
+
+
+
+//Sum of positive------------------------------------------------------------------------------------------------------------
+
+// You get an array of numbers, return the sum of all of the positives ones.
+
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+// Note: if there is nothing to sum, the sum is default to 0.
+
+
+// function positiveSum(arr) {
+//   let sum = 0
+//   arr.forEach(item => {
+//     if(item > 0){
+//       sum = item + sum
+//     }else{
+//       sum = sum + 0 
+//     }
+//   })
+//   return sum
+// }
+
+// console.log(positiveSum([1,-2,3,4,5]))
+
+
+//Contamination #1 -String-----------------------------------------------------------------------------------------------
+
+//An AI has infected a text with a character!!
+
+// This text is now fully mutated to this character.
+
+// If the text or the character are empty, return an empty string.
+// There will never be a case when both are empty as nothing is going on!!
+
+// Note: The character is a string of length 1 or an empty string.
+
+// Example
+// text before = "abc"
+// character   = "z"
+// text after  = "zzz"
+
+
+
+// function contamination(text, char){
+//   let arr = text.split("")
+//   let results = []
+//   arr.forEach(letter =>
+//     results.push(char))
+//   return results.join("")
+// }
+
+// console.log(contamination("abc","z"))
+
+
+//OTHER SOLUTIONS
+// function contamination(text, char){
+//   return char.repeat(text.length)
+// }
+
+
+//Beginner Series #2 Clock------------------------------------------------------------------------------------------------
+
+// Clock shows h hours, m minutes and s seconds after midnight.
+
+// Your task is to write a function which returns the time since midnight in milliseconds.
+
+// Example:
+// h = 0
+// m = 1
+// s = 1
+
+// result = 61000
+// Input constraints:
+
+// 0 <= h <= 23
+// 0 <= m <= 59
+// 0 <= s <= 59
+
+// function past(h, m, s){
+//   let hours = h * 3600000
+//   let minutes = m * 60000
+//   let seconds = s * 60
+//   return hours + minutes + seconds
+// }
+
+// //OTHER SOLUTION
+// function past(h, m, s){
+//   return ((h*3600)+(m*60)+s)*1000;
+// }
+
+
+//Reversed sequence----------------------------------------------------------------------------------------------------
+// Build a function that returns an array of integers from n to 1 where n>0.
+
+// Example : n=5 --> [5,4,3,2,1]
+
+// const reverseSeq = n => {
+//   let results = []
+//   for(i=1;i<=n;i++){
+//     results.push(i)
+//   }
+//   return results.sort((a,b) => b-a);
+// };
+
+//OTHER SOLUTIONS
+// const reverseSeq = n => {
+//   let arr = [];
+//     for (let i=n; i>0; i--) {
+//       arr.push(i);
+//       } return arr;
+//   };
+
+// console.log(reverseSeq(5))
+
+//MakeUpperCase-----------------------------------------------------------------------------------------------------------------
+//Write a function which converts the input string to uppercase.
+
+// function makeUpperCase(str) {
+//   return str.toUpperCase()
+// }
+
+// console.log(makeUpperCase('hello'))
+
+//Remove First and Last Character--------------------------------------------------------------------------------------------
+
+// DESCRIPTION:
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+// function removeChar(str){
+//   return str.slice(1,-1)
+//  };
+
+//  console.log(removeChar('eloquent'))
