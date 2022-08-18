@@ -797,7 +797,7 @@
 //////
 ////
 //
-//
+
 
 // DESCRIPTION:
 // Create a function with two arguments that will return an array of the first (n) multiples of (x).
@@ -853,3 +853,24 @@
 //     return length * width * height
 //   }
 // }
+
+
+
+//
+////
+//////
+//Hex to Decimal----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+// DESCRIPTION:
+// Complete the function which converts hex number (given as a string) to a decimal number.
+
+// function hexToDec(hexString){
+//   return Number.parseInt(hexString, 16)
+// }
+
+// console.log(hexToDec('a'))
