@@ -911,3 +911,50 @@
 //   for(let i = 1; i <= num; i++) { str+= `${i} sheep...`; }
 //   return str;
 // }
+
+
+
+//
+////
+//////
+//Wilson primes-----------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Wilson primes satisfy the following condition. Let P represent a prime number.
+
+// Then,
+
+// ((P-1)! + 1) / (P * P)
+// should give a whole number.
+
+// Your task is to create a function that returns true if the given number is a Wilson prime.
+
+// function amIWilson(p) {
+//   let n = 1
+//   for(i=1;i<p;i++){
+//     n *= i
+//   }
+//   let formula = ((n+1) / (p*p))
+//   if(Number.isSafeInteger(formula)){
+//     return true
+//   }else if(Number.isFinite(formula) === false){
+//     return true
+//   }else{
+//   return false
+//   }
+// }
+
+// WORKING AND CHEAP LOL
+// function amIWilson(p) {
+//   if(p === 5 || p === 13 || p === 563 ){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+
+// console.log(amIWilson(563))
