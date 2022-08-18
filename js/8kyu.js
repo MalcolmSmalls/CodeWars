@@ -1058,7 +1058,49 @@
 //
 ////
 //////
-//Even or Odd-------------------------------------------------------------------------------------------------
+//Get Nth Even Number---------------------------------------------------------------------------------------------
 //////
 ////
 //
+
+// DESCRIPTION:
+// Return the Nth Even Number
+
+// Example(Input --> Output)
+
+// 1 --> 0 (the first even number is 0)
+// 3 --> 4 (the 3rd even number is 4 (0, 2, 4))
+// 100 --> 198
+// 1298734 --> 2597466
+// The input will not be 0.
+
+// function nthEven(n){
+//   let arr = []
+//   for(i=0;i<=n+1;i++){
+//     if(i%2===0){
+//       arr.push(i)
+//     }
+//   }
+//   return arr[arr.length-1]
+// }
+
+
+// function nthEven(n){
+//   let arr = []
+//   for(i=0; i<n;i++){
+//     arr.push(i)
+//   }
+
+//   let newArr = arr.map(x => x*2)
+//   return newArr[newArr.length-1]
+// }
+
+// console.log(nthEven(1))
+
+
+
+function nthEven(n){
+  return n*2-2
+}
+
+console.log(nthEven(1))
