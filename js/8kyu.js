@@ -1026,13 +1026,39 @@
 // The output of this function should be a string
 // The exponent will never be 1, and neither number will ever be 0
 
+// function derive(coefficient,exponent) {
+//   let co = coefficient * exponent
+//   let ex = exponent - 1
+//   return `${co}x^${ex}`
+// }
+
+// console.log(derive(7,8))
 
 
 
-function derive(coefficient,exponent) {
-  let co = coefficient * exponent
-  let ex = exponent - 1
-  return `${co}x^${ex}`
-}
+//
+////
+//////
+//Even or Odd-------------------------------------------------------------------------------------------------
+//////
+////
+//
 
-console.log(derive(7,8))
+// DESCRIPTION:
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+
+// const even_or_odd = number => number % 2 === 0 ? 'Even' : 'Odd' 
+
+// console.log(even_or_odd(3))
+
+
+
+
+//
+////
+//////
+//Even or Odd-------------------------------------------------------------------------------------------------
+//////
+////
+//
