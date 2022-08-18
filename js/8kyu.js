@@ -711,8 +711,26 @@
 
 // "john McClane" --> "McClane john"
 
-function nameShuffler(str){
-  return str.split(" ").reverse().join(" ")
-}
+// function nameShuffler(str){
+//   return str.split(" ").reverse().join(" ")
+// }
 
-console.log(nameShuffler('johnny bananas'))
+// console.log(nameShuffler('johnny bananas'))
+
+//
+////
+//////
+//Function 3 - multiplying two numbers-------------------------------------------------------------------------------------------
+//////
+////
+//
+//
+
+// Implement a function called multiply, which takes two numbers and returns their product:
+
+// multiply(2, 3) = 6
+// multiply(0, 188) = 0
+// multiply(85, 144) = 12240
+
+const multiply = (n1,n2) => n1*n2
+
