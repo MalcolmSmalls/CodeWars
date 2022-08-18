@@ -87,7 +87,7 @@
 
 
 // const findSmallestInt = args => args.sort((a,b)=>a-b)[0]
-    
+
 // class SmallestIntegerFinder {
 //   findSmallestInt(args) {
 //     return args.sort((a,b)=>a-b)[0]
@@ -155,7 +155,7 @@
 //     let newArr = []
 //     numbers.forEach(x => {
 //         newArr.push(x**2)})
-//     return newArr.reduce((acc,curr)=>acc+curr,0) 
+//     return newArr.reduce((acc,curr)=>acc+curr,0)
 // }
 
 // console.log(squareSum([]))
@@ -245,7 +245,7 @@
 //       }
 //   })
 //   return noDupes
-  
+
 // }
 
 // console.log(mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]))
@@ -315,7 +315,7 @@
 //     let z = [];
 //     for(i=0;i<n;i++){
 //       z.push(x+n)}
-  
+
 //     return z;
 //   }
 
@@ -358,7 +358,7 @@
 //     if(item > 0){
 //       sum = item + sum
 //     }else{
-//       sum = sum + 0 
+//       sum = sum + 0
 //     }
 //   })
 //   return sum
@@ -500,7 +500,7 @@
 
 // console.log(opposite(4))
 
-//Other Solutions 
+//Other Solutions
 
 // function opposite(number) {
 //   return(-number);
@@ -576,7 +576,7 @@
 // ]
 
 // function howMuchILoveYou(n) {
-//    return phrases[(n - 1) % phrases.length] 
+//    return phrases[(n - 1) % phrases.length]
 // }
 
 
@@ -782,10 +782,10 @@
 
 // function correctTail(body, tail){
 //   let sub = body.substr(body.length-(tail.length))
-  
+
 //   if(sub === tail){
 //     return true
-//   }else{ 
+//   }else{
 //     return false
 //   }
 // }
@@ -830,4 +830,26 @@
 //       z.push(x * i);
 //   }
 //   return z;
+// }
+
+
+
+//
+////
+//////
+//Volume of a Cuboid----------------------------------------------------------------------------------------------------
+//////
+////
+//
+//
+
+
+
+// DESCRIPTION:
+// Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+
+// class Kata {
+//   static getVolumeOfCuboid(length, width, height) {
+//     return length * width * height
+//   }
 // }
