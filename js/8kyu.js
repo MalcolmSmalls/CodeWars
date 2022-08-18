@@ -976,4 +976,24 @@
 
 // [Make sure you type the exact thing I wrote or the program may not execute properly]
 
-const greet = name => `Hello, ${name} how are you doing today?`
+// const greet = name => `Hello, ${name} how are you doing today?`
+
+
+//
+////
+//////
+//Convert a Boolean to a String-----------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Implement a function which convert the given boolean value into its string representation.
+
+// Note: Only valid inputs will be given.
+
+function booleanToString(b){
+  return b.toString()
+}
+
+console.log(booleanToString(false))
