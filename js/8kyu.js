@@ -1124,15 +1124,45 @@
 // Length should be between 4 and 16 characters (both included).
 
 
-function validateUsr(username) {
-  res =  (/^[_a-z0-9]{4,16}$/g).test(username)
-  return res
-}
+// function validateUsr(username) {
+//   res =  (/^[_a-z0-9]{4,16}$/g).test(username)
+//   return res
+// }
 
-console.log(validateUsr('Hass'))
+// console.log(validateUsr('Hass'))
 
 
 // OTHER SOLUTIONS
 // function validateUsr(username) {
 //   return /^[0-9a-z_]{4,16}$/.test(username)
 // }
+
+
+
+//
+////
+//////
+//Double Char------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+// Good Luck!
+
+function doubleChar(str) {
+  let arr = str.split("")
+  let results = ""
+  arr.forEach(x => results += x.repeat(2))
+  return results
+}
+
+console.log(doubleChar('String'))
+
+// const doubleChar = (str) => str.split("").map(c => c + c).join("");
