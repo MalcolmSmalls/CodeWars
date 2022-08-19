@@ -1099,8 +1099,40 @@
 
 
 
-function nthEven(n){
-  return n*2-2
+// function nthEven(n){
+//   return n*2-2
+// }
+
+// console.log(nthEven(1))
+
+
+
+//
+////
+//////
+//Simple validation of a username with regex--------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Write a simple regex to validate a username. Allowed characters are:
+
+// lowercase letters,
+// numbers,
+// underscore
+// Length should be between 4 and 16 characters (both included).
+
+
+function validateUsr(username) {
+  res =  (/^[_a-z0-9]{4,16}$/g).test(username)
+  return res
 }
 
-console.log(nthEven(1))
+console.log(validateUsr('Hass'))
+
+
+// OTHER SOLUTIONS
+// function validateUsr(username) {
+//   return /^[0-9a-z_]{4,16}$/.test(username)
+// }
