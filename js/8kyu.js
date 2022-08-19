@@ -1246,22 +1246,54 @@
 // "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 // As usual, your function/method should be pure, i.e. it should not mutate the original string.
 
-String.prototype.toAlternatingCase = function () {
-  let arr = this.split("")
-  let alternatedCase = ""
-  arr.forEach(x => {
-    if(x===x.toUpperCase()){
-      alternatedCase += x.toLowerCase()
-    }else{
-      alternatedCase += x.toUpperCase()
-    }
-  })
-  return alternatedCase
-}
+// String.prototype.toAlternatingCase = function () {
+//   let arr = this.split("")
+//   let alternatedCase = ""
+//   arr.forEach(x => {
+//     if(x===x.toUpperCase()){
+//       alternatedCase += x.toLowerCase()
+//     }else{
+//       alternatedCase += x.toUpperCase()
+//     }
+//   })
+//   return alternatedCase
+// }
 
-"heLLo world".toAlternatingCase() 
+// "heLLo world".toAlternatingCase() 
 
 // OTHER SOLUTIONS
 // String.prototype.toAlternatingCase = function () {
 //   return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
+// }
+
+
+
+//
+////
+//////
+//Convert number to reversed array of digits-----------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Convert number to reversed array of digits
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example(Input => Output):
+// 348597 => [7,9,5,8,4,3]
+// 0 => [0]
+
+const digitize = n => {
+  let arr = n.toString().split("").reverse()
+  let newArr = arr.map(x=>Number(x))
+  return newArr
+}
+
+console.log(digitize(348597))
+
+// OTHER SOLUTIONS
+
+// function digitize(n) {
+//   return String(n).split('').map(Number).reverse()
 // }
