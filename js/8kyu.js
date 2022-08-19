@@ -1156,13 +1156,34 @@
 // * "1234!_ "     -> "11223344!!__  "
 // Good Luck!
 
-function doubleChar(str) {
-  let arr = str.split("")
-  let results = ""
-  arr.forEach(x => results += x.repeat(2))
-  return results
-}
+// function doubleChar(str) {
+//   let arr = str.split("")
+//   let results = ""
+//   arr.forEach(x => results += x.repeat(2))
+//   return results
+// }
 
-console.log(doubleChar('String'))
+// console.log(doubleChar('String'))
 
 // const doubleChar = (str) => str.split("").map(c => c + c).join("");
+
+
+//
+////
+//////
+//5 without numbers !!------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Write a function that always returns 5
+
+// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+// Good luck :)
+
+// function unusualFive() {
+//   let num = 'elbow'
+//   return num.length
+// }
