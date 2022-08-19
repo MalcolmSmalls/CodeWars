@@ -1284,16 +1284,35 @@
 // 348597 => [7,9,5,8,4,3]
 // 0 => [0]
 
-const digitize = n => {
-  let arr = n.toString().split("").reverse()
-  let newArr = arr.map(x=>Number(x))
-  return newArr
-}
+// const digitize = n => {
+//   let arr = n.toString().split("").reverse()
+//   let newArr = arr.map(x=>Number(x))
+//   return newArr
+// }
 
-console.log(digitize(348597))
+// console.log(digitize(348597))
 
 // OTHER SOLUTIONS
 
 // function digitize(n) {
 //   return String(n).split('').map(Number).reverse()
 // }
+
+//
+////
+//////
+//Quarter of the year-----------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+
+// For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+
+// const quarterOf = (month) => month < 4 ? 1 : month < 7 ? 2 : month < 10 ? 3 : 4
+
+
+// OTHER SOLUTIONS
+// const quarterOf = m => Math.ceil(m/3);
