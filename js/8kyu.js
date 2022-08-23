@@ -1359,17 +1359,17 @@
 // If you can, try writing it in only one line of code.
 
 
-function findMultiples(integer, limit) {
-  let newArr = []
-  for(i=integer;i<=limit;i++){
-    if(i%integer===0){
-      newArr.push(i)
-    }
-  }
-  return newArr
-}
+// function findMultiples(integer, limit) {
+//   let newArr = []
+//   for(i=integer;i<=limit;i++){
+//     if(i%integer===0){
+//       newArr.push(i)
+//     }
+//   }
+//   return newArr
+// }
 
-console.log(findMultiples(2,6))
+// console.log(findMultiples(2,6))
 
 //other solution
 // function findMultiples(int,limit){
@@ -1380,3 +1380,40 @@ console.log(findMultiples(2,6))
     
 //   return result
 // }
+
+
+//
+////
+//////
+//Find numbers which are divisible by given number----------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+// Example(Input1, Input2 --> Output)
+// [1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
+
+
+// function divisibleBy(numbers, divisor){
+//   newArray = []
+//   numbers.forEach(x => {
+//     if(x%divisor===0){
+//       newArray.push(x)
+//     }
+//   })
+//   return newArray
+// }
+
+// console.log(divisibleBy([1,2,3,4,5,6], 2))
+
+
+//OTHER SOLUTION
+// function divisibleBy(numbers, divisor) {
+//   return numbers.filter(n => n % divisor === 0)
+// }
+
+
+git commit -m "Finished CodeWars 1 'Find numbers which are divisible by given number'"
