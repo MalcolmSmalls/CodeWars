@@ -1570,6 +1570,76 @@
 
 // Simples!
 
-function fixTheMeerkat(arr) {
-  return arr.reverse()
- }
+// function fixTheMeerkat(arr) {
+//   return arr.reverse()
+//  }
+
+
+
+
+//
+////
+//////
+//Is n divisible by x and y?-----------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are strictly positive numbers.
+
+// Examples:
+// 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+// 2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+// 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+// 4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+
+
+
+// function isDivisible(n, x, y) {
+// }
+
+// const isDivisible = (n,x,y) => n % y === 0 && n % x === 0 ? true: false
+
+
+// OTHER SOLUTIONS
+// function isDivisible(n, x, y) {
+//   return n % x === 0 && n % y === 0
+// }
+
+
+//
+////
+//////
+//Well of Ideas - Easy Version-------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// For every good kata idea there seem to be quite a few bad ones!
+
+// In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+// function well(x){
+//   let count = 0
+//   let bad = 0
+//   x.forEach(x => {
+//     if(x==="good"){
+//       count++
+//     }else{
+//       bad++
+//     }
+//   })
+//   return count > 2 ? 'I smell a series!' : count >= 1 && count < 3? 'Publish!' : 'Fail!'
+// }
+
+//OTHER SOLUTIONS
+
+// const well = x => {
+//   const good_count = x.filter(x => x == 'good').length;
+//   return good_count < 1 ? 'Fail!' : 
+//          good_count < 3 ? 'Publish!' : 'I smell a series!';
+// }
