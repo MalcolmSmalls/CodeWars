@@ -1683,3 +1683,29 @@
 //   return Math.hypot(a.x - b.x, a.y - b.y);
 // }
 
+//
+////
+//////
+//Find Nearest square number--------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+// DESCRIPTION:
+// Your task is to find the nearest square number, nearest_sq(n), of a positive integer n.
+
+// Goodluck :)
+
+function nearestSq(n){
+  let sq = Math.round(Math.sqrt(n))
+  return sq * sq
+}
+
+console.log(nearestSq(111))
+
+
+//OthER SOLUTIONS
+
+// const nearestSq = n => Math.pow(Math.round(Math.sqrt(n)), 2);
