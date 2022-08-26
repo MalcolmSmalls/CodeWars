@@ -2016,15 +2016,54 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // The answer should be rounded to the nearest 2 decimal places.
 
 
-function howMuchWater(water, load, clothes){
-  let results = water * 1.1 ** (clothes-load)
-  if(clothes > load * 2){
-    return 'Too much clothes'
-  }else if(clothes < load){
-    return 'Not enough clothes'
-  }else{
-    return results.toFixed(2)
-  }
-}
+// function howMuchWater(water, load, clothes){
+//   let results = water * 1.1 ** (clothes-load)
+//   if(clothes > load * 2){
+//     return 'Too much clothes'
+//   }else if(clothes < load){
+//     return 'Not enough clothes'
+//   }else{
+//     return Number(results.toFixed(2))
+//   }
+// }
 
-console.log(howMuchWater(10,11,20))
+// console.log(howMuchWater(10,11,20))
+
+
+
+//
+////
+//////
+//What is between?------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+// For example:
+
+// a = 1
+// b = 4
+// --> [1, 2, 3, 4]
+
+// function between(a, b) {
+//   newArr = []
+//   for(i=a; i <= b; i++){
+//     newArr.push(i)
+//   }
+//   return newArr
+// }
+
+// console.log(between(1, 4))
+
+
+
+//
+////
+//////
+//What is between?------------------------------------------------------------------------------------
+//////
+////
+//
