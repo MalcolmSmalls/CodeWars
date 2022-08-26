@@ -2114,8 +2114,26 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Note: base is a non-negative number, factor is a positive number.
 
-const checkForFactor = (base,factor) => base%factor === 0
+// const checkForFactor = (base,factor) => base%factor === 0
 
-// function checkForFactor (base, factor) {
-//   // code here
-// }
+
+
+//
+////
+//////
+//Convert a string to an array-----------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Write a function to split a string and convert it into an array of words.
+
+// Examples (Input ==> Output):
+// "Robin Singh" ==> ["Robin", "Singh"]
+
+// "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+function stringToArray(string){
+  return string.split(" ")
+}
