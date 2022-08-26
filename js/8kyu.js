@@ -2163,3 +2163,33 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 
 // const playerRankUp = points => points >= 100 ? "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.": false
+
+//
+////
+//////
+//isReallyNaN-------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// I've hit a few bugs in my Java/Type/Coffee-script code recently, and I've traced the problem back to the global isNaN function I was using. I had expected it to be more discerning, but it's returning true for undefined right now.
+
+// Write a function isReallyNaN that returns true only if passed in an argument that evalutes to NaN, and returns false otherwise.
+
+// Any solution is acceptable!
+
+// const isReallyNaN = (val) => val === undefined ? false : isNaN(val) ? true: false
+
+
+
+
+
+const isReallyNaN = (val) => isNaN(val) === true && typeof(val) === 'number' ? true: false
+
+console.log(isReallyNaN(NaN))
+
+//OTHER SOLUTIONS 
+// const isReallyNaN = Number.isNaN
+
