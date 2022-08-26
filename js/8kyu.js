@@ -1801,16 +1801,16 @@
 // You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8.
 
 
-function expressionMatter(a, b, c) {
-  let formula1 = a * (b + c)
-  let formula2 = a * b * c
-  let formula3 = a + b * c
-  let formula4 = (a+b)*c
-  let formula5 = a+b+c
-  return formula1 >= formula2 && formula1 >= formula3 && formula1 >= formula4 && formula1 >= formula5 ? formula1 : formula2 >= formula1 && formula2 >= formula3 && formula2 >= formula4 && formula2 >= formula5 ? formula2 : formula3 >= formula1 && formula3 >= formula2 && formula3 >= formula4 && formula3 >= formula5 ? formula3 : formula4 >= formula1 && formula4 >= formula2 && formula4 >= formula3 && formula4 >= formula5 ? formula4: formula5
-}
+// function expressionMatter(a, b, c) {
+//   let formula1 = a * (b + c)
+//   let formula2 = a * b * c
+//   let formula3 = a + b * c
+//   let formula4 = (a+b)*c
+//   let formula5 = a+b+c
+//   return formula1 >= formula2 && formula1 >= formula3 && formula1 >= formula4 && formula1 >= formula5 ? formula1 : formula2 >= formula1 && formula2 >= formula3 && formula2 >= formula4 && formula2 >= formula5 ? formula2 : formula3 >= formula1 && formula3 >= formula2 && formula3 >= formula4 && formula3 >= formula5 ? formula3 : formula4 >= formula1 && formula4 >= formula2 && formula4 >= formula3 && formula4 >= formula5 ? formula4: formula5
+// }
 
-console.log(expressionMatter(2, 1, 2))
+// console.log(expressionMatter(2, 1, 2))
 
 //OTHER SOLUTION
 
@@ -1824,3 +1824,63 @@ console.log(expressionMatter(2, 1, 2))
 //     a * b + c,
 //   );
 // }
+
+
+//
+////
+//////
+//Century From Year-------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Introduction
+// The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+
+// Task
+// Given a year, return the century it is in.
+
+// Examples
+// 1705 --> 18
+// 1900 --> 19
+// 1601 --> 17
+// 2000 --> 20
+
+// function century(year) {
+//   let newArr = year.toString().split("")
+//   console.log(newArr.length)
+//   console.log(newArr[3])
+//   console.log(newArr[2])
+//   if(newArr.length === 4 && newArr[3] === '0' && newArr[2] === '0'){
+//     return Number(newArr[0]+newArr[1])
+//   }else if(newArr.length === 4){
+//     return Number(newArr[0]+newArr[1])+1
+//   } else {
+//   return 1
+//   }
+// }
+
+
+// function century(year) {
+//   let newArr = year.toString().split("")
+//   if(newArr.length === 4 && Number(newArr.join(''))%100 === 0){
+//     return Number(newArr[0]+newArr[1])
+//   }else if(newArr.length === 4){
+//     return Number(newArr[0]+newArr[1])+1
+//   }else if(newArr.length === 5 && Number(newArr.join(''))%100 === 0 ){
+//     return Number(newArr[0]+newArr[1]+newArr[2])
+//   }else if(newArr.length === 5){
+//     return Number(newArr[0]+newArr[1]+newArr[2])+1
+//   } else {
+//   return 1
+//   }
+// }
+
+
+
+
+const century = year => Math.ceil(year/100) 
+
+console.log(century(1990))
