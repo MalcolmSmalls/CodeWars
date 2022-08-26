@@ -1758,12 +1758,69 @@
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
 
-var summation = function (num) {
-  let count = 0
-  for(i=1;i<=num;i++){
-    count = i+count
-  }
-  return count
+// var summation = function (num) {
+//   let count = 0
+//   for(i=1;i<=num;i++){
+//     count = i+count
+//   }
+//   return count
+// }
+
+// console.log(summation(8))
+
+
+
+//
+////
+//////
+//Expressions Matter-------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Task
+// Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+// In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained (Read the notes for more detail about it)
+// Example
+// With the numbers are 1, 2 and 3 , here are some ways of placing signs and brackets:
+
+// 1 * (2 + 3) = 5
+// 1 * 2 * 3 = 6
+// 1 + 2 * 3 = 7
+// (1 + 2) * 3 = 9
+// So the maximum value that you can obtain is 9.
+
+// Notes
+// The numbers are always positive.
+// The numbers are in the range (1  ≤  a, b, c  ≤  10).
+// You can use the same operation more than once.
+// It's not necessary to place all the signs and brackets.
+// Repetition in numbers may occur .
+// You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8.
+
+
+function expressionMatter(a, b, c) {
+  let formula1 = a * (b + c)
+  let formula2 = a * b * c
+  let formula3 = a + b * c
+  let formula4 = (a+b)*c
+  let formula5 = a+b+c
+  return formula1 >= formula2 && formula1 >= formula3 && formula1 >= formula4 && formula1 >= formula5 ? formula1 : formula2 >= formula1 && formula2 >= formula3 && formula2 >= formula4 && formula2 >= formula5 ? formula2 : formula3 >= formula1 && formula3 >= formula2 && formula3 >= formula4 && formula3 >= formula5 ? formula3 : formula4 >= formula1 && formula4 >= formula2 && formula4 >= formula3 && formula4 >= formula5 ? formula4: formula5
 }
 
-console.log(summation(8))
+console.log(expressionMatter(2, 1, 2))
+
+//OTHER SOLUTION
+
+// function expressionMatter(a, b, c) {
+//   return Math.max(
+//     a + b + c,
+//     a * b * c,
+//     a * (b + c),
+//     (a + b) * c,
+//     a + b * c,
+//     a * b + c,
+//   );
+// }
