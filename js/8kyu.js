@@ -2213,14 +2213,32 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // Note:
 // Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
 
-function betterThanAverage(classPoints, yourPoints) {
-  let total = classPoints.reduce((acc,curr) => acc+curr, 0)
-  if(total / classPoints.length > yourPoints){
-    return false
-  }else{
-    return true
-  }
- }
+// function betterThanAverage(classPoints, yourPoints) {
+//   let total = classPoints.reduce((acc,curr) => acc+curr, 0)
+//   if(total / classPoints.length > yourPoints){
+//     return false
+//   }else{
+//     return true
+//   }
+//  }
  
 
+//
+////
+//////
+//Beginner Series #1 School Paperwork-------------------------------------------------------------------------------------
+//////
+////
+//
 
+// DESCRIPTION:
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+// Example:
+// n= 5, m=5: 25
+// n=-5, m=5:  0
+// Waiting for translations and Feedback! Thanks!
+
+// const paperwork = (n,m) => n <= 0 || m <= 0 ? 0 : n*m
