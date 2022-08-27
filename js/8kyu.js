@@ -2409,3 +2409,35 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 //   return array[n]**n
 //   }
 // }
+
+//
+////
+//////
+//Find the position!-------------------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// When provided with a letter, return its position in the alphabet.
+
+// Input :: "a"
+
+// Ouput :: "Position of alphabet: 1"
+
+function position(letter){
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  for(i=0;i<alphabet.length;i++){
+    if(alphabet[i] === letter.toLowerCase())
+    return `Position of alphabet: ${i+1}`
+  }
+}
+
+console.log(position('Z'))
+
+// OTHER SOLUTION
+
+// function position(letter){
+//   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+//   return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1);
+// }
