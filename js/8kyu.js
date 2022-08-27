@@ -2425,19 +2425,47 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Ouput :: "Position of alphabet: 1"
 
-function position(letter){
-  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
-  for(i=0;i<alphabet.length;i++){
-    if(alphabet[i] === letter.toLowerCase())
-    return `Position of alphabet: ${i+1}`
-  }
-}
+// function position(letter){
+//   let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+//   for(i=0;i<alphabet.length;i++){
+//     if(alphabet[i] === letter.toLowerCase())
+//     return `Position of alphabet: ${i+1}`
+//   }
+// }
 
-console.log(position('Z'))
+// console.log(position('Z'))
 
 // OTHER SOLUTION
 
 // function position(letter){
 //   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 //   return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1);
+// }
+
+
+//
+////
+//////
+//Is he gonna survive?-----------------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+// Return True if yes, False otherwise :)
+
+// function hero(bullets, dragons){
+//   if(bullets < dragons * 2){
+//     return false
+//   } else{
+//     return true
+//   }
+// }
+
+// OTHER SOLUTIONS
+
+// function hero(bullets, dragons){
+//   return bullets >= dragons * 2
 // }
