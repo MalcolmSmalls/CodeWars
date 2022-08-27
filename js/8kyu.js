@@ -2275,25 +2275,40 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // More details here: https://en.wikipedia.org/wiki/Comma-separated_values
 
 
-function toCsvText(array) {
-  let holder = ""
-  array.forEach(x => {
-    if(x === array[array.length-1]){
-      holder += `${x}`
-    }else{
-      holder += `${x}\n`
-    }})
-  return holder
-}
+// function toCsvText(array) {
+//   let holder = ""
+//   array.forEach(x => {
+//     if(x === array[array.length-1]){
+//       holder += `${x}`
+//     }else{
+//       holder += `${x}\n`
+//     }})
+//   return holder
+// }
 
-console.log(toCsvText([
-  [ 5,55,5,5,55 ],
-  [ 6,6,66,23,24 ],
-  [ 666,31,66,33,7 ]
- ] ))
+// console.log(toCsvText([
+//   [ 5,55,5,5,55 ],
+//   [ 6,6,66,23,24 ],
+//   [ 666,31,66,33,7 ]
+//  ] ))
 
  // OTHER SOLUTIONS
 
 //  function toCsvText(array) {
 //   return array.join('\n');
 // }
+
+//
+////
+//////
+//Bin to Decimals-----------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Complete the function which converts a binary number (given as a string) to a decimal number.
+
+function binToDec(bin){
+  return parseInt(bin, 2) 
+ }
