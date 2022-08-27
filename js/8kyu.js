@@ -2309,6 +2309,32 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // DESCRIPTION:
 // Complete the function which converts a binary number (given as a string) to a decimal number.
 
-function binToDec(bin){
-  return parseInt(bin, 2) 
- }
+// function binToDec(bin){
+//   return parseInt(bin, 2) 
+//  }
+
+
+
+//
+////
+//////
+//FIXME: Replace all dots-----------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// The code provided is supposed replace all the dots . in the specified String str with dashes -
+
+// But it's not working properly.
+
+// Task
+// Fix the bug so we can all go home early.
+
+// Notes
+// String str will never be null.
+
+var replaceDots = function(str) {
+  return str.replace(/\./g, '-');
+}
