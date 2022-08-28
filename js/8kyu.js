@@ -2654,4 +2654,52 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // }
 
 
-const setAlarm = (employed, vacation) => employed === true && vacation === false ? true: false
+// const setAlarm = (employed, vacation) => employed === true && vacation === false ? true: false
+
+
+
+
+
+
+
+//
+////
+//////
+//Regexp Basics - is it a digit?
+//////
+////
+//
+
+// DESCRIPTION:
+// Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a digit (0-9), false otherwise.
+
+// String.prototype.digit = function() {
+//   let results = /[0-9]/g
+//   if(this.length === 1 && this.search(results) === 0){
+//     return true
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(('14'.digit(), false))
+
+
+//DOESN'T WORK as NEEDED but COOL
+
+// String.prototype.digit = function() {
+//   let results = this.match(/[0-9]/g)
+//   console.log(results)
+//   console.log(this.split(""))
+//   if(results === this.split("")){
+//     return true
+//   } else {
+//     return false;
+//   }
+// };
+
+
+//OTHER SOLUTIONS
+// String.prototype.digit = function() {
+//   return /^\d$/.test(this);
+// };
