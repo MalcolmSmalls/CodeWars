@@ -2626,6 +2626,32 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // * [1, 2, 3, 4]  -> [4, 3, 2, 1]
 // * [9, 2, 0, 7]  -> [7, 0, 2, 9]
 
-function reverseList(list) {
-  return list.reverse()
-}
+// function reverseList(list) {
+//   return list.reverse()
+// }
+
+
+//
+////
+//////
+//L1: Set Alarm-----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+// setAlarm(true, true) -> false
+// setAlarm(false, true) -> false
+// setAlarm(false, false) -> false
+// setAlarm(true, false) -> true
+
+// function setAlarm(employed, vacation){
+
+// }
+
+
+const setAlarm = (employed, vacation) => employed === true && vacation === false ? true: false
