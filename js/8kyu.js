@@ -2939,8 +2939,22 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // I is misinterpreted as 1
 // The test cases contain numbers only by mistake.
 
-function correct(string){
-	return string.replace(/0/g, "O").replace(/5/g,"S").replace(/1/g, "I")
-}
+// function correct(string){
+// 	return string.replace(/0/g, "O").replace(/5/g,"S").replace(/1/g, "I")
+// }
 
-console.log(correct("L0ND0N1"))
+
+//
+////
+//////
+//String Templates - Bug Fixing #5-------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
+
+// function buildString(...template){
+//   return `I like ${template.join(', ')}!`;
+// }
