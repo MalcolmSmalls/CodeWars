@@ -2895,19 +2895,19 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Input: ["sheep", "sheep", "wolf"]
 // Output: "Pls go away and stop eating my sheep"
-function warnTheSheep(queue) {
-  let message = ""
-  queue.forEach((x,i) =>{
-    if(x==='wolf' && i !== queue.length-1){
-      message = `Oi! Sheep number ${queue.length-(i+1)}! You are about to be eaten by a wolf!`
-    }else if(x==='wolf' && i === queue.length-1){
-      message = "Pls go away and stop eating my sheep"   
-    }
-  })
-  return message
-}
+// function warnTheSheep(queue) {
+//   let message = ""
+//   queue.forEach((x,i) =>{
+//     if(x==='wolf' && i !== queue.length-1){
+//       message = `Oi! Sheep number ${queue.length-(i+1)}! You are about to be eaten by a wolf!`
+//     }else if(x==='wolf' && i === queue.length-1){
+//       message = "Pls go away and stop eating my sheep"   
+//     }
+//   })
+//   return message
+// }
 
-console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]))
+// console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]))
 
 
 // OTHER SOLUTIONS
@@ -2916,3 +2916,31 @@ console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "
 //   const position = queue.reverse().indexOf('wolf');
 //   return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
 // }
+
+
+//
+////
+//////
+//Correct the mistakes of the character recognition software--------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Character recognition software is widely used to digitise printed texts. Thus the texts can be edited, searched and stored on a computer.
+
+// When documents (especially pretty old ones written with a typewriter), are digitised character recognition softwares often make mistakes.
+
+// Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+
+// S is misinterpreted as 5
+// O is misinterpreted as 0
+// I is misinterpreted as 1
+// The test cases contain numbers only by mistake.
+
+function correct(string){
+	return string.replace(/0/g, "O").replace(/5/g,"S").replace(/1/g, "I")
+}
+
+console.log(correct("L0ND0N1"))
