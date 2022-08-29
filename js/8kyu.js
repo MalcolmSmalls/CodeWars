@@ -2814,3 +2814,18 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // const points=games=>games.reduce((output,current)=>{
 //   return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
 // },0)
+
+
+
+//
+////
+//////
+//Mr. Freeze-------------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// There is an object/class already created called MrFreeze. Mark this object as frozen so that no other changes can be made to it.
+
+Object.freeze(MrFreeze)
