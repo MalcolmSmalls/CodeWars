@@ -3280,10 +3280,42 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // * 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
 // * 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
 
-const flip=(d, a)=>{
-  if(d==='R'){
-    return a.sort((a,b) => a-b)
-  }else{
-    return a.sort((a,b) => b-a)
-  }
-}
+// const flip=(d, a)=>{
+//   if(d==='R'){
+//     return a.sort((a,b) => a-b)
+//   }else{
+//     return a.sort((a,b) => b-a)
+//   }
+// }
+
+
+//
+////
+//////
+//Exclamation marks series #1: Remove an exclamation mark from the end of string------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+// Examples
+// remove("Hi!") == "Hi"
+// remove("Hi!!!") == "Hi!!"
+// remove("!Hi") == "!Hi"
+// remove("!Hi!") == "!Hi"
+// remove("Hi! Hi!") == "Hi! Hi"
+// remove("Hi") == "Hi"
+
+// function remove (string) {
+//   let newArr = string.split("")
+//   if(newArr[newArr.length-1] === "!"){
+//     newArr.pop()
+//   }
+//   return newArr.join("")
+// }
+
+//OTHER SOLUTION
+
+//const remove = s => s.replace(/!$/, '');
