@@ -3216,6 +3216,34 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // 15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
 // Expect large Inputs!
 
-function oddCount(n){
-  return Math.floor(n / 2)
+// function oddCount(n){
+//   return Math.floor(n / 2)
+// }
+
+
+//
+////
+//////
+//Grasshopper - Messi goals function---------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Messi goals function
+// Messi is a soccer player with goals in three leagues:
+
+// LaLiga
+// Copa del Rey
+// Champions
+// Complete the function to return his total number of goals in all three leagues.
+
+// Note: the input will always be valid.
+
+// For example:
+
+// 5, 10, 2  -->  17
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
 }
