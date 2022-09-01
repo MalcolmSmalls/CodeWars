@@ -3161,20 +3161,61 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // There is no preloaded code to help you. This is not about coding skills; think before you code
 
+// 
+// const list = ['kiwi', 'pear', 'kiwi', 'banana', 'melon', 'banana', 'melon', 'pineapple', 'apple', 'pineapple', 'cucumber','pineapple', 'cucumber', 'orange', 'grape', 'orange', 'grape', 'apple', 'grape', 'cherry', 'pear', 'cherry', 'pear', 'kiwi', 'banana', 'kiwi', 'apple', 'melon', 'banana', 'melon', 'pineapple', 'melon', 'pineapple', 'cucumber', 'orange', 'apple', 'orange', 'grape', 'orange', 'grape', 'cherry', 'pear', 'cherry', 'pear', 'apple', 'pear', 'kiwi', 'banana', 'kiwi', 'banana', 'melon', 'pineapple', 'melon', 'apple', 'cucumber', 'pineapple', 'cucumber', 'orange', 'cucumber', 'orange', 'grape', 'cherry', 'apple', 'cherry', 'pear', 'cherry', 'pear', 'kiwi', 'pear', 'kiwi', 'banana', 'apple', 'banana', 'melon', 'pineapple', 'melon','pineapple', 'cucumber', 'pineapple', 'cucumber', 'apple', 'grape', 'orange', 'grape', 'cherry', 'grape', 'cherry', 'pear', 'cherry', 'apple', 'kiwi', 'banana', 'kiwi', 'banana', 'melon', 'banana', 'melon', 'pineapple', 'apple', 'pineapple']
 
-const list = ['kiwi', 'pear', 'kiwi', 'banana', 'melon', 'banana', 'melon', 'pineapple', 'apple', 'pineapple', 'cucumber','pineapple', 'cucumber', 'orange', 'grape', 'orange', 'grape', 'apple', 'grape', 'cherry', 'pear', 'cherry', 'pear', 'kiwi', 'banana', 'kiwi', 'apple', 'melon', 'banana', 'melon', 'pineapple', 'melon', 'pineapple', 'cucumber', 'orange', 'apple', 'orange', 'grape', 'orange', 'grape', 'cherry', 'pear', 'cherry', 'pear', 'apple', 'pear', 'kiwi', 'banana', 'kiwi', 'banana', 'melon', 'pineapple', 'melon', 'apple', 'cucumber', 'pineapple', 'cucumber', 'orange', 'cucumber', 'orange', 'grape', 'cherry', 'apple', 'cherry', 'pear', 'cherry', 'pear', 'kiwi', 'pear', 'kiwi', 'banana', 'apple', 'banana', 'melon', 'pineapple', 'melon','pineapple', 'cucumber', 'pineapple', 'cucumber', 'apple', 'grape', 'orange', 'grape', 'cherry', 'grape', 'cherry', 'pear', 'cherry', 'apple', 'kiwi', 'banana', 'kiwi', 'banana', 'melon', 'banana', 'melon', 'pineapple', 'apple', 'pineapple']
+// function SubtractSum(n){
+//   let results = 0
+//   let newArr = n.toString().split("")
+//   let firstNum = n.toString().split("")
+//   newArr.forEach(x => results += parseInt(x))
+//   let newN = list[n-results-1]
+//   console.log(results)
+//   if(newN !== undefined){
+//     return newN
+//   }else{
+//     let newTotal = n - results
+//     while(newN === undefined){
 
-function SubtractSum(n){
-  let results = 0
-  let newArr = n.toString().split("")
-  let firstNum = n.toString().split("")
-  newArr.forEach(x => results += parseInt(x))
-  let newN = list[n-results-1]
-  if(newN !== undefined){
-    return newN
-  }else{
-    return list[parseInt(firstNum[0]-1)]
-  }
+//     }
+//     return list[parseInt(firstNum[0]-1)]
+//   }
+// }
+
+// console.log(SubtractSum(400))
+
+
+
+// function SubtractSum(n){
+//   let results = 0
+//   let newArr = n.toString().split("")
+//   let firstNum = n.toString().split("")
+//   newArr.forEach(x => results += parseInt(x))
+//   let newN = list[n-results-1]
+//   if(newN !== undefined){
+//     return newN
+//   }else{
+//     return list[parseInt(firstNum[0]-1)]
+//   }
+// }
+
+// console.log(SubtractSum(400))
+
+//
+////
+//////
+//Count Odd Numbers below n-----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// Given a number n, return the number of positive odd numbers below n, EASY!
+
+// Examples (Input -> Output)
+// 7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+// 15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+// Expect large Inputs!
+
+function oddCount(n){
+  return Math.floor(n / 2)
 }
-
-console.log(SubtractSum(200))
