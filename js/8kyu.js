@@ -3433,52 +3433,63 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 
 
-
-
-
-
 // function duplicateCount(text){
-//   let holdLetter = ""
-//   let holdArr = []
-//   let textToArray = text.toLowerCase().split("").sort()
-//   console.log(textToArray)
-//   textToArray.forEach((letter, index) => {
-//     index++
-//     holdLetter = textToArray[index]
-//     if(letter === holdLetter){
-//       holdArr.push(letter)
+//   let strToArr = text.toLowerCase().split("")
+//   let count = 0
+//   let newArr = strToArr.filter((char, index) => {
+//     return text.indexOf(char) !== index
+//   })
+//   newArr.forEach((char,index)=> {
+//     if(index === newArr.indexOf(char)){
+//       count++
 //     }
 //   })
-//   holdArr.forEach((letter, index) => {
-//     index++
-//     holdLetter = holdArr[index]
-//     if(letter === holdLetter){
-//       holdArr.shift()
-//     }
-//   })
-//   return holdArr
+//   return count
 // }
 
-
-function duplicateCount(text){
-  let strToArr = text.toLowerCase().split("")
-  let count = 0
-  let newArr = strToArr.filter((char, index) => {
-    return text.indexOf(char) !== index
-  })
-  newArr.forEach((char,index)=> {
-    if(index === newArr.indexOf(char)){
-      count++
-    }
-  })
-  return count
-}
-
-console.log(duplicateCount('Indivisibilities'))
+// console.log(duplicateCount('Indivisibilities'))
 
 
 // other solution
 
 // function duplicateCount(text){
 //   return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+// }
+
+
+
+
+//
+////
+//////
+//Break camelCase-----------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+
+function solution(string) {
+  let newArr = string.split("")
+  newArr.forEach((char, index) => {
+    if(char === char.toUpperCase()){
+      newArr[index] = ` ${newArr[index]}`
+    }
+  })
+  return newArr.join("")
+}
+
+console.log(solution('camelCasingTest'))
+
+// OTHER SOLUTIONS
+
+// function solution(string) {
+//   return(string.replace(/([A-Z])/g, ' $1'));
+
 // }
