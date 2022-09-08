@@ -3783,18 +3783,57 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // Courtesy of projecteuler.net (Problem 1)
 
 
-function solution(number){
-  let newArr = []
-  for(i=1; i<number; i++){
-    if(i % 3 === 0 && i % 5 !== 0){
-      newArr.push(i)
-    }else if(i%5 === 0){
-      newArr.push(i)
-    }else if(i<0){
-      return 0
+// function solution(number){
+//   let newArr = []
+//   for(i=1; i<number; i++){
+//     if(i % 3 === 0 && i % 5 !== 0){
+//       newArr.push(i)
+//     }else if(i%5 === 0){
+//       newArr.push(i)
+//     }else if(i<0){
+//       return 0
+//     }
+//   } 
+//   return newArr.reduce((acc,total) => acc+total, 0)
+// }
+
+// console.log(solution(10))
+
+
+
+//
+////
+//////
+//Vowel Count----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  let count = 0
+  let vowels = ['a','e','i','o','u']
+  str.split("").forEach(item => vowels.forEach(vowel => {
+    if(item === vowel){
+      count++
     }
-  } 
-  return newArr.reduce((acc,total) => acc+total, 0)
+  }))
+  return count
 }
 
-console.log(solution(10))
+console.log(getCount('alien'))
+
+// CONCLUSION: Iterate through two arrays using forEach to compare one array to see if it contains items from reference array
+
+
+// OTHER SOLUTION
+
+// function getCount(str) {
+//   return (str.match(/[aeiou]/ig)||[]).length;
+// }
