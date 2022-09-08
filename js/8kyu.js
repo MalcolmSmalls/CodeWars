@@ -3816,18 +3816,18 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // The input string will only consist of lower case letters and/or spaces.
 
-function getCount(str) {
-  let count = 0
-  let vowels = ['a','e','i','o','u']
-  str.split("").forEach(item => vowels.forEach(vowel => {
-    if(item === vowel){
-      count++
-    }
-  }))
-  return count
-}
+// function getCount(str) {
+//   let count = 0
+//   let vowels = ['a','e','i','o','u']
+//   str.split("").forEach(item => vowels.forEach(vowel => {
+//     if(item === vowel){
+//       count++
+//     }
+//   }))
+//   return count
+// }
 
-console.log(getCount('alien'))
+// console.log(getCount('alien'))
 
 // CONCLUSION: Iterate through two arrays using forEach to compare one array to see if it contains items from reference array
 
@@ -3837,3 +3837,29 @@ console.log(getCount('alien'))
 // function getCount(str) {
 //   return (str.match(/[aeiou]/ig)||[]).length;
 // }
+
+
+
+//
+////
+//////
+//Disemvowel Trolls----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
