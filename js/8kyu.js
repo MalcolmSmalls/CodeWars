@@ -3649,19 +3649,75 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // "12345"  -->  false
 // "a234"   -->  false
 
-const validatePIN = pin => {
-  if(pin === "" || pin === null || pin === undefined){
-    return false
-  }else{
-  let isMatch = pin.match(/[0-9]/g).join("")
-  return pin.length === 4 && pin === isMatch || pin.length === 6 && pin === isMatch ? true : false
-  }
-}
+// const validatePIN = pin => {
+//   if(pin === "" || pin === null || pin === undefined){
+//     return false
+//   }else{
+//   let isMatch = pin.match(/[0-9]/g).join("")
+//   return pin.length === 4 && pin === isMatch || pin.length === 6 && pin === isMatch ? true : false
+//   }
+// }
 
-console.log(validatePIN("a234"))
+// console.log(validatePIN("a234"))
 
 // OTHER SOLUTION
 
 //function validatePIN(pin) {
 //   return /^(\d{4}|\d{6})$/.test(pin)
+// }
+
+
+//
+////
+//////
+//Build Tower-----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character.
+
+// For example, a tower with 3 floors looks like this:
+
+// [
+//   "  *  ",
+//   " *** ", 
+//   "*****"
+// ]
+// And a tower with 6 floors looks like this:
+
+// [
+//   "     *     ", 
+//   "    ***    ", 
+//   "   *****   ", 
+//   "  *******  ", 
+//   " ********* ", 
+//   "***********"
+// ]
+// Go challenge Build Tower Advanced once you have finished this :)
+
+function towerBuilder(nFloors) {
+  let space = " "
+  let spaceTimes = nFloors - 1
+  let starTimes = 1
+  let star = "*"
+  let newArr = []
+  for(i=1; i<=nFloors; i++){
+    newArr.push(`${space.repeat(spaceTimes)}${star.repeat(starTimes)}${space.repeat(spaceTimes)}`)
+    spaceTimes--
+    starTimes += 2
+  }
+  return newArr
+}
+
+console.log(towerBuilder(3))
+
+
+// OTHER SOLUTION
+
+// function towerBuilder(n) {
+//   return Array.from({length: n}, function(v, k) {
+//     const spaces = ' '.repeat(n - k - 1);
+//     return spaces + '*'.repeat(k + k + 1) + spaces;
+//   });
 // }
