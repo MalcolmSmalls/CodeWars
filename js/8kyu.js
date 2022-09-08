@@ -3475,17 +3475,17 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // ""             =>  ""
 
 
-function solution(string) {
-  let newArr = string.split("")
-  newArr.forEach((char, index) => {
-    if(char === char.toUpperCase()){
-      newArr[index] = ` ${newArr[index]}`
-    }
-  })
-  return newArr.join("")
-}
+// function solution(string) {
+//   let newArr = string.split("")
+//   newArr.forEach((char, index) => {
+//     if(char === char.toUpperCase()){
+//       newArr[index] = ` ${newArr[index]}`
+//     }
+//   })
+//   return newArr.join("")
+// }
 
-console.log(solution('camelCasingTest'))
+// console.log(solution('camelCasingTest'))
 
 // OTHER SOLUTIONS
 
@@ -3493,3 +3493,48 @@ console.log(solution('camelCasingTest'))
 //   return(string.replace(/([A-Z])/g, ' $1'));
 
 // }
+
+
+//
+////
+//////
+//Find the odd int---------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+
+// function findOdd(A) {
+//   let count = {}
+//   for (number of A) {
+//     if(count[number]){
+//       count[number] += 1
+//     }else{
+//       count[number] = 1
+//     }
+//   }
+//   for(const occurences in count){
+//     if(count[occurences]%2 !== 0){
+//       return Number(occurences)
+//     }
+//   }
+// }
+
+// console.log(findOdd([1,1,2,-2,5,2,4,4,-1,-2,5]))
+
+// OTHER SOLUTIONS
+
+// const findOdd = (xs) => xs.reduce((a, b) => a ^ b)
