@@ -3608,24 +3608,60 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // (level-2)       \/\_/
 // So here we passed one valley
 
-function countingValleys(s) {
-  let start = 0
-  let finalCount = 0
-  let toArr = s.split("")
-  for(i=0;i<toArr.length;i++){
-    if(toArr[i] === 'U'){
-      start++
+// function countingValleys(s) {
+//   let start = 0
+//   let finalCount = 0
+//   let toArr = s.split("")
+//   for(i=0;i<toArr.length;i++){
+//     if(toArr[i] === 'U'){
+//       start++
 
-    }else if(toArr[i] === 'D'){
-      start--
-    }
-    if(start === -1 && toArr[i+1] === 'U'){
-      finalCount++
-    }
+//     }else if(toArr[i] === 'D'){
+//       start--
+//     }
+//     if(start === -1 && toArr[i+1] === 'U'){
+//       finalCount++
+//     }
 
 
+// }
+// return finalCount
+// }
+
+// console.log(countingValleys('FUFFDDFDUDFUFUF'))
+
+//
+////
+//////
+//Regex validate PIN code--------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+const validatePIN = pin => {
+  if(pin === "" || pin === null || pin === undefined){
+    return false
+  }else{
+  let isMatch = pin.match(/[0-9]/g).join("")
+  return pin.length === 4 && pin === isMatch || pin.length === 6 && pin === isMatch ? true : false
+  }
 }
-return finalCount
-}
 
-console.log(countingValleys('FUFFDDFDUDFUFUF'))
+console.log(validatePIN("a234"))
+
+// OTHER SOLUTION
+
+//function validatePIN(pin) {
+//   return /^(\d{4}|\d{6})$/.test(pin)
+// }
