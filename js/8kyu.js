@@ -3696,21 +3696,21 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // ]
 // Go challenge Build Tower Advanced once you have finished this :)
 
-function towerBuilder(nFloors) {
-  let space = " "
-  let spaceTimes = nFloors - 1
-  let starTimes = 1
-  let star = "*"
-  let newArr = []
-  for(i=1; i<=nFloors; i++){
-    newArr.push(`${space.repeat(spaceTimes)}${star.repeat(starTimes)}${space.repeat(spaceTimes)}`)
-    spaceTimes--
-    starTimes += 2
-  }
-  return newArr
-}
+// function towerBuilder(nFloors) {
+//   let space = " "
+//   let spaceTimes = nFloors - 1
+//   let starTimes = 1
+//   let star = "*"
+//   let newArr = []
+//   for(i=1; i<=nFloors; i++){
+//     newArr.push(`${space.repeat(spaceTimes)}${star.repeat(starTimes)}${space.repeat(spaceTimes)}`)
+//     spaceTimes--
+//     starTimes += 2
+//   }
+//   return newArr
+// }
 
-console.log(towerBuilder(3))
+// console.log(towerBuilder(3))
 
 
 // OTHER SOLUTION
@@ -3721,3 +3721,80 @@ console.log(towerBuilder(3))
 //     return spaces + '*'.repeat(k + k + 1) + spaces;
 //   });
 // }
+
+
+
+//
+////
+//////
+//Rectangle into Squares----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// The drawing below gives an idea of how to cut a given "true" rectangle into squares ("true" rectangle meaning that the two dimensions are different).
+
+// alternative text
+
+// Can you translate this drawing into an algorithm?
+
+// You will be given two dimensions
+
+// a positive integer length
+// a positive integer width
+// You will return a collection or a string (depending on the language; Shell bash, PowerShell, Pascal and Fortran return a string) with the size of each of the squares.
+
+// Examples in general form:
+// (depending on the language)
+
+//   sqInRect(5, 3) should return [3, 2, 1, 1]
+//   sqInRect(3, 5) should return [3, 2, 1, 1]
+  
+//   You can see examples for your language in **"SAMPLE TESTS".**
+// Notes:
+// lng == wdth as a starting case would be an entirely different problem and the drawing is planned to be interpreted with lng != wdth. (See kata, Square into Squares. Protect trees! http://www.codewars.com/kata/54eb33e5bc1a25440d000891 for this problem).
+
+// When the initial parameters are so that lng == wdth, the solution [lng] would be the most obvious but not in the spirit of this kata so, in that case, return None/nil/null/Nothing or return {} with C++, Array() with Scala, [] with Perl, Raku.
+
+// In that case the returned structure of C will have its sz component equal to 0.
+
+// Return the string "nil" with Bash, PowerShell, Pascal and Fortran.
+
+
+
+
+//
+////
+//////
+//Multiples of 3 or 5----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
+
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+
+// Courtesy of projecteuler.net (Problem 1)
+
+
+function solution(number){
+  let newArr = []
+  for(i=1; i<number; i++){
+    if(i % 3 === 0 && i % 5 !== 0){
+      newArr.push(i)
+    }else if(i%5 === 0){
+      newArr.push(i)
+    }else if(i<0){
+      return 0
+    }
+  } 
+  return newArr.reduce((acc,total) => acc+total, 0)
+}
+
+console.log(solution(10))
