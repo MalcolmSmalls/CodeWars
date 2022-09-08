@@ -3860,6 +3860,44 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Note: for this kata y isn't considered a vowel.
 
-function disemvowel(str) {
-  return str.replace(/[aeiou]/gi, "");
+// function disemvowel(str) {
+//   return str.replace(/[aeiou]/gi, "");
+// }
+
+// CONCLUSION: remember /[]/gi, i is for case-insentive, g is for global (all matches)
+
+
+
+//
+////
+//////
+//Square Every Digit----------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+// Note: The function accepts an integer and returns an integer
+
+function squareDigits(num){
+  let array = num.toString().split("")
+  let squaredArray = array.map(items => {
+    return items ** 2
+  })
+  return Number(squaredArray.join(""))
 }
+
+console.log(squareDigits(1234))
+
+// OTHER SOLUTION 
+
+// function squareDigits(num){
+//   return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+  
+// }
+
+// CONCLUSION: You can attach .toString to any variable without passing it through as an argument. Use map to return a transformed array. Be sure to use "return" if using brackets {}
