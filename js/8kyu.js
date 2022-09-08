@@ -3558,14 +3558,74 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // Write a code that gives out the total amount for different days(d).
 
 
-function rentalCarCost(d) {
-  if(d > 7){
-    return d * 40 - 50
-  }else if(d > 3 && d < 7 ){
-    return d * 40 - 20
-  }else{
-    return d * 40
-  }
+// function rentalCarCost(d) {
+//   if(d >= 7){
+//     return d * 40 - 50
+//   }else if(d >= 3 && d < 7 ){
+//     return d * 40 - 20
+//   }else{
+//     return d * 40
+//   }
+// }
+
+// console.log(rentalCarCost(4))
+
+
+
+
+
+
+
+//
+////
+//////
+//Counting Valleys--------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+
+// DESCRIPTION:
+// You need count how many valleys you will pass.
+
+// Start is always from zero level.
+
+// Every time you go down below 0 level counts as an entry of a valley, and as you go up to 0 level from valley counts as an exit of a valley.
+
+// One passed valley is equal one entry and one exit of a valley.
+
+// s='FUFFDDFDUDFUFUF'
+// U=UP
+// F=FORWARD
+// D=DOWN
+// To represent string above
+
+// (level 1)  __
+// (level 0)_/  \         _(exit we are again on level 0)
+// (entry-1)     \_     _/
+// (level-2)       \/\_/
+// So here we passed one valley
+
+function countingValleys(s) {
+  let start = 0
+  let finalCount = 0
+  let toArr = s.split("")
+  for(i=0;i<toArr.length;i++){
+    if(toArr[i] === 'U'){
+      start++
+
+    }else if(toArr[i] === 'D'){
+      start--
+    }
+    if(start === -1 && toArr[i+1] === 'U'){
+      finalCount++
+    }
+
+
+}
+return finalCount
 }
 
-console.log(rentalCarCost(4))
+console.log(countingValleys('FUFFDDFDUDFUFUF'))
