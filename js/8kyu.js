@@ -3924,16 +3924,62 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // spinWords( "This is a test") => returns "This is a test" 
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
-function spinWords(string){
-  const newArr = string.split(" ").map(items => {
-    if(items.length >= 5){
-      return items.split("").reverse().join("")
-    }else{
-      return items
-    }
-    }
-  )
-  return newArr.join(" ")
+// function spinWords(string){
+//   const newArr = string.split(" ").map(items => {
+//     if(items.length >= 5){
+//       return items.split("").reverse().join("")
+//     }else{
+//       return items
+//     }
+//     }
+//   )
+//   return newArr.join(" ")
+// }
+
+// console.log(spinWords( "Hey fellow warriors" ))
+
+
+//
+////
+//////
+//Sum of Digits / Digital Root-------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Digital root is the recursive sum of all the digits in a number.
+
+// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+
+function digitalRoot(n) {
+  let sum = 0
+  let numToArray = n.toString().split("").map(item => Number(item))
+  sum = numToArray.reduce((acc, total) => acc+total, 0)
+  if(sum > 9){
+    numToArray = sum.toString().split("").map(item => Number(item))
+    sum = numToArray.reduce((acc,total) => acc+total,0)
+  }
+  if(sum > 9){
+    numToArray = sum.toString().split("").map(item => Number(item))
+    sum = numToArray.reduce((acc,total) => acc+total,0)
+  }
+  return sum
 }
 
-console.log(spinWords( "Hey fellow warriors" ))
+console.log(digitalRoot(49392982193))
+
+// OTHER SOLUTION
+
+// function digital_root(n) {
+//   return (n - 1) % 9 + 1;
+// }
+
