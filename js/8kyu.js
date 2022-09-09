@@ -4084,5 +4084,58 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Input: 123456789 Output: 987654321
 
-function descendingOrder(n){
-  return Number(n.toString().split("").sort((a,b) => b-a).join(""))}
+// function descendingOrder(n){
+//   return Number(n.toString().split("").sort((a,b) => b-a).join(""))}
+
+
+//
+////
+//////
+//Create Phone Number----------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
+
+// Don't forget the space after the closing parentheses!
+
+function createPhoneNumber(numbers){
+  let string = ""
+  for(i=0; i<numbers.length; i++)
+    if(i === 0){
+      numbers[0] = `(${numbers[0]}`
+      string += numbers[0]
+    }else if(i === 2){
+      numbers[2] =`${numbers[2]}) `
+      string += numbers[2]
+    }else if(i === 5){
+      numbers[5] = `${numbers[5]}-`
+      string += numbers[5]
+    }else{
+      string += numbers[i]
+    }
+    return string
+}
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+
+// OTHER SOLUTION
+
+// function createPhoneNumber(numbers){
+//   var format = "(xxx) xxx-xxxx";
+  
+//   for(var i = 0; i < numbers.length; i++)
+//   {
+//     format = format.replace('x', numbers[i]);
+//   }
+  
+//   return format;
+// }
