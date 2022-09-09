@@ -3883,15 +3883,15 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Note: The function accepts an integer and returns an integer
 
-function squareDigits(num){
-  let array = num.toString().split("")
-  let squaredArray = array.map(items => {
-    return items ** 2
-  })
-  return Number(squaredArray.join(""))
-}
+// function squareDigits(num){
+//   let array = num.toString().split("")
+//   let squaredArray = array.map(items => {
+//     return items ** 2
+//   })
+//   return Number(squaredArray.join(""))
+// }
 
-console.log(squareDigits(1234))
+// console.log(squareDigits(1234))
 
 // OTHER SOLUTION 
 
@@ -3901,3 +3901,39 @@ console.log(squareDigits(1234))
 // }
 
 // CONCLUSION: You can attach .toString to any variable without passing it through as an argument. Use map to return a transformed array. Be sure to use "return" if using brackets {}
+
+
+
+
+
+//
+////
+//////
+//Stop gninnipS My sdroW!--------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples:
+
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+// spinWords( "This is a test") => returns "This is a test" 
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+
+function spinWords(string){
+  const newArr = string.split(" ").map(items => {
+    if(items.length >= 5){
+      return items.split("").reverse().join("")
+    }else{
+      return items
+    }
+    }
+  )
+  return newArr.join(" ")
+}
+
+console.log(spinWords( "Hey fellow warriors" ))
