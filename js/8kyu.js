@@ -3960,22 +3960,22 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
 
-function digitalRoot(n) {
-  let sum = 0
-  let numToArray = n.toString().split("").map(item => Number(item))
-  sum = numToArray.reduce((acc, total) => acc+total, 0)
-  if(sum > 9){
-    numToArray = sum.toString().split("").map(item => Number(item))
-    sum = numToArray.reduce((acc,total) => acc+total,0)
-  }
-  if(sum > 9){
-    numToArray = sum.toString().split("").map(item => Number(item))
-    sum = numToArray.reduce((acc,total) => acc+total,0)
-  }
-  return sum
-}
+// function digitalRoot(n) {
+//   let sum = 0
+//   let numToArray = n.toString().split("").map(item => Number(item))
+//   sum = numToArray.reduce((acc, total) => acc+total, 0)
+//   if(sum > 9){
+//     numToArray = sum.toString().split("").map(item => Number(item))
+//     sum = numToArray.reduce((acc,total) => acc+total,0)
+//   }
+//   if(sum > 9){
+//     numToArray = sum.toString().split("").map(item => Number(item))
+//     sum = numToArray.reduce((acc,total) => acc+total,0)
+//   }
+//   return sum
+// }
 
-console.log(digitalRoot(49392982193))
+// console.log(digitalRoot(49392982193))
 
 // OTHER SOLUTION
 
@@ -3983,3 +3983,61 @@ console.log(digitalRoot(49392982193))
 //   return (n - 1) % 9 + 1;
 // }
 
+
+
+//
+////
+//////
+//Array.diff------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+// function arrayDiff(a, b) {
+//   let newArr = []
+//   if(a.length === 0){
+//     return a
+//   }else if(b.length === 0){
+//     return a
+//   }else{
+//   a.forEach(item => b.forEach(removeNum => {
+//     if(item !== removeNum){
+//     newArr.push(item)}
+//   }))}
+//   return newArr
+// }
+
+function arrayDiff(a, b) {
+  let newArr = []
+  if(a.length === 0){
+    return a
+  }else if(b.length === 0){
+    return a
+  }else{
+    a.filter(number => {
+      if(b.includes(number) === false){
+        newArr.push(number)
+      }
+    })
+  }  
+  return newArr
+}
+
+console.log(arrayDiff([1,2,3], [1,2]))
+
+// OTHER SOLUTIONS
+
+// function array_diff(a, b) {
+//   return a.filter(e => !b.includes(e));
+// }
