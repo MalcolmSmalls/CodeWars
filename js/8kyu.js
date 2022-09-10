@@ -4153,13 +4153,71 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this 
 
-var countBits = function(n) {
-  return n.toString(2).split("").map(item => +item).reduce((acc,total) => acc+total,0)
-};
+// var countBits = function(n) {
+//   return n.toString(2).split("").map(item => +item).reduce((acc,total) => acc+total,0)
+// };
 
-console.log(countBits(1234))
+// console.log(countBits(1234))
 
 // OTHER SOLUTIONS
 // countBits = n => n.toString(2).split('0').join('').length;
 
 //CONCLUSION: .toString(2) will give you binary representation!
+
+
+//
+////
+//////
+//Get the Middle Character------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+// DESCRIPTION:
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+// #Examples:
+
+// Kata.getMiddle("test") should return "es"
+
+// Kata.getMiddle("testing") should return "t"
+
+// Kata.getMiddle("middle") should return "dd"
+
+// Kata.getMiddle("A") should return "A"
+// #Input
+
+// A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.
+
+// #Output
+
+// The middle character(s) of the word represented as a string.
+
+
+function getMiddle(s){
+  let middleIndex = Math.round(s.length/2)-1
+  let newArr = s.split("")
+  let middle = []
+  if(s.length % 2 === 0){
+    middle.push(newArr[middleIndex])
+    middle.push(newArr[middleIndex+1])
+    return middle.join("")
+  }else{
+  return newArr[middleIndex]
+  }
+}
+
+console.log(getMiddle("A"))
+
+
+// OTHER SOLUTIONS
+
+// function getMiddle(s)
+// {
+//   return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+// }
+
+
+
