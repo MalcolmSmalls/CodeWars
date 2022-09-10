@@ -4106,25 +4106,25 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Don't forget the space after the closing parentheses!
 
-function createPhoneNumber(numbers){
-  let string = ""
-  for(i=0; i<numbers.length; i++)
-    if(i === 0){
-      numbers[0] = `(${numbers[0]}`
-      string += numbers[0]
-    }else if(i === 2){
-      numbers[2] =`${numbers[2]}) `
-      string += numbers[2]
-    }else if(i === 5){
-      numbers[5] = `${numbers[5]}-`
-      string += numbers[5]
-    }else{
-      string += numbers[i]
-    }
-    return string
-}
+// function createPhoneNumber(numbers){
+//   let string = ""
+//   for(i=0; i<numbers.length; i++)
+//     if(i === 0){
+//       numbers[0] = `(${numbers[0]}`
+//       string += numbers[0]
+//     }else if(i === 2){
+//       numbers[2] =`${numbers[2]}) `
+//       string += numbers[2]
+//     }else if(i === 5){
+//       numbers[5] = `${numbers[5]}-`
+//       string += numbers[5]
+//     }else{
+//       string += numbers[i]
+//     }
+//     return string
+// }
 
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
 
 
 // OTHER SOLUTION
@@ -4139,3 +4139,27 @@ console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
   
 //   return format;
 // }
+
+//
+////
+//////
+//Bit Counting-------------------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this 
+
+var countBits = function(n) {
+  return n.toString(2).split("").map(item => +item).reduce((acc,total) => acc+total,0)
+};
+
+console.log(countBits(1234))
+
+// OTHER SOLUTIONS
+// countBits = n => n.toString(2).split('0').join('').length;
+
+//CONCLUSION: .toString(2) will give you binary representation!
