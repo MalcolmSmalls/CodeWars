@@ -4359,28 +4359,84 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
 
-function XO(str) {
-  let newArr = str.toLowerCase().split("")
-  let count = {}
-  if(newArr === ""){
+// function XO(str) {
+//   let newArr = str.toLowerCase().split("")
+//   let count = {}
+//   if(newArr === ""){
+//     return true
+//   }else{
+//     for(char of newArr){
+//       if(count[char]){
+//         count[char] += 1
+//       }else{
+//         count[char] =1
+//       }
+//     }
+//     for(char in count){
+//       if(count['x'] !== count['o']){
+//         return false
+//       }else{
+//         return true
+//       }
+//     }
+//   }
+// }
+
+
+// console.log(XO("zpzpzpp"))
+
+// OTHER SOLUTION
+
+// function XO(str) {
+//   let x = str.match(/x/gi);
+//   let o = str.match(/o/gi);
+//   return (x && x.length) === (o && o.length);
+// }
+
+
+//
+////
+//////
+//Isograms-------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+// Example: (Input --> Output)
+
+// "Dermatoglyphics" --> true
+// "aba" --> false
+// "moOse" --> false (ignore letter case)
+
+function isIsogram(str){
+  let regex = ""
+  let results = []
+  let bool = ""
+  if(str === ""){
     return true
-  }else{
-    for(char of newArr){
-      if(count[char]){
-        count[char] += 1
-      }else{
-        count[char] =1
-      }
-    }
-    for(char in count){
-      if(count['x'] !== count['o']){
-        return false
-      }else{
-        return true
-      }
+  }
+  for(i=0;i<str.length;i++){
+    regex = `${str[i]}`
+    let re = new RegExp(regex, 'gi')
+    results = str.match(re)
+    if(results.length > 1){
+      return false
+    }else{
+      bool = true
     }
   }
+  return bool
 }
 
+console.log(isIsogram(''))
 
-console.log(XO("zpzpzpp"))
+
+// OTHER SOLUTIONS
+
+// function isIsogram(str){
+//   return new Set(str.toUpperCase()).size == str.length;
+// }
