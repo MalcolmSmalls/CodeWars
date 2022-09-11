@@ -4412,27 +4412,27 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // "aba" --> false
 // "moOse" --> false (ignore letter case)
 
-function isIsogram(str){
-  let regex = ""
-  let results = []
-  let bool = ""
-  if(str === ""){
-    return true
-  }
-  for(i=0;i<str.length;i++){
-    regex = `${str[i]}`
-    let re = new RegExp(regex, 'gi')
-    results = str.match(re)
-    if(results.length > 1){
-      return false
-    }else{
-      bool = true
-    }
-  }
-  return bool
-}
+// function isIsogram(str){
+//   let regex = ""
+//   let results = []
+//   let bool = ""
+//   if(str === ""){
+//     return true
+//   }
+//   for(i=0;i<str.length;i++){
+//     regex = `${str[i]}`
+//     let re = new RegExp(regex, 'gi')
+//     results = str.match(re)
+//     if(results.length > 1){
+//       return false
+//     }else{
+//       bool = true
+//     }
+//   }
+//   return bool
+// }
 
-console.log(isIsogram(''))
+// console.log(isIsogram(''))
 
 
 // OTHER SOLUTIONS
@@ -4440,3 +4440,25 @@ console.log(isIsogram(''))
 // function isIsogram(str){
 //   return new Set(str.toUpperCase()).size == str.length;
 // }
+
+
+//
+////
+//////
+//List Filtering-----------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+// Example
+// filter_list([1,2,'a','b']) == [1,2]
+// filter_list([1,'a','b',0,15]) == [1,0,15]
+// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+function filter_list(l) {
+  return l.filter(item => typeof(item) === 'number')
+  }
+console.log(filter_list([1,'a','b',0,15]))
