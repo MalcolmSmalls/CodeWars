@@ -4196,20 +4196,20 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // The middle character(s) of the word represented as a string.
 
 
-function getMiddle(s){
-  let middleIndex = Math.round(s.length/2)-1
-  let newArr = s.split("")
-  let middle = []
-  if(s.length % 2 === 0){
-    middle.push(newArr[middleIndex])
-    middle.push(newArr[middleIndex+1])
-    return middle.join("")
-  }else{
-  return newArr[middleIndex]
-  }
-}
+// function getMiddle(s){
+//   let middleIndex = Math.round(s.length/2)-1
+//   let newArr = s.split("")
+//   let middle = []
+//   if(s.length % 2 === 0){
+//     middle.push(newArr[middleIndex])
+//     middle.push(newArr[middleIndex+1])
+//     return middle.join("")
+//   }else{
+//   return newArr[middleIndex]
+//   }
+// }
 
-console.log(getMiddle("A"))
+// console.log(getMiddle("A"))
 
 
 // OTHER SOLUTIONS
@@ -4251,29 +4251,89 @@ console.log(getMiddle("A"))
 // 26  =>  false
 
 
-var isSquare = function(n){
-  let results
-  if(n<0){
-    return false
-  }else if(n === 0 || n === 1){
-    return true
-  }else{
-    for(i=0;i<n;i++){
-      if(i*i === n){
-        results = true
-        return results
-      }else{
-        results = false
-      }
-    }
-  }
-  return results
-}
+// var isSquare = function(n){
+//   let results
+//   if(n<0){
+//     return false
+//   }else if(n === 0 || n === 1){
+//     return true
+//   }else{
+//     for(i=0;i<n;i++){
+//       if(i*i === n){
+//         results = true
+//         return results
+//       }else{
+//         results = false
+//       }
+//     }
+//   }
+//   return results
+// }
 
-console.log(isSquare(25))
+// console.log(isSquare(25))
 
 // OTHER SOLUTIONS
 
 // function isSquare(n) {
 //   return Math.sqrt(n) % 1 === 0;
+// }
+
+
+
+
+
+//
+////
+//////
+//Duplicate Encoder---------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+// DESCRIPTION:
+// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+// Examples
+// "din"      =>  "((("
+// "recede"   =>  "()()()"
+// "Success"  =>  ")())())"
+// "(( @"     =>  "))((" 
+// Notes
+// Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
+
+// function duplicateEncode(word){
+//   let newArr = word.toLowerCase().split("")
+//   let count = {}
+//   let translatedStr = ""
+//   for(character of newArr){
+//     if (count[character]){
+//       count[character] += 1
+//     }else{
+//       count[character] = 1
+//     }
+//   }
+//   for(character of newArr){
+//     if(count[character] > 1){
+//       translatedStr += ")"
+//     }else{
+//       translatedStr += "("
+//     }
+//   }
+//   return translatedStr
+// }
+
+// console.log(duplicateEncode("Success"))
+
+//  OTHER SOLUTION
+
+// function duplicateEncode(word){
+//   return word
+//     .toLowerCase()
+//     .split('')
+//     .map( function (a, i, w) {
+//       return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+//     })
+//     .join('');
 // }
