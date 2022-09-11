@@ -4337,3 +4337,50 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 //     })
 //     .join('');
 // }
+
+
+//
+////
+//////
+//Exes and Ohs-------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// Examples input/output:
+
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+function XO(str) {
+  let newArr = str.toLowerCase().split("")
+  let count = {}
+  if(newArr === ""){
+    return true
+  }else{
+    for(char of newArr){
+      if(count[char]){
+        count[char] += 1
+      }else{
+        count[char] =1
+      }
+    }
+    for(char in count){
+      if(count['x'] !== count['o']){
+        return false
+      }else{
+        return true
+      }
+    }
+  }
+}
+
+
+console.log(XO("zpzpzpp"))
