@@ -4557,26 +4557,26 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // 4 --> 0 (because 4 is already a one-digit number)
 
 
-function persistence(num) {
-  let holderArr = num.toString().split("").map(number => +number)
-  let holder = holderArr.reduce((acc,total) => acc*total,1)
-  for(i=1;i<10;i++){
-    if(num < 10){
-    return 0
-    }else if(holder < 10){
-      return i
-    }else{
-      holderArr = holder.toString().split("").map(number=>+number)
-      holder = holderArr.reduce((acc,total) => acc*total,1)
-      if(holder < 10){
-        return i+1
-      }
-    }
-  }
+// function persistence(num) {
+//   let holderArr = num.toString().split("").map(number => +number)
+//   let holder = holderArr.reduce((acc,total) => acc*total,1)
+//   for(i=1;i<10;i++){
+//     if(num < 10){
+//     return 0
+//     }else if(holder < 10){
+//       return i
+//     }else{
+//       holderArr = holder.toString().split("").map(number=>+number)
+//       holder = holderArr.reduce((acc,total) => acc*total,1)
+//       if(holder < 10){
+//         return i+1
+//       }
+//     }
+//   }
 
-}
+// }
 
-console.log((persistence(5127140)))
+// console.log((persistence(5127140)))
 
 
 // OTHER SOLUTIONS
@@ -4592,4 +4592,54 @@ console.log((persistence(5127140)))
 //   }
   
 //   return times;
+// }
+
+
+//
+////
+//////
+//Replace With Alphabet Position---------------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Welcome.
+
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+// If anything in the text isn't a letter, ignore it and don't return it.
+
+// "a" = 1, "b" = 2, etc.
+
+// Example
+// alphabetPosition("The sunset sets at twelve o' clock.")
+// Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
+
+
+let abcs = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+function alphabetPosition(text) {
+  let str = ""
+  text.split("").forEach(char => {
+    abcs.forEach((match, index) =>{
+      if(char.toLowerCase() === match){
+        str += `${index+1} `
+      }
+    })
+  })
+  return str.trim();
+}
+
+console.log(alphabetPosition("ABCD"))
+
+
+// OTHER SOLUTIONS
+
+// function alphabetPosition(text) {
+//   return text
+//     .toUpperCase()
+//     .match(/[a-z]/gi)
+//     .map( (c) => c.charCodeAt() - 64)
+//     .join(' ');
 // }
