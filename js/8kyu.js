@@ -4617,21 +4617,21 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
 
 
-let abcs = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+// let abcs = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-function alphabetPosition(text) {
-  let str = ""
-  text.split("").forEach(char => {
-    abcs.forEach((match, index) =>{
-      if(char.toLowerCase() === match){
-        str += `${index+1} `
-      }
-    })
-  })
-  return str.trim();
-}
+// function alphabetPosition(text) {
+//   let str = ""
+//   text.split("").forEach(char => {
+//     abcs.forEach((match, index) =>{
+//       if(char.toLowerCase() === match){
+//         str += `${index+1} `
+//       }
+//     })
+//   })
+//   return str.trim();
+// }
 
-console.log(alphabetPosition("ABCD"))
+// console.log(alphabetPosition("ABCD"))
 
 
 // OTHER SOLUTIONS
@@ -4642,4 +4642,61 @@ console.log(alphabetPosition("ABCD"))
 //     .match(/[a-z]/gi)
 //     .map( (c) => c.charCodeAt() - 64)
 //     .join(' ');
+// }
+
+
+//
+////
+//////
+//Complementary DNA--------------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+
+// If you want to know more: http://en.wikipedia.org/wiki/DNA
+
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+// More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+
+// Example: (input --> output)
+
+// "ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+
+
+function DNAStrand(dna){
+  newArr = dna.split("")
+  holdingArr = []
+  newArr.forEach(char => {
+    if(char==="G"){
+      holdingArr.push("C")
+    }else if(char==="A"){
+      holdingArr.push('T')
+    }else if(char==="C"){
+      holdingArr.push("G")
+    }else{
+      holdingArr.push('A')
+    }
+  })
+  return holdingArr.join("")
+}
+
+// OTHER SOLUTION
+
+// function DNAStrand(dna) {
+//   return dna.replace(/./g, function(c) {
+//     return DNAStrand.pairs[c]
+//   })
+// }
+
+// DNAStrand.pairs = {
+//   A: 'T',
+//   T: 'A',
+//   C: 'G',
+//   G: 'C',
 // }
