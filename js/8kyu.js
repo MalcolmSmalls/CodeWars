@@ -4669,22 +4669,22 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // "GTAT" --> "CATA"
 
 
-function DNAStrand(dna){
-  newArr = dna.split("")
-  holdingArr = []
-  newArr.forEach(char => {
-    if(char==="G"){
-      holdingArr.push("C")
-    }else if(char==="A"){
-      holdingArr.push('T')
-    }else if(char==="C"){
-      holdingArr.push("G")
-    }else{
-      holdingArr.push('A')
-    }
-  })
-  return holdingArr.join("")
-}
+// function DNAStrand(dna){
+//   newArr = dna.split("")
+//   holdingArr = []
+//   newArr.forEach(char => {
+//     if(char==="G"){
+//       holdingArr.push("C")
+//     }else if(char==="A"){
+//       holdingArr.push('T')
+//     }else if(char==="C"){
+//       holdingArr.push("G")
+//     }else{
+//       holdingArr.push('A')
+//     }
+//   })
+//   return holdingArr.join("")
+// }
 
 // OTHER SOLUTION
 
@@ -4795,12 +4795,67 @@ function DNAStrand(dna){
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 
-String.prototype.toJadenCase = function () {
-  let holderArr = this.split(" ").map(item =>{
-    return item.slice(0,1).toUpperCase() + item.substring(1)}
-  )
-  return holderArr.join(" ")
-};
+// String.prototype.toJadenCase = function () {
+//   let holderArr = this.split(" ").map(item =>{
+//     return item.slice(0,1).toUpperCase() + item.substring(1)}
+//   )
+//   return holderArr.join(" ")
+// };
 
-var str = "How can mirrors be real if our eyes aren't real"
-str.toJadenCase()
+// var str = "How can mirrors be real if our eyes aren't real"
+// str.toJadenCase()
+
+
+
+//
+////
+//////
+//Check same case-----------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Write a function that will check if two given characters are the same case.
+
+// If either of the characters is not a letter, return -1
+// If both characters are the same case, return 1
+// If both characters are letters, but not the same case, return 0
+// Examples
+// 'a' and 'g' returns 1
+
+// 'A' and 'C' returns 1
+
+// 'b' and 'G' returns 0
+
+// 'B' and 'g' returns 0
+
+// '0' and '?' returns -1
+
+
+const sameCase = (a,b) => {
+  const upperCase = /([A-Z])/g
+  const lowerCase = /([a-z])/g
+  if(a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase()){
+    return -1
+  }else if(upperCase.test(a) === upperCase.test(b) || lowerCase.test(a) === lowerCase.test(b)){
+    return 1
+  }else{
+    return 0
+  }
+}
+
+console.log(sameCase('0','?'))
+
+
+// OTHER SOLUTION
+
+// function sameCase(a, b){
+//   if(a.toUpperCase() === a.toLowerCase() || b.toLowerCase() === b.toUpperCase()){
+//      return -1
+//    }else if(a === a.toLowerCase() && b === b.toLowerCase() || a === a.toUpperCase() && b === b.toUpperCase()){
+//        return 1
+//    }else{
+//      return 0
+//    }
+//  }
