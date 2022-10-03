@@ -5062,10 +5062,27 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // name + " does not play banjo"
 // Names given are always valid strings.
 
-function areYouPlayingBanjo(name) {
-  if(name.charAt(0).toLowerCase() === 'r'){
-    return `${name} plays banjo`
-  }else{
-    return `${name} does not play banjo`
-  }
-}
+// function areYouPlayingBanjo(name) {
+//   if(name.charAt(0).toLowerCase() === 'r'){
+//     return `${name} plays banjo`
+//   }else{
+//     return `${name} does not play banjo`
+//   }
+// }
+
+
+//
+////
+//////
+//Function 1 - hello world-------------------------------------------------------------------------------
+//////
+////
+//
+
+// Description:
+// Make a simple function called greet that returns the most-famous "hello world!".
+
+// Style Points
+// Sure, this is about as easy as it gets. But how clever can you be to create the most creative hello world you can think of? What is a "hello world" solution you would want to show your friends?
+
+const greet = () => 'hello world!'
