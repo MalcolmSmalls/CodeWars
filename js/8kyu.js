@@ -5085,4 +5085,25 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // Style Points
 // Sure, this is about as easy as it gets. But how clever can you be to create the most creative hello world you can think of? What is a "hello world" solution you would want to show your friends?
 
-const greet = () => 'hello world!'
+// const greet = () => 'hello world!'
+
+
+//
+////
+//////
+//Calculate average------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Write a function which calculates the average of the numbers in a given list.
+
+// Note: Empty arrays should return 0.
+
+function findAverage(array) {
+  return array.reduce((prev, curr) => prev+curr,0) / array.length
+}
+
+console.log(findAverage([1,1,1]))
