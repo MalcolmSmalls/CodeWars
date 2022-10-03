@@ -5102,8 +5102,38 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Note: Empty arrays should return 0.
 
-function findAverage(array) {
-  return array.reduce((prev, curr) => prev+curr,0) / array.length
+// function findAverage(array) {
+//   if(array.length === 0){
+//     return 0
+//   }else{
+//   return array.reduce((prev, curr) => prev+curr,0) / array.length
+//   }
+// }
+
+// console.log(findAverage([1,1,1]))
+
+
+//
+////
+//////
+//Array plus array-----------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// I'm new to coding and now I want to get the sum of two arrays... Actually the sum of all their elements. I'll appreciate for your help.
+
+// P.S. Each array includes only integer numbers. Output is a number too.
+
+function arrayPlusArray(arr1, arr2) {
+  let newArr = [arr1, arr2]
+  return newArr.flatMap(item => item).reduce((prev, curr) => prev+curr,0)
 }
 
-console.log(findAverage([1,1,1]))
+
+// OTHER SOLUTION 
+
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+//   }
