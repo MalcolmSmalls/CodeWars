@@ -4833,19 +4833,19 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // '0' and '?' returns -1
 
 
-const sameCase = (a,b) => {
-  const upperCase = /([A-Z])/g
-  const lowerCase = /([a-z])/g
-  if(a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase()){
-    return -1
-  }else if(upperCase.test(a) === upperCase.test(b) || lowerCase.test(a) === lowerCase.test(b)){
-    return 1
-  }else{
-    return 0
-  }
-}
+// const sameCase = (a,b) => {
+//   const upperCase = /([A-Z])/g
+//   const lowerCase = /([a-z])/g
+//   if(a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase()){
+//     return -1
+//   }else if(upperCase.test(a) === upperCase.test(b) || lowerCase.test(a) === lowerCase.test(b)){
+//     return 1
+//   }else{
+//     return 0
+//   }
+// }
 
-console.log(sameCase('0','?'))
+// console.log(sameCase('0','?'))
 
 
 // OTHER SOLUTION
@@ -4859,3 +4859,114 @@ console.log(sameCase('0','?'))
 //      return 0
 //    }
 //  }
+
+//
+////
+//////
+//Closest elevator-----------------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write a function elevator accepting 3 arguments (in order):
+
+// left - The current floor of the left elevator
+// right - The current floor of the right elevator
+// call - The floor that called an elevator
+// It should return the name of the elevator closest to the called floor ("left"/"right").
+
+// In the case where both elevators are equally distant from the called floor, choose the elevator to the right.
+
+// You can assume that the inputs will always be valid integers between 0-2.
+
+// Examples:
+
+// elevator(0, 1, 0); // => "left"
+// elevator(0, 1, 1); // => "right"
+// elevator(0, 1, 2); // => "right"
+// elevator(0, 0, 0); // => "right"
+// elevator(0, 2, 1); // => "right"
+
+
+// function elevator(left, right, call){
+//   return left === call && left !== right || left - call > right - call? "left": "right"
+// }
+
+
+// function elevator(left, right, call){
+//   let rightRes = right-call
+//   let leftRes = left-call
+//   if(rightRes === leftRes || rightRes > leftRes && leftRess !== call){
+//     return "right"
+//   }else{
+//     return "left"
+//   }
+// }
+
+
+//
+////
+//////
+//Sum of differences in array---------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+// Example
+// [2, 1, 10]  -->  9
+// In descending order: [10, 2, 1]
+
+// Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+// If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell, None in Rust).
+
+// function sumOfDifferences(arr) {
+//   arr.sort((a,b) => b-a)
+//   return arr.reduce((pre, curr) => -pre+curr, 0)
+// }
+
+
+
+
+
+//
+////
+//////
+//DNA to RNA Conversion-------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+
+// Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+
+// Create a function which translates a given DNA string into RNA.
+
+// For example:
+
+// "GCAT"  =>  "GCAU"
+// The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
+
+function DNAtoRNA(dna) {
+  let newArr = dna.split('')
+  let switchedArr = newArr.map(item => {
+    if(item==='T'){
+      item='U'
+      return item
+    }else{
+      return item
+    }
+  })
+  return switchedArr.join('')
+
+}
+
+console.log(DNAtoRNA('GCAT'))
