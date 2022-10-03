@@ -5024,19 +5024,48 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
 // Note: In COBOL, it should return "found the needle at position 6"
 
-function findNeedle(haystack) {
-  let res = 0
-  haystack.forEach((item,index)=> {
-    if(item==='needle'){
-      res = index
-    }})
-    return `found the needle at position ${res}`
-}
+// function findNeedle(haystack) {
+//   let res = 0
+//   haystack.forEach((item,index)=> {
+//     if(item==='needle'){
+//       res = index
+//     }})
+//     return `found the needle at position ${res}`
+// }
 
-console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
 
 // OTHER SOLUTIONS:
 
 // function findNeedle(haystack) {
 //   return "found the needle at position " + haystack.indexOf("needle");
 // }
+
+
+
+//
+////
+//////
+//Are You Playing Banjo?-----------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+function areYouPlayingBanjo(name) {
+  if(name.charAt(0).toLowerCase() === 'r'){
+    return `${name} plays banjo`
+  }else{
+    return `${name} does not play banjo`
+  }
+}
