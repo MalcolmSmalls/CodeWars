@@ -5293,10 +5293,19 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // name equals owner	'Hello boss'
 // otherwise	'Hello guest'
 
-function greet (name, owner) {
-  if(name === owner){
-    return 'Hello boss'
-  }else{
-    return 'Hello guest'
-  }
-}
+// function greet (name, owner) {
+//   if(name === owner){
+//     return 'Hello boss'
+//   }else{
+//     return 'Hello guest'
+//   }
+// }
+
+
+//
+////
+//////
+//Area or Perimeter--------------------------------------------------------------------------
+//////
+////
+//
