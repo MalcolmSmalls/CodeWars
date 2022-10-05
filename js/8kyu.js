@@ -5309,3 +5309,84 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 //////
 ////
 //
+
+
+// DESCRIPTION:
+// You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+// Example(Input1, Input2 --> Output):
+
+// 6, 10 --> 32
+// 3, 3 --> 9
+// Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+
+// const areaOrPerimeter = function(l , w) {
+//   return l === w ? l * w : (2*l)+(2*w)
+// };
+
+
+
+//
+////
+//////
+//Find the first non-consecutive number----------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// Your task is to find the first element of an array that is not consecutive.
+
+// By not consecutive we mean not exactly 1 larger than the previous element of the array.
+
+// E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
+
+// If the whole array is consecutive then return null2.
+
+// The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
+
+// If you like this Kata, maybe try this one next: https://www.codewars.com/kata/represent-array-of-numbers-as-ranges
+
+// 1 Can you write a solution that will return null2 for both [] and [ x ] though? (This is an empty array and one with a single number and is not tested for, but you can write your own example test. )
+
+// 2
+// Swift, Ruby and Crystal: nil
+// Haskell: Nothing
+// Python, Rust, Scala: None
+// Julia: nothing
+// Nim: none(int) (See options)
+
+function firstNonConsecutive (arr) {
+  let copyArr = []
+  let number
+  for(i=arr[0]; i <= arr[arr.length-1]; i++){
+    copyArr.push(i)
+  }
+  copyArr = arr.concat(copyArr).sort((a,b) => a-b)
+  copyArr.forEach((item, index) => {
+    if(item !== copyArr[index-1] && item !== copyArr[index+1]){
+      number = copyArr[index+1]
+    }
+  })
+  if(number === undefined){
+    return null
+  }else{
+    return number
+  }
+}
+
+console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
+
+
+// OTHER SOLUTIONS
+
+// function firstNonConsecutive(arr) {
+//   for (let i = 0; i < arr.length - 1; ++i) {
+//     if (arr[i] + 1 !== arr[i + 1]) {
+//       return arr[i + 1]
+//     }
+//   }
+//   return null
+// }
