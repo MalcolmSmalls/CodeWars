@@ -5358,26 +5358,26 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // Julia: nothing
 // Nim: none(int) (See options)
 
-function firstNonConsecutive (arr) {
-  let copyArr = []
-  let number
-  for(i=arr[0]; i <= arr[arr.length-1]; i++){
-    copyArr.push(i)
-  }
-  copyArr = arr.concat(copyArr).sort((a,b) => a-b)
-  copyArr.forEach((item, index) => {
-    if(item !== copyArr[index-1] && item !== copyArr[index+1]){
-      number = copyArr[index+1]
-    }
-  })
-  if(number === undefined){
-    return null
-  }else{
-    return number
-  }
-}
+// function firstNonConsecutive (arr) {
+//   let copyArr = []
+//   let number
+//   for(i=arr[0]; i <= arr[arr.length-1]; i++){
+//     copyArr.push(i)
+//   }
+//   copyArr = arr.concat(copyArr).sort((a,b) => a-b)
+//   copyArr.forEach((item, index) => {
+//     if(item !== copyArr[index-1] && item !== copyArr[index+1]){
+//       number = copyArr[index+1]
+//     }
+//   })
+//   if(number === undefined){
+//     return null
+//   }else{
+//     return number
+//   }
+// }
 
-console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
+// console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
 
 
 // OTHER SOLUTIONS
@@ -5390,3 +5390,23 @@ console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
 //   }
 //   return null
 // }
+
+
+//
+////
+//////
+//Thinkful - Logic Drills: Traffic light--------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+// Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
+// For example, when the input is green, output should be yellow.
+
+function updateLight(current) {
+  return current === "green" ? "yellow" : current === "yellow" ? "red" :  "green"
+}
