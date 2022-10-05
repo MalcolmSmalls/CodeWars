@@ -5262,12 +5262,41 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 
-function feast(beast, dish) {
-  if(beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1)){
-    return true
+// function feast(beast, dish) {
+//   if(beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1)){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// console.log(feast("great blue heron", "garlic naan"))
+
+
+
+//
+////
+//////
+//Grasshopper - Personalized Message--------------------------------------------------------------------------
+//////
+////
+//
+
+
+
+// DESCRIPTION:
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+// Use conditionals to return the proper message:
+
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+
+function greet (name, owner) {
+  if(name === owner){
+    return 'Hello boss'
   }else{
-    return false
+    return 'Hello guest'
   }
 }
-
-console.log(feast("great blue heron", "garlic naan"))
