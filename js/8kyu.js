@@ -5626,3 +5626,23 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // If either input is an empty string, consider it as zero.
 
 // Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
+
+// function sumStr(a,b) {
+//   return `${+a + +b}`
+// }
+
+
+
+//
+////
+//////
+//Is it a palindrome?-----------------------------------------------------------------------------------
+//////
+////
+//
+
+function isPalindrome(x) {
+  return x.toLowerCase() === x.toLowerCase().split('').reverse().join('') ? true : false
+}
+
+console.log(isPalindrome('Bob'))
