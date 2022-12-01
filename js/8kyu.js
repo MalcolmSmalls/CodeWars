@@ -5540,8 +5540,33 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
-function getAge(inputString){
-  return Number(inputString[0])
+// function getAge(inputString){
+//   return Number(inputString[0])
+// }
+
+//   console.log(getAge("4 years old"))
+
+
+//
+////
+//////
+//Difference of Volumes of Cuboids-----------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+// Your function will be tested with pre-made examples as well as random ones.
+
+// If you can, try writing it in one line of code
+
+
+function findDifference(a, b) {
+  return a.reduce((acc, curr) => acc * curr, 1) - b.reduce((acc,curr) => acc * curr, 1)
 }
 
-  console.log(getAge("4 years old"))
+console.log(findDifference([3, 2, 5], [1, 4, 4]))
