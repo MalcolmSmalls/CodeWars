@@ -5509,17 +5509,39 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // ball1.ballType     //=> "regular"
 // ball2.ballType     //=> "super"
 
-class Ball {
-  constructor (ballType) {
-    this.ballType = ballType ? ballType : "regular"
-  }
-};
+// class Ball {
+//   constructor (ballType) {
+//     this.ballType = ballType ? ballType : "regular"
+//   }
+// };
 
-let ball1 = new Ball('super')
-console.log(ball1.ballType)
+// let ball1 = new Ball('super')
+// console.log(ball1.ballType)
 
-//other solutions
+// //other solutions
 
 // var Ball = function(ballType) {
 //   this.ballType = ballType || 'regular';
 // };
+
+
+
+//
+////
+//////
+//Parse nice int from char problem-----------------------------------------------------------------
+//////
+////
+//
+
+// You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+// Write a program that returns the girl's age (0-9) as an integer.
+
+// Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+function getAge(inputString){
+  return Number(inputString[0])
+}
+
+  console.log(getAge("4 years old"))
