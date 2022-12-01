@@ -5595,10 +5595,34 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
 
 
-function gooseFilter (birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  return birds.filter(bird => !geese.includes(bird))
-};
+// function gooseFilter (birds) {
+//   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//   return birds.filter(bird => !geese.includes(bird))
+// };
 
 
-console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+
+
+//
+////
+//////
+//Sum The Strings------------------------------------------------------------------------------------
+//////
+////
+//
+
+// Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+
+// Example: (Input1, Input2 -->Output)
+
+// "4",  "5" --> "9"
+// "34", "5" --> "39"
+// "", "" --> "0"
+// "2", "" --> "2"
+// "-5", "3" --> "-2"
+// Notes:
+
+// If either input is an empty string, consider it as zero.
+
+// Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
