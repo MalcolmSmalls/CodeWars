@@ -5641,8 +5641,33 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 ////
 //
 
-function isPalindrome(x) {
-  return x.toLowerCase() === x.toLowerCase().split('').reverse().join('') ? true : false
-}
+// DESCRIPTION:
+// Write a function that checks if a given string (case insensitive) is a palindrome.
 
-console.log(isPalindrome('Bob'))
+// function isPalindrome(x) {
+//   return x.toLowerCase() === x.toLowerCase().split('').reverse().join('') ? true : false
+// }
+
+// console.log(isPalindrome('Bob'))
+
+//
+////
+//////
+// Third Angle of a Triangle ----------------------------------------------------------------------------------
+//////
+////
+//
+
+// DESCRIPTION:
+// You are given two interior angles (in degrees) of a triangle.
+
+// Write a function to return the 3rd.
+
+// Note: only positive integers will be tested.
+
+// https://en.wikipedia.org/wiki/Triangle
+
+
+function otherAngle(a, b) {
+  return 180 - a - b
+}
