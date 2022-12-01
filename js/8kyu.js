@@ -5434,19 +5434,53 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell, None in Rust).
 
 
-function sumOfDifferences(arr) {
-  let sortedArr = arr.sort((a,b) => b-a )
-  let differences = []
-  sortedArr.forEach((number,index) => {
-    let num = number - sortedArr[index+1]
-    if (isNaN(num) === false){
-      differences.push(num)    
-  }})
-  return differences.reduce((curr, prev) => curr + prev, 0)
-}
+// function sumOfDifferences(arr) {
+//   let sortedArr = arr.sort((a,b) => b-a )
+//   let differences = []
+//   sortedArr.forEach((number,index) => {
+//     let num = number - sortedArr[index+1]
+//     if (isNaN(num) === false){
+//       differences.push(num)    
+//   }})
+//   return differences.reduce((curr, prev) => curr + prev, 0)
+// }
 
 // function sumOfDifferences(arr) {
 //   return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
 // }
 
-console.log(sumOfDifferences([2,1,10]))
+// console.log(sumOfDifferences([2,1,10]))
+
+
+
+
+
+//
+////
+//////
+//Enumerable Magic #4 - True for None?------------------------------------------------------------------
+//////
+////
+//
+
+
+// Create a method none? (JS none) that accepts an array and a block (JS: a function), and returns true if the block (/function) returns true for none of the items in the array. An empty list should return true.
+
+function none(arr, fun){
+  const newArr = arr.map ( item => {
+    if(fun(item) === true){
+      return true
+    }else{
+      return false
+    }
+  }          
+  )
+  const resArr = newArr.filter(item => item === true )
+  if(resArr.length > 0){
+    return false
+  } else {
+    return true
+  }
+}
+
+console.log(none([1,2,3,4,5],function(item){ return item > 4 }))
