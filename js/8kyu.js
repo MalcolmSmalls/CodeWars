@@ -5556,7 +5556,7 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 //
 
 // DESCRIPTION:
-// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger. Assure that it is ALWAYS a positive number.
 
 // For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
 
@@ -5565,8 +5565,40 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // If you can, try writing it in one line of code
 
 
-function findDifference(a, b) {
-  return a.reduce((acc, curr) => acc * curr, 1) - b.reduce((acc,curr) => acc * curr, 1)
-}
+// function findDifference(a, b) {
+//   return a.reduce((acc, curr) => acc * curr, 1) - b.reduce((acc,curr) => acc * curr, 1)
+// }
 
-console.log(findDifference([3, 2, 5], [1, 4, 4]))
+// console.log(findDifference([3, 2, 5], [1, 4, 4]))
+
+
+
+//
+////
+//////
+//Filter out the geese------------------------------------------------------------------------------------
+//////
+////
+//
+
+// Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+
+// The geese are any strings in the following array, which is pre-populated in your solution:
+
+//   ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+// For example, if this array were passed as an argument:
+
+//  ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+// Your function would return the following array:
+
+// ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+// The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
+
+
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(bird => !geese.includes(bird))
+};
+
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
