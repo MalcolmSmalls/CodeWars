@@ -5466,21 +5466,60 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Create a method none? (JS none) that accepts an array and a block (JS: a function), and returns true if the block (/function) returns true for none of the items in the array. An empty list should return true.
 
-function none(arr, fun){
-  const newArr = arr.map ( item => {
-    if(fun(item) === true){
-      return true
-    }else{
-      return false
-    }
-  }          
-  )
-  const resArr = newArr.filter(item => item === true )
-  if(resArr.length > 0){
-    return false
-  } else {
-    return true
-  }
-}
+// function none(arr, fun){
+//   const newArr = arr.map ( item => {
+//     if(fun(item) === true){
+//       return true
+//     }else{
+//       return false
+//     }
+//   }          
+//   )
+//   const resArr = newArr.filter(item => item === true )
+//   if(resArr.length > 0){
+//     return false
+//   } else {
+//     return true
+//   }
+// }
 
-console.log(none([1,2,3,4,5],function(item){ return item > 4 }))
+// console.log(none([1,2,3,4,5],function(item){ return item > 4 }))
+
+
+
+
+//
+////
+//////
+//Regular Ball Super Ball------------------------------------------------------------------
+//////
+////
+//
+
+
+
+
+// Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+
+// If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+// ball1 = new Ball();
+// ball2 = new Ball("super");
+
+// ball1.ballType     //=> "regular"
+// ball2.ballType     //=> "super"
+
+class Ball {
+  constructor (ballType) {
+    this.ballType = ballType ? ballType : "regular"
+  }
+};
+
+let ball1 = new Ball('super')
+console.log(ball1.ballType)
+
+//other solutions
+
+// var Ball = function(ballType) {
+//   this.ballType = ballType || 'regular';
+// };
