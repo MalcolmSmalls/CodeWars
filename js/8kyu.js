@@ -5668,6 +5668,30 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 // https://en.wikipedia.org/wiki/Triangle
 
 
-function otherAngle(a, b) {
-  return 180 - a - b
+// function otherAngle(a, b) {
+//   return 180 - a - b
+// }
+
+
+
+//
+////
+//////
+// Switch it Up! ----------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// When provided with a number between 0-9, return it in words.
+
+// Input :: 1
+
+// Output :: "One".
+
+// If your language supports it, try using a switch statement.
+
+function switchItUp(number){
+  const arr = ['Zero','One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
+  return arr[number]  
 }
