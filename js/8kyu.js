@@ -5782,7 +5782,7 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 ////
 //
 
-DESCRIPTION:
+// DESCRIPTION:
 // Your start-up's BA has told marketing that your website has a large audience in Scandinavia and surrounding countries. Marketing thinks it would be great to welcome visitors to the site in their own language. Luckily you already use an API that detects the user's location, so this is an easy win.
 
 // The Task
@@ -5813,28 +5813,80 @@ DESCRIPTION:
 // IP_ADDRESS_REQUIRED - no ip address was supplied
 
 
-function greet(language = 'english') {
-	const lang = {
-    english: 'Welcome',
-    czech: 'Vitejte',
-    danish: 'Velkomst',
-    dutch: 'Welkom',
-    estonian: 'Tere tulemast',
-    finnish: 'Tervetuloa',
-    flemish: 'Welgekomen',
-    french: 'Bienvenue',
-    german: 'Willkommen',
-    irish: 'Failte',
-    italian: 'Benvenuto',
-    latvian: 'Gaidits',
-    lithuanian: 'Laukiamas',
-    polish: 'Witamy',
-    spanish: 'Bienvenido',
-    swedish: 'Valkommen',
-    welsh: 'Croeso'
-  }
-  return lang[language]
-}
+// function greet(language = 'english') {
+// 	const lang = {
+//     english: 'Welcome',
+//     czech: 'Vitejte',
+//     danish: 'Velkomst',
+//     dutch: 'Welkom',
+//     estonian: 'Tere tulemast',
+//     finnish: 'Tervetuloa',
+//     flemish: 'Welgekomen',
+//     french: 'Bienvenue',
+//     german: 'Willkommen',
+//     irish: 'Failte',
+//     italian: 'Benvenuto',
+//     latvian: 'Gaidits',
+//     lithuanian: 'Laukiamas',
+//     polish: 'Witamy',
+//     spanish: 'Bienvenido',
+//     swedish: 'Valkommen',
+//     welsh: 'Croeso'
+//   }
+//   return lang[language]
+// }
 
-console.log(greet())
-console.log(greet('finnish'))
+
+
+
+// function greet(language) {
+// 	const lang = {
+//     english: 'Welcome',
+//     czech: 'Vitejte',
+//     danish: 'Velkomst',
+//     dutch: 'Welkom',
+//     estonian: 'Tere tulemast',
+//     finnish: 'Tervetuloa',
+//     flemish: 'Welgekomen',
+//     french: 'Bienvenue',
+//     german: 'Willkommen',
+//     irish: 'Failte',
+//     italian: 'Benvenuto',
+//     latvian: 'Gaidits',
+//     lithuanian: 'Laukiamas',
+//     polish: 'Witamy',
+//     spanish: 'Bienvenido',
+//     swedish: 'Valkommen',
+//     welsh: 'Croeso'
+//   }
+//   return lang[language] ? lang[language] : lang['english']
+// }
+// console.log(greet())
+// console.log(greet('finnish'))
+
+
+//
+////
+//////
+//Pre-FizzBuzz Workout #1-------------------------------------------------------------------------------------
+//////
+////
+//
+
+
+// DESCRIPTION:
+// This is the first step to understanding FizzBuzz.
+
+// Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
+
+// Your expected output is an array of positive integers from 1 to n (inclusive).
+
+// Your job is to write an algorithm that gets you from the input to the output.
+
+function preFizz(n) {
+  let newArr = []
+  for(let i = 1; i <= n; i++){
+    newArr.push(i)
+  }
+  return newArr
+}
