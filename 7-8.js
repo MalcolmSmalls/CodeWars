@@ -87,9 +87,28 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 // Removing Elements
 
-function removeEveryOther(arr){
-    return arr.filter((item, index) => index % 2 === 0)
-}
+// function removeEveryOther(arr){
+//     return arr.filter((item, index) => index % 2 === 0)
+// }
 
 
-  console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
+
+
+
+
+// All Star Code Challenge #18
+
+
+// function strCount(str, letter){
+//     let count = 0  
+//     str.split('').forEach(item => item === letter ? count++ : null)
+//     return count
+// }
+
+// console.log(strCount("Hello", "l"))
+
+// function strCount(str, letter){  
+//     return str.split(letter).length-1
+//   }
+
