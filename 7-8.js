@@ -35,13 +35,51 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 */
 
-function mango(quantity, price) {
-    return price * (quantity - Math.floor(quantity / 3))
+// function mango(quantity, price) {
+//     return price * (quantity - Math.floor(quantity / 3))
+// }
+
+
+// console.log(mango(2, 3)) 
+// console.log(mango(3, 3))
+// console.log(mango(5, 3))
+// console.log(mango(9, 5))
+
+
+
+
+// Sum of odd numbers
+
+// function rowSumOddNumbers(n) {
+//     let total = 0
+// 	for(let i = n * 2 + 1; i < n; i = i + 2){
+//         if(i === 1){
+//             total = n * 2 + 1
+
+//         }
+//         total = total + 2
+//     }
+//     return total
+// }
+
+// console.log(rowSumOddNumbers(3))
+
+
+
+// Vowel remover
+
+function shortcut (string) {
+    const vowels = ['a','e','i','o','u']
+    let newArr = string.split('').map(item => {
+        if(vowels.includes(item) === false){
+            return item
+        }
+    })
+    return newArr.join("")
 }
 
+  console.log(shortcut('HELLO'))
 
-console.log(mango(2, 3)) 
-console.log(mango(3, 3))
-console.log(mango(5, 3))
-console.log(mango(9, 5))
-
+//   function shortcut(string){
+//     return string.replace(/[aeiou]/g,'')
+//   }
