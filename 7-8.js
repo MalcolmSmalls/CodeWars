@@ -68,18 +68,28 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 // Vowel remover
 
-function shortcut (string) {
-    const vowels = ['a','e','i','o','u']
-    let newArr = string.split('').map(item => {
-        if(vowels.includes(item) === false){
-            return item
-        }
-    })
-    return newArr.join("")
-}
+// function shortcut (string) {
+//     const vowels = ['a','e','i','o','u']
+//     let newArr = string.split('').map(item => {
+//         if(vowels.includes(item) === false){
+//             return item
+//         }
+//     })
+//     return newArr.join("")
+// }
 
-  console.log(shortcut('HELLO'))
+//   console.log(shortcut('HELLO'))
 
 //   function shortcut(string){
 //     return string.replace(/[aeiou]/g,'')
 //   }
+
+
+// Removing Elements
+
+function removeEveryOther(arr){
+    return arr.filter((item, index) => index % 2 === 0)
+}
+
+
+  console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
