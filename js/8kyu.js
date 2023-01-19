@@ -5883,10 +5883,10 @@ const bonusTime = (salary, bonus) => bonus === true ? `\u00A3`+salary * 10 : `\u
 
 // Your job is to write an algorithm that gets you from the input to the output.
 
-function preFizz(n) {
-  let newArr = []
-  for(let i = 1; i <= n; i++){
-    newArr.push(i)
-  }
-  return newArr
-}
+// function preFizz(n) {
+//   let newArr = []
+//   for(let i = 1; i <= n; i++){
+//     newArr.push(i)
+//   }
+//   return newArr
+// }
