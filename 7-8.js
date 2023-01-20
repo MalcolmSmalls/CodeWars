@@ -186,19 +186,29 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     return newArray;
 //   }
 
+// Stringy Strings
+
+// function stringy(size) {
+//     let newStr = ""
+//     for(let i = 0; i < size; i++){
+//         if(i % 2 === 0){
+//             newStr += 1
+//         }else{
+//             newStr += 0
+//         }
+//     } 
+//     return newStr
+//   }
 
 
-function stringy(size) {
-    let newStr = ""
-    for(let i = 0; i < size; i++){
-        if(i % 2 === 0){
-            newStr += 1
-        }else{
-            newStr += 0
-        }
-    } 
-    return newStr
+//   console.log(stringy(6))
+
+// Grasshopper - If/else syntax debug
+
+function checkAlive (health) {
+    if ( health <= 0) {
+      return false
+    } else {
+      return true
+    }
   }
-
-
-  console.log(stringy(6))
