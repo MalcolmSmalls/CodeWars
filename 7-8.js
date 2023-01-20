@@ -134,15 +134,30 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 // To square(root) or not to square(root)
 
-function squareOrSquareRoot(array) {
-    const newArr = array.map(item => {
-        if(Number.isInteger(Math.sqrt(item))){
-            return Math.sqrt(item)
-        }else{
-            return item**2
-        }
-    })
-    return newArr;  
-  }
+// function squareOrSquareRoot(array) {
+//     const newArr = array.map(item => {
+//         if(Number.isInteger(Math.sqrt(item))){
+//             return Math.sqrt(item)
+//         }else{
+//             return item**2
+//         }
+//     })
+//     return newArr;  
+//   }
 
-console.log(squareOrSquareRoot([4,3,9,7,2,1]))
+// console.log(squareOrSquareRoot([4,3,9,7,2,1]))
+
+
+//Student's Final Grade
+
+// function finalGrade (exam, projects) {
+//     if(exam > 90 || projects > 10){
+//       return 100
+//     }else if(exam > 75 && projects >= 5){
+//       return 90
+//     }else if(exam > 50 && projects >= 2){
+//       return 75
+//     }else{
+//       return 0
+//     }
+//   }
