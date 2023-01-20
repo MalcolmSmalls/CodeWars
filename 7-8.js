@@ -115,19 +115,34 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 // Cat years, Dog years
 
-var humanYearsCatYearsDogYears = function(humanYears) {
-    let catYears = 0
-    let dogYears = 0
-    for(let i = 1; i <= humanYears; i++){
-        if(i === 1){
-            dogYears += 15, catYears += 15
-        }else if(i === 2){
-            dogYears += 9, catYears += 9
+// var humanYearsCatYearsDogYears = function(humanYears) {
+//     let catYears = 0
+//     let dogYears = 0
+//     for(let i = 1; i <= humanYears; i++){
+//         if(i === 1){
+//             dogYears += 15, catYears += 15
+//         }else if(i === 2){
+//             dogYears += 9, catYears += 9
+//         }else{
+//             catYears += 4, dogYears += 5
+//         }
+//     }
+//     return [humanYears, catYears, dogYears];
+//   }
+
+//   console.log(humanYearsCatYearsDogYears(10))
+
+// To square(root) or not to square(root)
+
+function squareOrSquareRoot(array) {
+    const newArr = array.map(item => {
+        if(Number.isInteger(Math.sqrt(item))){
+            return Math.sqrt(item)
         }else{
-            catYears += 4, dogYears += 5
+            return item**2
         }
-    }
-    return [humanYears, catYears, dogYears];
+    })
+    return newArr;  
   }
 
-  console.log(humanYearsCatYearsDogYears(10))
+console.log(squareOrSquareRoot([4,3,9,7,2,1]))
