@@ -161,3 +161,14 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //       return 0
 //     }
 //   }
+
+
+// Is it even?
+
+// function testEven(n) {
+//     if(n % 2 === 0){
+//       return true
+//     }else{
+//       return false
+//     }
+// }
