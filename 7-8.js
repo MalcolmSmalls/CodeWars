@@ -112,3 +112,22 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     return str.split(letter).length-1
 //   }
 
+
+// Cat years, Dog years
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+    let catYears = 0
+    let dogYears = 0
+    for(let i = 1; i <= humanYears; i++){
+        if(i === 1){
+            dogYears += 15, catYears += 15
+        }else if(i === 2){
+            dogYears += 9, catYears += 9
+        }else{
+            catYears += 4, dogYears += 5
+        }
+    }
+    return [humanYears, catYears, dogYears];
+  }
+
+  console.log(humanYearsCatYearsDogYears(10))
