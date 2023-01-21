@@ -6,19 +6,12 @@
 
 */
 
-
 // function trim(str, size){
 //     const arr = str.split('')
-//     return arr.length <= size ? str : arr.length <= 3 ? arr.slice(0, size).join('') + '...' : arr.slice(0, size-3).join('') + '...'   
+//     return arr.length <= size ? str : arr.length <= 3 ? arr.slice(0, size).join('') + '...' : arr.slice(0, size-3).join('') + '...'
 // }
 
 // console.log(trim("Creating kata is fun", 14))
-
-
-
-
-
-
 
 // Price of Mangoes
 
@@ -39,14 +32,10 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     return price * (quantity - Math.floor(quantity / 3))
 // }
 
-
-// console.log(mango(2, 3)) 
+// console.log(mango(2, 3))
 // console.log(mango(3, 3))
 // console.log(mango(5, 3))
 // console.log(mango(9, 5))
-
-
-
 
 // Sum of odd numbers
 
@@ -63,8 +52,6 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 // }
 
 // console.log(rowSumOddNumbers(3))
-
-
 
 // Vowel remover
 
@@ -84,34 +71,27 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     return string.replace(/[aeiou]/g,'')
 //   }
 
-
 // Removing Elements
 
 // function removeEveryOther(arr){
 //     return arr.filter((item, index) => index % 2 === 0)
 // }
 
-
 // console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
-
-
-
 
 // All Star Code Challenge #18
 
-
 // function strCount(str, letter){
-//     let count = 0  
+//     let count = 0
 //     str.split('').forEach(item => item === letter ? count++ : null)
 //     return count
 // }
 
 // console.log(strCount("Hello", "l"))
 
-// function strCount(str, letter){  
+// function strCount(str, letter){
 //     return str.split(letter).length-1
 //   }
-
 
 // Cat years, Dog years
 
@@ -142,11 +122,10 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //             return item**2
 //         }
 //     })
-//     return newArr;  
+//     return newArr;
 //   }
 
 // console.log(squareOrSquareRoot([4,3,9,7,2,1]))
-
 
 //Student's Final Grade
 
@@ -162,7 +141,6 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     }
 //   }
 
-
 // Is it even?
 
 // function testEven(n) {
@@ -173,16 +151,15 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     }
 // }
 
-
 // Unfinished Loop - Bug Fixing #1
 
 // function createArray(number){
 //     var newArray = [];
-    
+
 //     for(var counter = 1; counter <= number; counter++){
 //       newArray.push(counter);
 //     }
-    
+
 //     return newArray;
 //   }
 
@@ -196,10 +173,9 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //         }else{
 //             newStr += 0
 //         }
-//     } 
+//     }
 //     return newStr
 //   }
-
 
 //   console.log(stringy(6))
 
@@ -213,3 +189,12 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 //     }
 //   }
 
+// What's the real floor?
+// function getRealFloor(n) {
+//     return n > 13 ? n-2 : n <= 0 ? n : n-1
+// }
+
+// Super Duper Easy
+function problem(x) {
+  return typeof x === 'number' ? x * 50 + 6 : 'Error'
+}
