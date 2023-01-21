@@ -195,6 +195,44 @@ mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 // }
 
 // Super Duper Easy
-function problem(x) {
-  return typeof x === 'number' ? x * 50 + 6 : 'Error'
+// function problem(x) {
+//   return typeof x === 'number' ? x * 50 + 6 : 'Error'
+// }
+
+/* Lario and Muigi Pipe Problem
+
+Take an array, get the lowest number and the highest number. Then return an array that takes the lower number and inputs a number for each 1+ increment until it reaches the highest interval, so it counts up to it with no duplicates.
+
+
+Initalize a lowestNum variable with arr[0] that will be used to compare with the others to determine the lowest number.
+Initalize a highestNum variable with arr[0] to compare for the highest number
+Loop through array
+  // If num[i] is less than lowestNum, lowestNum = num[i]
+  // If num[i] is more than highestNum, highestNum = num[i]
+Create newArr = []
+Iterate from lowestNum to highestNum
+ // push each i to newArr
+return newArr
+
+*/
+
+function pipeFix(numbers) {
+  let lowestNum = numbers[0]
+  let highestNum = numbers[0]
+  numbers.forEach((number) => {
+    if (number < lowestNum) {
+      lowestNum = number
+    }
+
+    if (number > highestNum) {
+      highestNum = number
+    }
+  })
+  const newArr = []
+  for (let i = lowestNum; i <= highestNum; i++) {
+    newArr.push(i)
+  }
+  return newArr
 }
+
+console.log(pipeFix([-1, 4]))
