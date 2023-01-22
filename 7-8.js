@@ -270,42 +270,41 @@ return newarr
 
 // console.log(generateRange(2, 10, 2))
 
-/* Beginner Series #3 Sum of Numbers
+/* Two to one
 
+Write a function that takes in two strings. Return a sorted combination of these two strings, only using unique letters from the two. 
 
+create obj1 = {}
+create obj2 = {}
+create obj3 = {}
+create a for in loop that looks at each letter of str1 and adds to object only if there isn't an instance of it already
+do the same for str2
 
-Create a function that takes in two numbers and then adds all the numbers in between them and returns that.
+create a for of loop to compare obj1 and obj2 and only add one instance to obj3
+create array from obj and sort a-z
 
-compare a < b and if true, make that minVal and b maxVal else vice-versa
-create total with a value of 0
-iterate from min value to max value by 1
-inside iteration add i to total
-
-return total
-
+return array joined by ''
 */
-// function getSum(a, b) {
-//   let minVal
-//   let maxVal
-//   let total = 0
-//   if (a <= b) {
-//     minVal = a
-//     maxVal = b
-//   } else {
-//     minVal = b
-//     maxVal = a
-//   }
-//   for (let i = minVal; i <= maxVal; i++) {
-//     total += i
-//   }
-//   return total
-// }
 
-// console.log(getSum(1, 1))
+function longest(s1, s2) {
+  const obj1 = {}
+  const arr = []
+  for (let letter of s1) {
+    obj1[letter] = 1
+  }
+  for (let letter of s2) {
+    obj1[letter] = 1
+  }
+  for (let key in obj1) {
+    arr.push(key)
+  }
+  return arr.sort().join('')
+}
 
-// MORE EFFICIENT, O(1) RATHER THAN O(n)
-// const GetSum = (a, b) => {
-//   let min = Math.min(a, b),
-//     max = Math.max(a, b)
-//   return ((max - min + 1) * (min + max)) / 2
-// }
+console.log(longest('aretheyhere', 'yestheyarehere'))
+
+// OTHER SOLUTIONS, LESS CODE, more READABLE?
+
+// const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+// REMEMBER Set returns an array with only one occurence.
