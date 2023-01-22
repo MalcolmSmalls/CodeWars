@@ -245,6 +245,27 @@ return num1 - num2
 if num2 > num1 return 0
 */
 
-function combat(health, damage) {
-  return damage > health ? 0 : health - damage
+// function combat(health, damage) {
+//   return damage > health ? 0 : health - damage
+// }
+
+/* Generate range of integers
+
+Write a function that takes three arguments. Min, max, step. Return an array that starts with the min, takes however many steps incrementally up to max. May not have a max depending on step?
+
+create newarray = []
+iterate starting on min and ending til less than or equal to max 
+increase by step
+push to array
+return newarr
+*/
+
+function generateRange(min, max, step) {
+  let newArr = []
+  for (let i = min; i <= max; i = i + step) {
+    newArr.push(i)
+  }
+  return newArr
 }
+
+console.log(generateRange(2, 10, 2))
