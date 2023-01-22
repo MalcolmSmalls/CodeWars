@@ -216,23 +216,35 @@ return newArr
 
 */
 
-function pipeFix(numbers) {
-  let lowestNum = numbers[0]
-  let highestNum = numbers[0]
-  numbers.forEach((number) => {
-    if (number < lowestNum) {
-      lowestNum = number
-    }
+// function pipeFix(numbers) {
+//   let lowestNum = numbers[0]
+//   let highestNum = numbers[0]
+//   numbers.forEach((number) => {
+//     if (number < lowestNum) {
+//       lowestNum = number
+//     }
 
-    if (number > highestNum) {
-      highestNum = number
-    }
-  })
-  const newArr = []
-  for (let i = lowestNum; i <= highestNum; i++) {
-    newArr.push(i)
-  }
-  return newArr
+//     if (number > highestNum) {
+//       highestNum = number
+//     }
+//   })
+//   const newArr = []
+//   for (let i = lowestNum; i <= highestNum; i++) {
+//     newArr.push(i)
+//   }
+//   return newArr
+// }
+
+// console.log(pipeFix([-1, 4]))
+
+/* Grasshopper - Terminal game combat function
+
+Write a function that takes in two numbers. Subtract num1 - num2 and return the results. If num2 > num1 return 0.
+
+return num1 - num2
+if num2 > num1 return 0
+*/
+
+function combat(health, damage) {
+  return damage > health ? 0 : health - damage
 }
-
-console.log(pipeFix([-1, 4]))
