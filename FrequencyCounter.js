@@ -45,11 +45,11 @@ function anagram(str1, str2) {
     if (!(key in freqCounter2)) {
       return false
     }
-    if (freqCounter2[key] !== freqCounter2[key]) {
+    if (freqCounter2[key] !== freqCounter1[key]) {
       return false
     }
   }
   return true
 }
 
-console.log(anagram('gainly', 'laying'))
+console.log(anagram('aaz', 'zza'))
