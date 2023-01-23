@@ -286,25 +286,54 @@ create array from obj and sort a-z
 return array joined by ''
 */
 
-function longest(s1, s2) {
-  const obj1 = {}
-  const arr = []
-  for (let letter of s1) {
-    obj1[letter] = 1
-  }
-  for (let letter of s2) {
-    obj1[letter] = 1
-  }
-  for (let key in obj1) {
-    arr.push(key)
-  }
-  return arr.sort().join('')
-}
+// function longest(s1, s2) {
+//   const obj1 = {}
+//   const arr = []
+//   for (let letter of s1) {
+//     obj1[letter] = 1
+//   }
+//   for (let letter of s2) {
+//     obj1[letter] = 1
+//   }
+//   for (let key in obj1) {
+//     arr.push(key)
+//   }
+//   return arr.sort().join('')
+// }
 
-console.log(longest('aretheyhere', 'yestheyarehere'))
+// console.log(longest('aretheyhere', 'yestheyarehere'))
 
 // OTHER SOLUTIONS, LESS CODE, more READABLE?
 
 // const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 
 // REMEMBER Set returns an array with only one occurence.
+
+/* 
+Take a Ten Minutes Walk
+- Take N-S W-E make sure they balance eachother and equal to 10. So you can do 5 e 5 w or 2 n 2 s 3 w 3 e return true if balanced and false if not.
+
+Create an object 
+iterate through array and count up each instance of direction
+if e-w and s-n are even and sum up to 10 return true else, false
+
+*/
+
+function isValidWalk(walk) {
+  if (walk.length !== 10) {
+    return false
+  }
+  let obj = {}
+  for (let i = 0; i < walk.length; i++) {
+    let direction = walk[i]
+    obj[direction] ? (obj[direction] += 1) : (obj[direction] = 1)
+  }
+
+  if (obj['n'] === obj['s'] && obj['e'] === obj['w']) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
