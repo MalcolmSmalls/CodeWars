@@ -340,27 +340,27 @@ if e-w and s-n are even and sum up to 10 return true else, false
 
 // Your order, please
 
-function order(words) {
-  let newArr = words.split(' ')
-  let numArr = []
-  let finishedArr = []
-  for (let letter of words) {
-    if (letter !== ' ' && !isNaN(Number(letter))) {
-      numArr.push(letter)
-    }
-  }
+// function order(words) {
+//   let newArr = words.split(' ')
+//   let numArr = []
+//   let finishedArr = []
+//   for (let letter of words) {
+//     if (letter !== ' ' && !isNaN(Number(letter))) {
+//       numArr.push(letter)
+//     }
+//   }
 
-  let left = 0
-  let right = 0
-  while (left < newArr.length) {
-    right = numArr[left] - 1
-    finishedArr[right] = newArr[left]
-    left++
-  }
-  return finishedArr.join(' ')
-}
+//   let left = 0
+//   let right = 0
+//   while (left < newArr.length) {
+//     right = numArr[left] - 1
+//     finishedArr[right] = newArr[left]
+//     left++
+//   }
+//   return finishedArr.join(' ')
+// }
 
-console.log(orders('is2 Thi1s T4est 3a'))
+// console.log(order('is2 Thi1s T4est 3a'))
 
 /* 
 function order(words){
@@ -369,5 +369,61 @@ function order(words){
       return a.match(/\d/) - b.match(/\d/);
    }).join(' ');
 }    
+
+*/
+
+/* 
+
+Convert string to camel case
+
+
+Take a string and make it one word camel case, no spaces or dashes and if the first word is capitalized, keep it capitalized or not if it isn't while capitalizing everything else, camelCase
+
+create a regex that includes a-zA-Z and maybe 1-9 not sure if there are gonna be integer inputs
+
+do a for of loop and if it gets to a character thats not in the regex add it to a new variable
+
+split by this variable into a newArr
+
+create an arr and map with item and index return an item[0] to upperCase if index > 0 
+
+then return join("")
+*/
+
+function toCamelCase(str) {
+  const regEx = /[A-Za-z1-9]/
+  let delimiter = ''
+  let arr = []
+  for (let letter of str) {
+    if (!regEx.test(letter)) {
+      arr.push(' ')
+    } else {
+      arr.push(letter)
+    }
+  }
+  let newArr = arr
+    .join('')
+    .split(' ')
+    .map((item, index) => {
+      if (index !== 0) {
+        return item[0].toUpperCase() + item.substring(1)
+      } else {
+        return item
+      }
+    })
+  return newArr.join('')
+}
+
+console.log(toCamelCase('the_stealth_warrior'))
+
+/* 
+
+function toCamelCase(str){
+      var regExp=/[-_]\w/ig;
+      return str.replace(regExp,function(match){
+            return match.charAt(1).toUpperCase();
+       });
+}
+
 
 */
