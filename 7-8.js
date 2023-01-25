@@ -319,21 +319,55 @@ if e-w and s-n are even and sum up to 10 return true else, false
 
 */
 
-function isValidWalk(walk) {
-  if (walk.length !== 10) {
-    return false
-  }
-  let obj = {}
-  for (let i = 0; i < walk.length; i++) {
-    let direction = walk[i]
-    obj[direction] ? (obj[direction] += 1) : (obj[direction] = 1)
+// function isValidWalk(walk) {
+//   if (walk.length !== 10) {
+//     return false
+//   }
+//   let obj = {}
+//   for (let i = 0; i < walk.length; i++) {
+//     let direction = walk[i]
+//     obj[direction] ? (obj[direction] += 1) : (obj[direction] = 1)
+//   }
+
+//   if (obj['n'] === obj['s'] && obj['e'] === obj['w']) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
+
+// Your order, please
+
+function order(words) {
+  let newArr = words.split(' ')
+  let numArr = []
+  let finishedArr = []
+  for (let letter of words) {
+    if (letter !== ' ' && !isNaN(Number(letter))) {
+      numArr.push(letter)
+    }
   }
 
-  if (obj['n'] === obj['s'] && obj['e'] === obj['w']) {
-    return true
-  } else {
-    return false
+  let left = 0
+  let right = 0
+  while (left < newArr.length) {
+    right = numArr[left] - 1
+    finishedArr[right] = newArr[left]
+    left++
   }
+  return finishedArr.join(' ')
 }
 
-console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
+console.log(orders('is2 Thi1s T4est 3a'))
+
+/* 
+function order(words){
+  
+  return words.split(' ').sort(function(a, b){
+      return a.match(/\d/) - b.match(/\d/);
+   }).join(' ');
+}    
+
+*/
