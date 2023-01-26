@@ -456,3 +456,29 @@ function friend(friends){
 }
 
 */
+
+/* 
+Does my number look big in this?
+
+
+you'll be given a number and you'll have to separate each number and ** each digit by however many digits are in the given number. Then you'll add all of them together and if they === the number given, return true or else false.
+
+create a variable called total = 0
+do a for of loop on the number that total += each number ** num.length 
+then write an if that if total === num return true else false.
+
+*/
+
+function narcissistic(value) {
+  let total = 0
+  for (number of value.toString()) {
+    total += Number(number) ** value.toString().length
+  }
+  if (total === value) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(narcissistic(7))
