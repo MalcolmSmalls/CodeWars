@@ -527,14 +527,14 @@ else return 1
 
 */
 
-function findNextSquare(sq) {
-  let num = Math.sqrt(sq)
-  if (num === Math.round(num)) {
-    num++
-    return num * num
-  } else {
-    return -1
-  }
-}
+// function findNextSquare(sq) {
+//   let num = Math.sqrt(sq)
+//   if (num === Math.round(num)) {
+//     num++
+//     return num * num
+//   } else {
+//     return -1
+//   }
+// }
 
-console.log(findNextSquare(121))
+// console.log(findNextSquare(121))
