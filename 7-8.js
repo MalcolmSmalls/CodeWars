@@ -438,17 +438,17 @@ return a map of array that returns only if the name.length is === 4.
 
 */
 
-function friend(friends) {
-  let newArr = []
-  friends.forEach((item) => {
-    if (item.length === 4) {
-      newArr.push(item)
-    }
-  })
-  return newArr
-}
+// function friend(friends) {
+//   let newArr = []
+//   friends.forEach((item) => {
+//     if (item.length === 4) {
+//       newArr.push(item)
+//     }
+//   })
+//   return newArr
+// }
 
-console.log(friend(['Ryan', 'Kieran', 'Mark']))
+// console.log(friend(['Ryan', 'Kieran', 'Mark']))
 
 /* 
 function friend(friends){
@@ -469,16 +469,46 @@ then write an if that if total === num return true else false.
 
 */
 
-function narcissistic(value) {
-  let total = 0
-  for (number of value.toString()) {
-    total += Number(number) ** value.toString().length
-  }
-  if (total === value) {
-    return true
-  } else {
-    return false
-  }
+// function narcissistic(value) {
+//   let total = 0
+//   for (number of value.toString()) {
+//     total += Number(number) ** value.toString().length
+//   }
+//   if (total === value) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(narcissistic(7))
+
+/* 
+Categorize New Member
+
+you'll be given a list of arrays, go through them and if the first number of the array is >= 55 and the second is > 7 return Senior in new array, else open.
+
+
+return data.map if item[0] >= 55 && item[1] > 7 return 'Senior' 
+else return 'Open'
+
+*/
+
+function openOrSenior(data) {
+  return data.map((item) => {
+    if (item[0] >= 55 && item[1] > 7) {
+      return 'Senior'
+    } else {
+      return 'Open'
+    }
+  })
 }
 
-console.log(narcissistic(7))
+console.log(
+  openOrSenior([
+    [45, 12],
+    [55, 21],
+    [19, -2],
+    [104, 20],
+  ])
+)
