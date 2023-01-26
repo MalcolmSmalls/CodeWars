@@ -494,21 +494,47 @@ else return 'Open'
 
 */
 
-function openOrSenior(data) {
-  return data.map((item) => {
-    if (item[0] >= 55 && item[1] > 7) {
-      return 'Senior'
-    } else {
-      return 'Open'
-    }
-  })
+// function openOrSenior(data) {
+//   return data.map((item) => {
+//     if (item[0] >= 55 && item[1] > 7) {
+//       return 'Senior'
+//     } else {
+//       return 'Open'
+//     }
+//   })
+// }
+
+// console.log(
+//   openOrSenior([
+//     [45, 12],
+//     [55, 21],
+//     [19, -2],
+//     [104, 20],
+//   ])
+// )
+
+/* 
+
+Find the next perfect square!
+
+Get the square root of a number, go one above and do that number power that number
+
+let variable = squareRoot of num
+if variable == Math.round(variable)
+variable ++ 
+return variable ** variable
+else return 1
+
+*/
+
+function findNextSquare(sq) {
+  let num = Math.sqrt(sq)
+  if (num === Math.round(num)) {
+    num++
+    return num * num
+  } else {
+    return -1
+  }
 }
 
-console.log(
-  openOrSenior([
-    [45, 12],
-    [55, 21],
-    [19, -2],
-    [104, 20],
-  ])
-)
+console.log(findNextSquare(121))
