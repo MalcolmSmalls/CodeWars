@@ -390,31 +390,31 @@ create an arr and map with item and index return an item[0] to upperCase if inde
 then return join("")
 */
 
-function toCamelCase(str) {
-  const regEx = /[A-Za-z1-9]/
-  let delimiter = ''
-  let arr = []
-  for (let letter of str) {
-    if (!regEx.test(letter)) {
-      arr.push(' ')
-    } else {
-      arr.push(letter)
-    }
-  }
-  let newArr = arr
-    .join('')
-    .split(' ')
-    .map((item, index) => {
-      if (index !== 0) {
-        return item[0].toUpperCase() + item.substring(1)
-      } else {
-        return item
-      }
-    })
-  return newArr.join('')
-}
+// function toCamelCase(str) {
+//   const regEx = /[A-Za-z1-9]/
+//   let delimiter = ''
+//   let arr = []
+//   for (let letter of str) {
+//     if (!regEx.test(letter)) {
+//       arr.push(' ')
+//     } else {
+//       arr.push(letter)
+//     }
+//   }
+//   let newArr = arr
+//     .join('')
+//     .split(' ')
+//     .map((item, index) => {
+//       if (index !== 0) {
+//         return item[0].toUpperCase() + item.substring(1)
+//       } else {
+//         return item
+//       }
+//     })
+//   return newArr.join('')
+// }
 
-console.log(toCamelCase('the_stealth_warrior'))
+// console.log(toCamelCase('the_stealth_warrior'))
 
 /* 
 
@@ -425,5 +425,34 @@ function toCamelCase(str){
        });
 }
 
+
+*/
+
+/* 
+Friend or Foe?
+
+
+you'll be given an array of names your job is to return an array with only the names that have four letters.
+
+return a map of array that returns only if the name.length is === 4.
+
+*/
+
+function friend(friends) {
+  let newArr = []
+  friends.forEach((item) => {
+    if (item.length === 4) {
+      newArr.push(item)
+    }
+  })
+  return newArr
+}
+
+console.log(friend(['Ryan', 'Kieran', 'Mark']))
+
+/* 
+function friend(friends){
+  return friends.filter(n => n.length === 4)
+}
 
 */
