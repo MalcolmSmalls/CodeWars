@@ -90,12 +90,40 @@ function collectOddValues(arr) {
 
 // console.log(recursiveRange(10))
 
-function fib(num) {
-  if (num <= 1) {
-    return num
-  } else {
-    return fib(num - 1) + fib(num - 2)
+// function fib(num) {
+//   if (num <= 1) {
+//     return num
+//   } else {
+//     return fib(num - 1) + fib(num - 2)
+//   }
+// }
+
+// console.log(fib(10))
+
+/*
+
+reverse
+Write a recursive function called reverse which accepts a string and returns a new string in reverse.
+
+*/
+
+function reverse(string) {
+  let result = []
+
+  function helper(helperInput) {
+    if (helperInput.length === 0) {
+      return
+    }
+    result.unshift(helperInput[0])
+    helper(helperInput.slice(1))
   }
+  helper(string)
+  return result.join('')
 }
 
-console.log(fib(10))
+console.log(reverse('awesome'))
+
+// function reverse(str){
+// 	if(str.length <= 1) return str;
+// 	return reverse(str.slice(1)) + str[0];
+// }
