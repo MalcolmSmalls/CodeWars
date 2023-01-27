@@ -68,21 +68,49 @@ function countUniqueValues(arr) {
 }
 */
 
-function averagePair(arr, num) {
-  if (arr.length === 0) return false
+/* 
+
+Multiple Pointers - averagePair
+Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target.
+
+*/
+
+// function averagePair(arr, num) {
+//   if (arr.length === 0) return false
+//   let left = 0
+//   let right = arr.length - 1
+//   while (left < right) {
+//     let avg = arr[left] + arr[right] / 2
+//     if (avg === num) {
+//       return true
+//     } else if (avg > num) {
+//       right--
+//     } else {
+//       left++
+//     }
+//   }
+//   return false
+// }
+
+// console.log(averagePair([1, 2, 3], 2.5))
+
+function isSubsequence(str1, str2) {
   let left = 0
-  let right = arr.length - 1
-  while (left < right) {
-    let avg = arr[left] + arr[right] / 2
-    if (avg === num) {
-      return true
-    } else if (avg > num) {
-      right--
+  let right = 0
+  let newArr = []
+  while (right < str2.length) {
+    if (str1[left] !== str2[right]) {
+      right++
     } else {
+      newArr.push(str2[right])
       left++
     }
   }
-  return false
+  if (newArr.join('') === str1) {
+    return true
+  } else {
+    return false
+  }
 }
 
-console.log(averagePair([1, 2, 3], 2.5))
+console.log(isSubsequence('sing', 'sting'))
