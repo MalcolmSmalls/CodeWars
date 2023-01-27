@@ -81,11 +81,21 @@ function collectOddValues(arr) {
 
 // console.log(productOfArray([1, 2, 3, 10]))
 
-function recursiveRange(num) {
-  if (num === 0) {
+// function recursiveRange(num) {
+//   if (num === 0) {
+//     return num
+//   }
+//   return num + recursiveRange(num - 1)
+// }
+
+// console.log(recursiveRange(10))
+
+function fib(num) {
+  if (num <= 1) {
     return num
+  } else {
+    return fib(num - 1) + fib(num - 2)
   }
-  return num + recursiveRange(num - 1)
 }
 
-console.log(recursiveRange(10))
+console.log(fib(10))
