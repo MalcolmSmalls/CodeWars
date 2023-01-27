@@ -107,23 +107,58 @@ Write a recursive function called reverse which accepts a string and returns a n
 
 */
 
-function reverse(string) {
-  let result = []
+// function reverse(string) {
+//   let result = []
 
-  function helper(helperInput) {
-    if (helperInput.length === 0) {
-      return
-    }
-    result.unshift(helperInput[0])
-    helper(helperInput.slice(1))
+//   function helper(helperInput) {
+//     if (helperInput.length === 0) {
+//       return
+//     }
+//     result.unshift(helperInput[0])
+//     helper(helperInput.slice(1))
+//   }
+//   helper(string)
+//   return result.join('')
+// }
+
+// console.log(reverse('awesome'))
+/*
+
+UDEMY SOLUTION: 
+
+function reverse(string) {
+  if (string.length <= 1) {
+    return string
   }
-  helper(string)
-  return result.join('')
+  return reverse(string.slice(1)) + string[0]
 }
 
-console.log(reverse('awesome'))
 
-// function reverse(str){
-// 	if(str.length <= 1) return str;
-// 	return reverse(str.slice(1)) + str[0];
-// }
+*/
+
+/* 
+
+isPalindrome
+Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome (reads the same forward and backward). Otherwise it returns false.
+
+*/
+
+function isPalindrome(str) {
+  let newStr = []
+  function helper(input) {
+    if (input.length <= 0) {
+      return
+    }
+    newStr.unshift(input[0])
+    return helper(input.slice(1))
+  }
+
+  helper(str)
+  if (str === newStr.join('')) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isPalindrome('tacocat'))
