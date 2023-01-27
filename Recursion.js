@@ -54,11 +54,20 @@ function collectOddValues(arr) {
   return newArr
 }
 
-function power(base, exponent) {
-  if (exponent === 0) {
+// function power(base, exponent) {
+//   if (exponent === 0) {
+//     return 1
+//   }
+//   return base * power(base, exponent - 1)
+// }
+
+// console.log(power(2, 4))
+
+function factorial(num) {
+  if (num === 0) {
     return 1
   }
-  return base * power(base, exponent - 1)
+  return num * factorial(num - 1)
 }
 
-console.log(power(2, 4))
+console.log(factorial(4))
