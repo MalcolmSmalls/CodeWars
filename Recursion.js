@@ -186,16 +186,38 @@ Write a recursive function called someRecursive which accepts an array and a cal
 
 */
 
-const isOdd = (val) => val % 2 !== 0
+// const isOdd = (val) => val % 2 !== 0
 
-function someRecursive(arr, callback) {
-  if (arr.length === 0) {
-    return false
+// function someRecursive(arr, callback) {
+//   if (arr.length === 0) {
+//     return false
+//   }
+//   if (callback(arr[0])) {
+//     return true
+//   }
+//   return someRecursive(arr.slice(1), callback)
+// }
+
+// console.log(someRecursive([4, 6, 8], isOdd))
+
+/* 
+
+flatten
+Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+
+
+*/
+
+function flatten(arr) {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (!Array.isArray(arr[i])) {
+      newArr.push(arr[i])
+    } else {
+      newArr = newArr.concat(flatten(arr[i]))
+    }
   }
-  if (callback(arr[0])) {
-    return true
-  }
-  return someRecursive(arr.slice(1), callback)
+  return newArr
 }
 
-console.log(someRecursive([4, 6, 8], isOdd))
+console.log(flatten([1, [2, [3, 4], [[5]]]]))
