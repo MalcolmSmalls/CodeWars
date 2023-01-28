@@ -295,14 +295,89 @@ Write a recursive function called capitalizeWords. Given an array of words, retu
 
 */
 
-function capitalizeWords(arr) {
+// function capitalizeWords(arr) {
+//   let newArr = []
+//   if (arr.length === 0) {
+//     return newArr
+//   }
+//   newArr.push(arr[0].toUpperCase())
+//   newArr = newArr.concat(capitalizeWords(arr.splice(1)))
+//   return newArr
+// }
+
+// console.log(capitalizeWords(['i', 'am', 'learning', 'recursion']))
+
+/* 
+
+stringifyNumbers
+Write a function called stringifyNumbers which takes in an object and finds all of the values which are numbers and converts them to strings. Recursion would be a great way to solve this!
+
+*/
+
+// function stringifyNumbers(obj) {
+//   let newObj = {}
+//   for (let key in obj) {
+//     if (typeof obj[key] === 'number') {
+//       newObj[key] = `${obj[key]}`
+//     } else if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+//       newObj[key] = stringifyNumbers(obj[key])
+//     } else {
+//       newObj[key] = obj[key]
+//     }
+//   }
+//   return newObj
+// }
+
+// let obj = {
+//   num: 1,
+//   test: [],
+//   data: {
+//     val: 4,
+//     info: {
+//       isRight: true,
+//       random: 66,
+//     },
+//   },
+// }
+
+// console.log(stringifyNumbers(obj))
+
+/* 
+
+collectStrings
+Write a function called collectStrings which accepts an object and returns an array of all the values in the object that have a typeof string
+
+*/
+
+function collectStrings(arr) {
   let newArr = []
-  if (arr.length === 0) {
-    return newArr
+  function traverseObj(obj) {
+    for (let key in obj) {
+      if (typeof obj[key] === 'string') {
+        newArr.push(obj[key])
+      } else {
+        return traverseObj(obj[key])
+      }
+    }
   }
-  newArr.push(arr[0].toUpperCase())
-  newArr = newArr.concat(capitalizeWords(arr.splice(1)))
+  traverseObj(arr)
   return newArr
 }
 
-console.log(capitalizeWords(['i', 'am', 'learning', 'recursion']))
+const obj = {
+  stuff: 'foo',
+  data: {
+    val: {
+      thing: {
+        info: 'bar',
+        moreInfo: {
+          evenMoreInfo: {
+            weMadeIt: 'baz',
+          },
+        },
+      },
+    },
+  },
+}
+
+console.log(collectStrings(obj))
