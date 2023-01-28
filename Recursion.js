@@ -230,18 +230,79 @@ Write a recursive function called capitalizeFirst. Given an array of strings, ca
 
 */
 
-function capitalizeFirst(arr) {
+// function capitalizeFirst(arr) {
+//   let newArr = []
+//   if (arr.length === 0) {
+//     return newArr
+//   }
+//   newArr.push(arr[0][0].toUpperCase() + arr[0].substring(1))
+//   newArr = newArr.concat(capitalizeFirst(arr.slice(1)))
+//   return newArr
+// }
+
+// console.log(capitalizeFirst(['car', 'taco', 'banana']))
+
+/* 
+
+nestedEvenSum
+Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain nested objects.
+
+*/
+
+// function nestedEvenSum(obj) {
+//   let total = 0
+
+//   function traverse(travObj) {
+//     for (let key in travObj) {
+//       if (travObj[key] % 2 === 0) {
+//         total += travObj[key]
+//       } else if (typeof travObj[key] === 'object') {
+//         total += nestedEvenSum(travObj[key])
+//       }
+//     }
+//   }
+//   traverse(obj)
+//   return total
+// }
+
+// var obj1 = {
+//   outer: 2,
+//   obj: {
+//     inner: 2,
+//     otherObj: {
+//       superInner: 2,
+//       notANumber: true,
+//       alsoNotANumber: 'yup',
+//     },
+//   },
+// }
+
+// var obj2 = {
+//   a: 2,
+//   b: { b: 2, bb: { b: 3, bb: { b: 2 } } },
+//   c: { c: { c: 2 }, cc: 'ball', ccc: 5 },
+//   d: 1,
+//   e: { e: { e: 2 }, ee: 'car' },
+// }
+
+// console.log(nestedEvenSum(obj1))
+// console.log(nestedEvenSum(obj2))
+
+/* 
+
+capitalizeWords
+Write a recursive function called capitalizeWords. Given an array of words, return a new array containing each word capitalized.
+
+*/
+
+function capitalizeWords(arr) {
   let newArr = []
   if (arr.length === 0) {
     return newArr
   }
-  newArr.push(arr[0][0].toUpperCase() + arr[0].substring(1))
-  newArr = newArr.concat(capitalizeFirst(arr.slice(1)))
+  newArr.push(arr[0].toUpperCase())
+  newArr = newArr.concat(capitalizeWords(arr.splice(1)))
   return newArr
 }
 
-console.log(capitalizeFirst(['car', 'taco', 'banana']))
-
-// const newArr = ['car', 'taco']
-
-// console.log(newArr[0][0])
+console.log(capitalizeWords(['i', 'am', 'learning', 'recursion']))
