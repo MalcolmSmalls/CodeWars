@@ -143,22 +143,59 @@ Write a recursive function called isPalindrome which returns true if the string 
 
 */
 
-function isPalindrome(str) {
-  let newStr = []
-  function helper(input) {
-    if (input.length <= 0) {
-      return
-    }
-    newStr.unshift(input[0])
-    return helper(input.slice(1))
-  }
+// function isPalindrome(str) {
+//   let newStr = []
+//   function helper(input) {
+//     if (input.length <= 0) {
+//       return
+//     }
+//     newStr.unshift(input[0])
+//     return helper(input.slice(1))
+//   }
 
-  helper(str)
-  if (str === newStr.join('')) {
-    return true
-  } else {
-    return false
-  }
+//   helper(str)
+//   if (str === newStr.join('')) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(isPalindrome('tacocat'))
+
+/* 
+
+Udemy Solution: 
+
+isPalindrome Solution
+
+function isPalindrome(str){
+    if(str.length === 1) return true;
+    if(str.length === 2) return str[0] === str[1];
+    if(str[0] === str.slice(-1)) return isPalindrome(str.slice(1,-1))
+    return false;
 }
 
-console.log(isPalindrome('tacocat'))
+*/
+
+/* 
+
+someRecursive
+Write a recursive function called someRecursive which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false.
+
+
+*/
+
+const isOdd = (val) => val % 2 !== 0
+
+function someRecursive(arr, callback) {
+  if (arr.length === 0) {
+    return false
+  }
+  if (callback(arr[0])) {
+    return true
+  }
+  return someRecursive(arr.slice(1), callback)
+}
+
+console.log(someRecursive([4, 6, 8], isOdd))
