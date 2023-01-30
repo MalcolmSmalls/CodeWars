@@ -1,5 +1,8 @@
 /* 
 Compares current index with previous index resulting in the highest value "popping" to the top before it's iterated through again to compare values.
+
+O(n^2)
+Nearly Sorted: O(n)
 */
 
 function bubbleSortUnnecessary(arr) {
@@ -50,4 +53,28 @@ function bubbleSortNewSwap(arr) {
   return arr
 }
 
-console.log(bubbleSortNewSwap([5, 4, 3, 2, 1]))
+// console.log(bubbleSortNewSwap([5, 4, 3, 2, 1]))
+
+/*
+An issue with bubbleSort is if items are already mostly sorted, it will continue to iterate even when items are sorted.
+
+*/
+function bubbleSortOptimized(arr) {
+  let noSwaps
+  for (let i = arr.length; i > 0; i--) {
+    noSwaps = true
+    for (let j = 0; j < i - 1; j++) {
+      console.log(arr, arr[j], arr[j + 1])
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = temp
+        noSwaps = false
+      }
+    }
+    if (noSwaps) break
+  }
+  return arr
+}
+
+console.log(bubbleSortOptimized([8, 1, 2, 3, 4, 5, 6]))
