@@ -1,3 +1,11 @@
+/* 
+
+Takes up less memory than bubbleSort because it requires less-swapping but that's the only benefit. 
+
+Speed: O(n^2)
+
+*/
+
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let minimum = i
