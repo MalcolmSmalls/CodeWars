@@ -61,4 +61,16 @@ function mostDigits(nums) {
   return maxDigits
 }
 
-console.log(mostDigits([1, 2, 3, 5, 100, 30, 30000, 10]))
+function radixSort(nums) {
+  let maxDigitCount = mostDigits(nums)
+  for (let k = 0; k < maxDigitCount; k++) {
+    let buckets = Array.from({ length: 10 }, () => [])
+    for (let i = 0; i < nums.length; i++) {
+      let digit = getDigit(nums[i], k)
+      buckets[digit].push(nums[i])
+    }
+    nums = [].concat(...buckets)
+  }
+  return nums
+}
+console.log(radixSort([1, 2, 3, 5, 100, 30, 30000, 10]))
