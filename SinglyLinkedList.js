@@ -23,17 +23,27 @@ class LinkedList {
     return this
   }
   pop() {
+    if (!this.head || !this.tail) return undefined
     let current = this.head
-    for (let i = 1; i < this.length; i++) {
-      if (!this.head && !this.tail) return undefined
-      if (i === this.length - 1) {
-        current.next = null
-        this.tail = current
-        this.length--
-      } else {
-        current = current.next
-      }
+    let newTail = current
+    while (current.next) {
+      newTail = current
+      current = current.next
     }
+    this.tail = newTail
+    this.tail.next = null
+    this.length--
+    if (this.length === 0) {
+      this.head = null
+      this.tail = null
+    }
+    return current
+  }
+  shift(val) {
+    let newNode = new Node(val)
+    newNode.next = this.head
+    this.head = newNode
+    this.length++
     return this
   }
 }
@@ -43,4 +53,9 @@ firstLinkedList.push('Hi')
 firstLinkedList.push('You')
 firstLinkedList.push('How')
 console.log(firstLinkedList)
-console.log(firstLinkedList.pop())
+console.log(firstLinkedList.shift('22'))
+// console.log(firstLinkedList.pop())
+// console.log(firstLinkedList.pop())
+// console.log(firstLinkedList.pop())
+// console.log(firstLinkedList.pop())
+// console.log(firstLinkedList)
