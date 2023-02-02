@@ -39,10 +39,27 @@ class LinkedList {
     }
     return current
   }
-  shift(val) {
+  shift() {
+    if (!this.head) return undefined
+    let currentHead = this.head
+    this.head = currentHead.next
+    this.length--
+    if (this.length === 0) {
+      this.tail = null
+    }
+    return currentHead
+  }
+
+  unShift(val) {
     let newNode = new Node(val)
-    newNode.next = this.head
-    this.head = newNode
+    if (!this.head) {
+      this.head = newNode
+      this.tail = newNode
+    } else {
+      newNode.next = this.head
+      this.head = newNode
+    }
+
     this.length++
     return this
   }
@@ -53,7 +70,8 @@ firstLinkedList.push('Hi')
 firstLinkedList.push('You')
 firstLinkedList.push('How')
 console.log(firstLinkedList)
-console.log(firstLinkedList.shift('22'))
+console.log(firstLinkedList.unShift('bruh'))
+console.log(firstLinkedList)
 // console.log(firstLinkedList.pop())
 // console.log(firstLinkedList.pop())
 // console.log(firstLinkedList.pop())
