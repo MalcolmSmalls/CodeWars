@@ -63,6 +63,15 @@ class LinkedList {
     this.length++
     return this
   }
+
+  get(val) {
+    if (val >= this.length || val < 0) return undefined
+    let current = this.head
+    for (let i = 0; i < val; i++) {
+      current = current.next
+    }
+    return current
+  }
 }
 
 const firstLinkedList = new LinkedList()
@@ -72,6 +81,7 @@ firstLinkedList.push('How')
 console.log(firstLinkedList)
 console.log(firstLinkedList.unShift('bruh'))
 console.log(firstLinkedList)
+console.log(firstLinkedList.get(3))
 // console.log(firstLinkedList.pop())
 // console.log(firstLinkedList.pop())
 // console.log(firstLinkedList.pop())
