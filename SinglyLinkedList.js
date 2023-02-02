@@ -72,16 +72,40 @@ class LinkedList {
     }
     return current
   }
+
+  set(index, val) {
+    let foundNode = this.get(index)
+    if (foundNode) {
+      foundNode.val = val
+    }
+    return false
+  }
+
+  insert(index, val) {
+    let newNode = new Node(val)
+    if (index < 0 || index > this.length) return false
+    if (index === this.length) return this.push(val)
+    if (index === 0) return this.unshift(val)
+    let beforeNode = this.get(index - 1)
+    let tempNode = beforeNode.next
+    beforeNode.next = newNode
+    newNode.next = tempNode
+    this.length++
+    return true
+  }
 }
 
 const firstLinkedList = new LinkedList()
 firstLinkedList.push('Hi')
 firstLinkedList.push('You')
 firstLinkedList.push('How')
-console.log(firstLinkedList)
+// console.log(firstLinkedList)
 console.log(firstLinkedList.unShift('bruh'))
-console.log(firstLinkedList)
+// console.log(firstLinkedList)
+console.log(firstLinkedList.insert(3, 'wander'))
+console.log(firstLinkedList.get(2))
 console.log(firstLinkedList.get(3))
+console.log(firstLinkedList.get(4))
 // console.log(firstLinkedList.pop())
 // console.log(firstLinkedList.pop())
 // console.log(firstLinkedList.pop())
