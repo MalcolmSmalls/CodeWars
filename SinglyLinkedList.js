@@ -84,8 +84,8 @@ class LinkedList {
   insert(index, val) {
     let newNode = new Node(val)
     if (index < 0 || index > this.length) return false
-    if (index === this.length) return this.push(val)
-    if (index === 0) return this.unshift(val)
+    if (index === this.length) return !!this.push(val)
+    if (index === 0) return !!this.unshift(val)
     let beforeNode = this.get(index - 1)
     let tempNode = beforeNode.next
     beforeNode.next = newNode
@@ -93,21 +93,46 @@ class LinkedList {
     this.length++
     return true
   }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return null
+    if (index === this.length - 1) return this.pop()
+    if (index === 0) return this.shift()
+    let beforeNode = this.get(index - 1)
+    let removed = beforeNode.next
+    beforeNode.next = removed.next
+    this.length--
+    return removed
+  }
+  print() {
+    var arr = []
+    var current = this.head
+    while (current) {
+      arr.push(current.val)
+      current = current.next
+    }
+    console.log(arr)
+  }
+  reverse() {
+    if (this.length === 0) return null
+    let node = this.head
+    this.head = this.tail
+    this.tail = node
+    let prev = null
+    let next
+    for (let i = 0; i < this.length; i++) {
+      next = node.next
+      node.next = prev
+      prev = node
+      node = next
+    }
+    return this
+  }
 }
 
 const firstLinkedList = new LinkedList()
 firstLinkedList.push('Hi')
 firstLinkedList.push('You')
 firstLinkedList.push('How')
-// console.log(firstLinkedList)
-console.log(firstLinkedList.unShift('bruh'))
-// console.log(firstLinkedList)
-console.log(firstLinkedList.insert(3, 'wander'))
-console.log(firstLinkedList.get(2))
-console.log(firstLinkedList.get(3))
-console.log(firstLinkedList.get(4))
-// console.log(firstLinkedList.pop())
-// console.log(firstLinkedList.pop())
-// console.log(firstLinkedList.pop())
-// console.log(firstLinkedList.pop())
-// console.log(firstLinkedList)
+console.log(firstLinkedList.reverse())
+console.log(firstLinkedList.print())
