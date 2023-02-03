@@ -58,6 +58,20 @@ class DoublyLinkedList {
     return poppedNode
   }
 
+  unshift(val) {
+    let node = new Node(val)
+    if (!this.head) {
+      this.head = node
+      this.tail = node
+    } else {
+      node.next = this.head
+      this.head.prev = node
+      this.head = node
+    }
+    this.length++
+    return this
+  }
+
   print() {
     let arr = []
     let current = this.head
@@ -76,5 +90,5 @@ newDub.push('you')
 newDub.push('all')
 newDub.push('in')
 console.log(newDub.push('check'))
-console.log(newDub.shift())
+console.log(newDub.unshift('busta rhymes up in effect uh, true indeed uhhh'))
 console.log(newDub.print())
