@@ -43,6 +43,21 @@ class DoublyLinkedList {
     return poppedNode
   }
 
+  shift() {
+    if (!this.head) return undefined
+    let poppedNode = this.head
+    if (this.length === 1) {
+      this.head = null
+      this.tail = null
+    } else {
+      this.head = poppedNode.next
+      this.head.prev = null
+      poppedNode.next = null
+    }
+    this.length--
+    return poppedNode
+  }
+
   print() {
     let arr = []
     let current = this.head
@@ -61,5 +76,5 @@ newDub.push('you')
 newDub.push('all')
 newDub.push('in')
 console.log(newDub.push('check'))
-console.log(newDub.pop())
+console.log(newDub.shift())
 console.log(newDub.print())
