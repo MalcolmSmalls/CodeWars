@@ -111,6 +111,30 @@ class DoublyLinkedList {
     return current
   }
 
+  set(val, index) {
+    let node = this.get(index)
+    if (node != null) {
+      node.val = val
+      return true
+    }
+    return false
+  }
+
+  insert(index, val) {
+    if (index > this.length || index < 0) return null
+    if (index === 0) return this.unshift(val)
+    if (index === this.length) return this.push(val)
+    let node = new Node(val)
+    let prevNode = this.get(index - 1)
+    let nextNode = prevNode.next
+    prevNode.next = node
+    nextNode.prev = node
+    node.next = nextNode
+    node.prev = prevNode
+    this.length++
+    return true
+  }
+
   print() {
     let arr = []
     let current = this.head
@@ -128,7 +152,9 @@ newDub.push('got')
 newDub.push('you')
 newDub.push('all')
 newDub.push('in')
-// console.log(newDub.push('check'))
+newDub.push('check')
+
 // console.log(newDub.unshift('busta rhymes up in effect uh, true indeed uhhh'))
 // console.log(newDub.set('me', 2))
 console.log(newDub.print())
+console.log(newDub)
