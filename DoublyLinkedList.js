@@ -72,6 +72,45 @@ class DoublyLinkedList {
     return this
   }
 
+  //   getFORLOOP(index) {
+  //     if (index < 0 || index >= this.length) return undefined
+  //     let middle = Math.floor(this.length / 2)
+  //     if (index >= middle) {
+  //       let current = this.tail
+  //       for (let i = 0; i < this.length - 1 - index; i++) {
+  //         current = current.prev
+  //       }
+  //       return current
+  //     } else {
+  //       let current = this.head
+  //       for (let i = 0; i < index; i++) {
+  //         current = current.next
+  //       }
+  //       return current
+  //     }
+  //   }
+
+  get(index) {
+    if (index < 0 || index >= this.length) return null
+    let count, current
+    if (index <= Math.floor(this.length / 2)) {
+      current = this.head
+      count = 0
+      while (count != index) {
+        current = current.next
+        count++
+      }
+    } else {
+      count = this.length - 1
+      current = this.tail
+      while (count !== index) {
+        current = current.prev
+        count--
+      }
+    }
+    return current
+  }
+
   print() {
     let arr = []
     let current = this.head
@@ -89,6 +128,7 @@ newDub.push('got')
 newDub.push('you')
 newDub.push('all')
 newDub.push('in')
-console.log(newDub.push('check'))
-console.log(newDub.unshift('busta rhymes up in effect uh, true indeed uhhh'))
+// console.log(newDub.push('check'))
+// console.log(newDub.unshift('busta rhymes up in effect uh, true indeed uhhh'))
+// console.log(newDub.set('me', 2))
 console.log(newDub.print())
