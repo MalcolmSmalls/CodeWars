@@ -122,17 +122,29 @@ class DoublyLinkedList {
 
   insert(index, val) {
     if (index > this.length || index < 0) return null
-    if (index === 0) return this.unshift(val)
-    if (index === this.length) return this.push(val)
+    if (index === 0) return !!this.unshift(val)
+    if (index === this.length) return !!this.push(val)
     let node = new Node(val)
     let prevNode = this.get(index - 1)
     let nextNode = prevNode.next
-    prevNode.next = node
-    nextNode.prev = node
-    node.next = nextNode
-    node.prev = prevNode
+    ;(prevNode.next = node), (node.prev = prevNode)
+    ;(nextNode.prev = node), (node.next = nextNode)
     this.length++
     return true
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return false
+    if (index === 0) return this.shift()
+    if (index === this.length - 1) return this.pop()
+    let prevNode = this.get(index - 1)
+    let node = this.get(index)
+    let nextNode = this.get(index + 1)
+    prevNode.next = nextNode
+    nextNode.prev = prevNode
+    ;(node.next = null), (node.prev = null)
+    this.length--
+    return node
   }
 
   print() {
@@ -154,7 +166,8 @@ newDub.push('all')
 newDub.push('in')
 newDub.push('check')
 
+console.log(newDub.insert(1, 'i'))
 // console.log(newDub.unshift('busta rhymes up in effect uh, true indeed uhhh'))
 // console.log(newDub.set('me', 2))
+console.log(newDub.remove(1))
 console.log(newDub.print())
-console.log(newDub)
