@@ -22,12 +22,29 @@ class Stack {
       this.first = node
       node.next = current
     }
-    return ++this.size
+    this.size++
+    return this.size
   }
 
-  pop() {}
+  pop() {
+    if (!this.first) return null
+    let current = this.first
+    if (this.size === 1) {
+      this.first = null
+      this.last = null
+    } else {
+      this.first = current.next
+      current.next = null
+    }
+    this.size--
+    return current
+  }
 }
 
 let fatStax = new Stack()
-console.log(fatStax.push('blockin'))
-console.log(fatStax.push('baller'))
+console.log(fatStax.push('first'))
+console.log(fatStax.push('second'))
+console.log(fatStax.push('third'))
+console.log(fatStax.pop())
+console.log(fatStax.pop())
+console.log(fatStax.pop())
