@@ -1,6 +1,6 @@
 class Node {
-  constructor(val) {
-    this.val = val
+  constructor(value) {
+    this.value = value
     this.left = null
     this.right = null
   }
@@ -36,6 +36,23 @@ class BinarySearchTree {
       }
     }
   }
+
+  find(value) {
+    if (!this.root) return false
+    let current = this.root,
+      found = false
+    while (current && !found) {
+      if (value < current.value) {
+        current = current.left
+      } else if (value > current.value) {
+        current = current.right
+      } else {
+        found = true
+      }
+    }
+    if (!found) return false
+    return current
+  }
 }
 
 const bts = new BinarySearchTree()
@@ -43,3 +60,5 @@ const bts = new BinarySearchTree()
 console.log(bts.insert(12))
 console.log(bts.insert(911))
 console.log(bts.insert(90210))
+console.log(bts.find(911))
+console.log(bts.find(20))
