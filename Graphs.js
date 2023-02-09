@@ -27,17 +27,52 @@ class Graph {
     }
     delete this.adjacencyList[vertex]
   }
+
+  depthFirstRecursive(start) {
+    let results = []
+    let visited = {}
+    let adjacencyList = this.adjacencyList
+    ;(function dfs(vertex) {
+      if (!vertex) return
+      visited[vertex] = true
+      results.push(vertex)
+      adjacencyList[vertex].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          return dfs(neighbor)
+        }
+      })
+    })(start)
+    return results
+  }
 }
 
-const rappers = new Graph()
+// const rappers = new Graph()
 
-rappers.addVertex('Jay-Z')
-rappers.addVertex('Kanye West')
-rappers.addVertex('Kid Cudi')
-rappers.addVertex('Jaz-O')
-rappers.addEdge('Jay-Z', 'Kanye West')
-rappers.addEdge('Jay-Z', 'Jaz-O')
-rappers.addEdge('Kanye West', 'Kid Cudi')
-// rappers.removeEdge('Jay-Z', 'Kanye West')
-rappers.removeVertex('Kanye West')
-console.log(rappers.adjacencyList)
+// rappers.addVertex('Jay-Z')
+// rappers.addVertex('Kanye West')
+// rappers.addVertex('Kid Cudi')
+// rappers.addVertex('Jaz-O')
+// rappers.addEdge('Jay-Z', 'Kanye West')
+// rappers.addEdge('Jay-Z', 'Jaz-O')
+// rappers.addEdge('Kanye West', 'Kid Cudi')
+// rappers.removeVertex('Kanye West')
+// console.log(rappers.adjacencyList)
+
+const g = new Graph()
+
+g.addVertex('A')
+g.addVertex('B')
+g.addVertex('C')
+g.addVertex('D')
+g.addVertex('E')
+g.addVertex('F')
+
+g.addEdge('A', 'B')
+g.addEdge('A', 'C')
+g.addEdge('B', 'D')
+g.addEdge('C', 'E')
+g.addEdge('D', 'E')
+g.addEdge('D', 'F')
+g.addEdge('E', 'F')
+
+console.log(g.depthFirstRecursive('A'))
