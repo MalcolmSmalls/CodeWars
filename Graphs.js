@@ -44,6 +44,27 @@ class Graph {
     })(start)
     return results
   }
+
+  depthFirstIterative(start) {
+    let results = []
+    let stack = [start]
+    let visited = {}
+    let currentVertex
+
+    visited[start] = true
+    while (stack.length) {
+      currentVertex = stack.pop()
+      results.push(currentVertex)
+
+      this.adjacencyList[currentVertex].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true
+          stack.push(neighbor)
+        }
+      })
+    }
+    return results
+  }
 }
 
 // const rappers = new Graph()
@@ -76,3 +97,5 @@ g.addEdge('D', 'F')
 g.addEdge('E', 'F')
 
 console.log(g.depthFirstRecursive('A'))
+
+console.log(g.depthFirstIterative('A'))
