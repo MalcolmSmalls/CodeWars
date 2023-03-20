@@ -9,3 +9,13 @@ function chromosomeCheck(sperm) {
   const gender = sperm === 'XX' ? 'daughter' : 'son'
   return `Congratulations! You're going to have a ${gender}`
 }
+
+// Simple multiplication
+
+// If the input number is even multiply by 8 otherwise, multiply by nine
+
+// Write conditional if % 2 === 0 return num * 8 else num * 9
+
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9
+}
