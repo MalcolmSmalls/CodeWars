@@ -19,3 +19,34 @@ function chromosomeCheck(sperm) {
 function simpleMultiplication(number) {
   return number % 2 === 0 ? number * 8 : number * 9
 }
+
+// Find Nearest Square Number
+
+// Take in a number and get the square root of it. Return square root if it's evenly squared, if not round up and down and figure out which one is closet to the target number.
+
+// Math.sqrt a number create a flooredVar and a ceiled version and if num - floored < num -  ceiled return floored, else ceiled
+
+function nearestSq(n) {
+  const squareRoot = Math.sqrt(n)
+  if (Number.isInteger(squareRoot)) return squareRoot
+  const flooredVar = Math.floor(squareRoot)
+  const ceiledVar = Math.floor(squareRoot)
+  if (squareRoot - flooredVar < ceiledVar - squareRoot) {
+    return flooredVar
+  } else {
+    return ceiledVar
+  }
+}
+
+// Be Concise I - The Ternary Operator
+
+// TODO: Refactor and shorten the function
+
+var describeAge = (a) =>
+  a <= 12
+    ? `You're a(n) kid`
+    : a >= 13 && a <= 17
+    ? `You're a(n) teenager`
+    : a >= 18 && a <= 64
+    ? `You're a(n) adult`
+    : `You're a(n) elderly`
