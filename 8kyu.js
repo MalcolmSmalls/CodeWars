@@ -50,3 +50,13 @@ var describeAge = (a) =>
     : a >= 18 && a <= 64
     ? `You're a(n) adult`
     : `You're a(n) elderly`
+
+// Power
+
+function numberToPower(number, power) {
+  let totalPowered = 1
+  for (let i = 0; i < power; i++) {
+    totalPowered *= number
+  }
+  return totalPowered
+}
