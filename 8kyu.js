@@ -230,3 +230,13 @@ function aliasGen(first, last) {
 function litres(time) {
   return Math.floor(0.5 * time)
 }
+
+// Filter out the geese
+function gooseFilter(birds) {
+  return birds.filter(
+    (item) =>
+      !item.match(
+        /^["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]+/
+      )
+  )
+}
