@@ -118,3 +118,9 @@ function isDivisible(n, x, y) {
 function distanceBetweenPoints(a, b) {
   return Math.sqrt((b.x - a.x) ** 2 + (b.y - a.y) ** 2)
 }
+
+// Even or Odd
+
+function evenOrOdd(number) {
+  return number % 2 === 0 ? 'Even' : 'Odd'
+}
