@@ -100,3 +100,9 @@ function squareSum(numbers) {
 function century(year) {
   return Math.ceil(year / 100)
 }
+
+// Quarter of the year
+
+const quarterOf = (month) => {
+  return Math.ceil(month / 3)
+}
