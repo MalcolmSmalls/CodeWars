@@ -194,3 +194,13 @@ function createArray(number) {
 
   return newArray
 }
+
+// The 'if' function
+
+function _if(bool, func1, func2) {
+  if (bool) {
+    func1()
+  } else {
+    func2()
+  }
+}
