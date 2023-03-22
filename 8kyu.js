@@ -94,3 +94,9 @@ function squareSum(numbers) {
   numbers.forEach((item) => (total += item ** 2))
   return total
 }
+
+// Century From Year
+
+function century(year) {
+  return Math.ceil(year / 100)
+}
