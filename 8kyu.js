@@ -215,3 +215,13 @@ function otherAngle(a, b) {
 function reverseWords(str) {
   return str.split(' ').reverse().join(' ')
 }
+
+// Crash Override
+
+function aliasGen(first, last) {
+  if (Number.isInteger(+first[0]) || Number.isInteger(+last[0]))
+    return 'Your name must start with a letter from A - Z.'
+  return `${firstName[first[0].toUpperCase()]} ${
+    surname[last[0].toUpperCase()]
+  }`
+}
