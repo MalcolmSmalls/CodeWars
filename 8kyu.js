@@ -170,3 +170,9 @@ function addLength(str) {
   let arr = str.split(' ')
   return arr.map((item) => `${item} ${item.length}`)
 }
+
+// Convert a Boolean to a String
+
+function booleanToString(b) {
+  return b ? 'true' : 'false'
+}
