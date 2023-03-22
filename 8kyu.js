@@ -75,3 +75,14 @@ function strCount(str, letter) {
   }
   return 0
 }
+
+// ASCII Total
+
+function uniTotal(string) {
+  if (string === '') return 0
+  let total = 0
+  for (let i = 0; i < string.length; i++) {
+    total += string.charCodeAt(i)
+  }
+  return total
+}
