@@ -225,3 +225,8 @@ function aliasGen(first, last) {
     surname[last[0].toUpperCase()]
   }`
 }
+
+// Keep Hydrated!
+function litres(time) {
+  return Math.floor(0.5 * time)
+}
