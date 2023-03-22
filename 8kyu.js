@@ -112,3 +112,9 @@ const quarterOf = (month) => {
 function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0
 }
+
+// Geometry Basics: Distance between points in 2D
+
+function distanceBetweenPoints(a, b) {
+  return Math.sqrt((b.x - a.x) ** 2 + (b.y - a.y) ** 2)
+}
