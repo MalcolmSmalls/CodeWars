@@ -124,3 +124,9 @@ function distanceBetweenPoints(a, b) {
 function evenOrOdd(number) {
   return number % 2 === 0 ? 'Even' : 'Odd'
 }
+
+// Return to Sanity
+function mystery() {
+  var results = { sanity: 'Hello' }
+  return results
+}
