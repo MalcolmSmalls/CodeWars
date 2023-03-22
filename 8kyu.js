@@ -163,3 +163,10 @@ class Person {
 function solution(str) {
   return str.split('').reverse().join('')
 }
+
+// Add Length
+
+function addLength(str) {
+  let arr = str.split(' ')
+  return arr.map((item) => `${item} ${item.length}`)
+}
