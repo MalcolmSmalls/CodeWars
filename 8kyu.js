@@ -210,3 +210,8 @@ function _if(bool, func1, func2) {
 function otherAngle(a, b) {
   return 180 - a - b
 }
+
+// Reversed Words
+function reverseWords(str) {
+  return str.split(' ').reverse().join(' ')
+}
