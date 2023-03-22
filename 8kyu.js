@@ -86,3 +86,11 @@ function uniTotal(string) {
   }
   return total
 }
+
+// Square(n) Sum
+
+function squareSum(numbers) {
+  let total = 0
+  numbers.forEach((item) => (total += item ** 2))
+  return total
+}
