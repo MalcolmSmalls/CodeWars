@@ -60,3 +60,18 @@ function numberToPower(number, power) {
   }
   return totalPowered
 }
+
+// All Star Code Challenge #18
+
+function strCount(str, letter) {
+  let obj = {}
+  for (let item of str) {
+    obj[item] = (obj[item] || 0) + 1
+  }
+  for (let key in obj) {
+    if (key === letter) {
+      return obj[key]
+    }
+  }
+  return 0
+}
