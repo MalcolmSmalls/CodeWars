@@ -240,3 +240,11 @@ function gooseFilter(birds) {
       )
   )
 }
+
+// Beginner Series #2 Clock
+function past(h, m, s) {
+  let totalHrs = h * 3600000
+  let totalMins = m * 60000
+  let totalSecs = s * 1000
+  return totalHrs + totalMins + totalSecs
+}
