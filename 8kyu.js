@@ -487,3 +487,8 @@ function findDifference(a, b) {
       b.reduce((acc, total) => acc * total, 1)
   )
 }
+
+// String Templates - Bug Fixing #5
+function buildString(...template) {
+  return `I like ${template.join(', ')}!`
+}
