@@ -547,3 +547,11 @@ function addFive(num) {
 function hoopCount(n) {
   return n < 10 ? 'Keep at it until you get it' : 'Great, now move on to tricks'
 }
+
+// Opposites Attract
+
+function lovefunc(flower1, flower2) {
+  let oneEven = flower1 % 2 === 0 || flower2 % 2 === 0
+  let oneOdd = flower1 % 2 === 0 && flower2 % 2 === 0
+  return oneOdd !== oneEven
+}
