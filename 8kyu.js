@@ -518,3 +518,20 @@ function bmi(weight, height) {
 var a = 'code'
 var b = 'wa.rs'
 var name = a + b
+
+function switchItUp(number) {
+  const obj = {
+    0: 'Zero',
+    1: 'One',
+    2: 'Two',
+    3: 'Three',
+    4: 'Four',
+    5: 'Five',
+    6: 'Six',
+    7: 'Seven',
+    8: 'Eight',
+    9: 'Nine',
+  }
+
+  return obj[number]
+}
