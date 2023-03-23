@@ -254,3 +254,9 @@ function past(h, m, s) {
 function invert(array) {
   return array.map((item) => Math.abs(item) * -Math.sign(item))
 }
+
+// How many lightsabers do you own?
+
+function howManyLightsabersDoYouOwn(name) {
+  return name === 'Zach' ? 18 : 0
+}
