@@ -542,3 +542,8 @@ function addFive(num) {
   var total = num + 5
   return total
 }
+
+// Keep up the hoop
+function hoopCount(n) {
+  return n < 10 ? 'Keep at it until you get it' : 'Great, now move on to tricks'
+}
