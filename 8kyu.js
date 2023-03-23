@@ -398,3 +398,9 @@ function findMultiples(integer, limit) {
   }
   return newArr
 }
+
+// Regular Ball Super Ball
+
+var Ball = function (ballType) {
+  // your code goes here
+}
