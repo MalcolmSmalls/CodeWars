@@ -441,3 +441,9 @@ String.prototype.toAlternatingCase = function () {
 function isPalindrome(x) {
   return x.toLowerCase().split('').reverse().join('') === x.toLowerCase()
 }
+
+// Convert a String to a Number!
+
+const stringToNumber = function (str) {
+  return +str
+}
