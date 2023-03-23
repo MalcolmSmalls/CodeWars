@@ -623,3 +623,9 @@ function areYouPlayingBanjo(name) {
 function problem(x) {
   return isNaN(x) || x === '' ? 'Error' : x * 50 + 6
 }
+
+// Abbreviate a Two Word Name
+function abbrevName(name) {
+  let splitName = name.toUpperCase().split(' ')
+  return `${splitName[0][0]}.${splitName[1][0]}`
+}
