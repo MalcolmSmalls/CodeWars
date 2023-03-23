@@ -320,3 +320,9 @@ var humanYearsCatYearsDogYears = function (humanYears) {
 
   return total
 }
+
+// Grasshopper - Summation
+var summation = function (num) {
+  if (num === 0) return num
+  return num + summation(num - 1)
+}
