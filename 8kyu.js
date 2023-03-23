@@ -447,3 +447,8 @@ function isPalindrome(x) {
 const stringToNumber = function (str) {
   return +str
 }
+
+// Will you make it?
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return mpg * fuelLeft >= distanceToPump
+}
