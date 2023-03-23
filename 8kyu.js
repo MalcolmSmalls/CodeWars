@@ -269,7 +269,7 @@ function powersOfTwo(n) {
   return arr.map((item, index) => item ** index)
 }
 
-console.log(powersOfTwo(1))
+// console.log(powersOfTwo(1))
 
 // Vowel remover
 function shortcut(string) {
@@ -330,4 +330,14 @@ var summation = function (num) {
 // Function 2 - squaring an argument
 function square(num) {
   return Math.pow(num, 2)
+}
+
+// Training JS #7: if..else and ternary operator
+function saleHotdogs(n) {
+  return n >= 10 ? 90 * n : n >= 5 ? n * 95 : n * 100
+}
+
+// Remove exclamation marks
+function removeExclamationMarks(s) {
+  return s.replaceAll(/[!]/g, '')
 }
