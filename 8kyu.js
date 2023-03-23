@@ -260,3 +260,13 @@ function invert(array) {
 function howManyLightsabersDoYouOwn(name) {
   return name === 'Zach' ? 18 : 0
 }
+
+// Powers of 2
+
+function powersOfTwo(n) {
+  const arr = new Array(n + 1).fill(2, 0, n + 1)
+
+  return arr.map((item, index) => item ** index)
+}
+
+console.log(powersOfTwo(1))
