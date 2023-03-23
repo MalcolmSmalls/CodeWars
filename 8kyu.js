@@ -248,3 +248,9 @@ function past(h, m, s) {
   let totalSecs = s * 1000
   return totalHrs + totalMins + totalSecs
 }
+
+// Invert values
+
+function invert(array) {
+  return array.map((item) => Math.abs(item) * -Math.sign(item))
+}
