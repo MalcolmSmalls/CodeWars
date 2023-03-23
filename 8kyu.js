@@ -457,3 +457,24 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 function getAge(inputString) {
   return +inputString[0]
 }
+
+// Safen User Input Part I - htmlspecialchars
+
+function htmlspecialchars(formData) {
+  let newStr = ''
+  const obj = {
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    '&': '&amp;',
+  }
+
+  for (let letter of formData) {
+    if (Object.hasOwn(obj, letter)) {
+      newStr += obj[letter]
+    } else {
+      newStr += letter
+    }
+  }
+  return newStr
+}
