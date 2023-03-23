@@ -519,6 +519,7 @@ var a = 'code'
 var b = 'wa.rs'
 var name = a + b
 
+// Switch it Up!
 function switchItUp(number) {
   const obj = {
     0: 'Zero',
@@ -534,4 +535,10 @@ function switchItUp(number) {
   }
 
   return obj[number]
+}
+
+// Grasshopper - Basic Function Fixer
+function addFive(num) {
+  var total = num + 5
+  return total
 }
