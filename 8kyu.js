@@ -571,3 +571,13 @@ function removeChar(str) {
     .slice(1, str.length - 1)
     .join('')
 }
+
+// Get the mean of an array
+function getAverage(marks) {
+  let total = 0
+  for (let num of marks) {
+    total += num
+  }
+
+  return Math.floor(total / marks.length)
+}
