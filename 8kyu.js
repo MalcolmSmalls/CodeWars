@@ -302,3 +302,21 @@ var hotpo = function (n) {
   }
   return count
 }
+
+// Cat years, Dog years
+
+var humanYearsCatYearsDogYears = function (humanYears) {
+  let total = [humanYears, 0, 0]
+  humanYears > 2
+    ? (total[1] = (humanYears - 2) * 4 + 9 + 15)
+    : humanYears > 1
+    ? (total[1] = 15 + 9)
+    : (total[1] = 15)
+  humanYears > 2
+    ? (total[2] = (humanYears - 2) * 5 + 9 + 15)
+    : humanYears > 1
+    ? (total[2] = 15 + 9)
+    : (total[2] = 15)
+
+  return total
+}
