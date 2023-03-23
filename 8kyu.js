@@ -285,3 +285,20 @@ function shortcut(string) {
 function grow(x) {
   return x.reduce((a, b) => a * b, 1)
 }
+
+// Collatz Conjecture (3n+1)
+
+var hotpo = function (n) {
+  if (n == 0) return 0 //Optional Handler to n = 0
+  let count = 0
+  while (n > 1) {
+    if (n % 2 === 0) {
+      n = n / 2
+      count++
+    } else {
+      n = n * 3 + 1
+      count++
+    }
+  }
+  return count
+}
