@@ -425,3 +425,13 @@ function toCsvText(array) {
 function sayHello(name) {
   return `Hello, ${name}`
 }
+
+// altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+
+String.prototype.toAlternatingCase = function () {
+  return this.split('')
+    .map((item) =>
+      item.toUpperCase() === item ? item.toLowerCase() : item.toUpperCase()
+    )
+    .join('')
+}
