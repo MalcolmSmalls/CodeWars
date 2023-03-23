@@ -629,3 +629,11 @@ function abbrevName(name) {
   let splitName = name.toUpperCase().split(' ')
   return `${splitName[0][0]}.${splitName[1][0]}`
 }
+
+// Alan Partridge II - Apple Turnover
+
+function apple(x) {
+  return x ** 2 > 1000
+    ? `It's hotter than the sun!!`
+    : 'Help yourself to a honeycomb Yorkie for the glovebox.'
+}
