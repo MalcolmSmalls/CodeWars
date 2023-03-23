@@ -555,3 +555,11 @@ function lovefunc(flower1, flower2) {
   let oneOdd = flower1 % 2 === 0 && flower2 % 2 === 0
   return oneOdd !== oneEven
 }
+
+//Grasshopper - Messi Goals
+
+var laLigaGoals = 43
+var championsLeagueGoals = 10
+var copaDelReyGoals = 5
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
