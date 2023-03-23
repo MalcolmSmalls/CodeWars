@@ -611,3 +611,10 @@ function greet(language) {
   }
   return 'Welcome'
 }
+
+// Are You Playing Banjo?
+function areYouPlayingBanjo(name) {
+  return `${name} ${
+    name[0].toLowerCase() === 'r' ? 'plays' : 'does not play'
+  } banjo`
+}
