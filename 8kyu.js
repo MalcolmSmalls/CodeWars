@@ -279,3 +279,9 @@ function shortcut(string) {
     .filter((item) => !vowels.includes(item))
     .join('')
 }
+
+// Beginner - Reduce but Grow
+
+function grow(x) {
+  return x.reduce((a, b) => a * b, 1)
+}
