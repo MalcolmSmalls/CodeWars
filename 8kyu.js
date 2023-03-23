@@ -402,5 +402,21 @@ function findMultiples(integer, limit) {
 // Regular Ball Super Ball
 
 var Ball = function (ballType) {
-  // your code goes here
+  this.ballType = ballType || 'regular'
+}
+
+// CSV representation of array
+
+function toCsvText(array) {
+  let newArr = []
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      if (i > 0 && j === 0) {
+        newArr.push(`\n${array[i][j]}`)
+      } else {
+        newArr.push(`,${array[i][j]}`)
+      }
+    }
+  }
+  return newArr.join('').slice(1)
 }
