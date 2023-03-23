@@ -452,3 +452,8 @@ const stringToNumber = function (str) {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return mpg * fuelLeft >= distanceToPump
 }
+
+// Parse nice int from char problem
+function getAge(inputString) {
+  return +inputString[0]
+}
