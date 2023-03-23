@@ -341,3 +341,26 @@ function saleHotdogs(n) {
 function removeExclamationMarks(s) {
   return s.replaceAll(/[!]/g, '')
 }
+
+console.log(removeExclamationMarks('hey!'))
+
+// Pythagorean Triple
+
+function isPythagoreanTriple(integers) {
+  let newArr = [integers[0] ** 2, integers[1] ** 2, integers[2] ** 2].sort(
+    (a, b) => a - b
+  )
+  let left = 0
+  let right = newArr.length - 1
+  while (left < right) {
+    let target = newArr[left] + newArr[right]
+    if (newArr.includes(target)) {
+      return true
+    } else if (target < newArr[left]) {
+      left++
+    } else {
+      right--
+    }
+  }
+  return false
+}
