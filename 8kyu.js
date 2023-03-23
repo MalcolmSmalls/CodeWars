@@ -492,3 +492,8 @@ function findDifference(a, b) {
 function buildString(...template) {
   return `I like ${template.join(', ')}!`
 }
+
+// Sum The Strings
+function sumStr(a, b) {
+  return (+a + +b).toString()
+}
