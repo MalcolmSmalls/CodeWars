@@ -364,3 +364,9 @@ function isPythagoreanTriple(integers) {
   }
   return false
 }
+
+// Training JS #1: create your first JS function and print "Hello World!"
+function helloWorld() {
+  const str = 'Hello World!'
+  console.log(str)
+}
