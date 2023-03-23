@@ -618,3 +618,8 @@ function areYouPlayingBanjo(name) {
     name[0].toLowerCase() === 'r' ? 'plays' : 'does not play'
   } banjo`
 }
+
+// Super Duper Easy
+function problem(x) {
+  return isNaN(x) || x === '' ? 'Error' : x * 50 + 6
+}
