@@ -682,3 +682,10 @@ const flip = (d, a) => {
 String.prototype.isUpperCase = function () {
   return this.toUpperCase() == this
 }
+
+// Quadratic Coefficients Solver
+function quadratic(x1, x2) {
+  let b = 0 - x1 - x2
+  let c = x1 * x2
+  return [1, b, c]
+}
