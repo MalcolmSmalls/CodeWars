@@ -387,3 +387,14 @@ var max = function (list) {
   list.sort((a, b) => b - a)
   return list[0]
 }
+
+// Find Multiples of a Number
+function findMultiples(integer, limit) {
+  let newArr = []
+  let newInt = integer
+  while (newInt <= limit) {
+    newArr.push(newInt)
+    newInt += integer
+  }
+  return newArr
+}
