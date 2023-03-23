@@ -563,3 +563,11 @@ var championsLeagueGoals = 10
 var copaDelReyGoals = 5
 
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
+
+//Remove First and Last Character
+function removeChar(str) {
+  return str
+    .split('')
+    .slice(1, str.length - 1)
+    .join('')
+}
