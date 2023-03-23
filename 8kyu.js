@@ -420,3 +420,8 @@ function toCsvText(array) {
   }
   return newArr.join('').slice(1)
 }
+
+// Grasshopper - Debug sayHello
+function sayHello(name) {
+  return `Hello, ${name}`
+}
