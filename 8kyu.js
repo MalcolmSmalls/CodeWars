@@ -270,3 +270,12 @@ function powersOfTwo(n) {
 }
 
 console.log(powersOfTwo(1))
+
+// Vowel remover
+function shortcut(string) {
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  return string
+    .split('')
+    .filter((item) => !vowels.includes(item))
+    .join('')
+}
