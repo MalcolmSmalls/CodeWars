@@ -326,3 +326,13 @@ var summation = function (num) {
   if (num === 0) return num
   return num + summation(num - 1)
 }
+
+// Function 2 - squaring an argument
+function square(num) {
+  return Math.pow(num, 2)
+}
+
+// Training JS #7: if..else and ternary operator
+function saleHotdogs(n) {
+  return n >= 10 ? 90 * n : n >= 5 ? n * 95 : n * 100
+}
