@@ -497,3 +497,19 @@ function buildString(...template) {
 function sumStr(a, b) {
   return (+a + +b).toString()
 }
+
+// Calculate BMI
+
+function bmi(weight, height) {
+  const bmiCalculated = weight / height ** 2
+  switch (true) {
+    case bmiCalculated <= 18.5:
+      return 'Underweight'
+    case bmiCalculated <= 25.0:
+      return 'Normal'
+    case bmiCalculated <= 30.0:
+      return 'Overweight'
+    case bmiCalculated > 30:
+      return 'Obese'
+  }
+}
