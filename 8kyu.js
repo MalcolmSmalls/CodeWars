@@ -662,3 +662,11 @@ function isVow(a) {
 function fixTheMeerkat(arr) {
   return arr.reverse()
 }
+
+// Count the Monkeys!
+
+function monkeyCount(n) {
+  return Array(n)
+    .fill(0)
+    .map((item, index) => index + 1)
+}
