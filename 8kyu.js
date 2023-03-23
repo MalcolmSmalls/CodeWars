@@ -637,3 +637,23 @@ function apple(x) {
     ? `It's hotter than the sun!!`
     : 'Help yourself to a honeycomb Yorkie for the glovebox.'
 }
+
+// Is there a vowel in there?
+function isVow(a) {
+  let newArr = []
+  const obj = {
+    97: 'a',
+    101: 'e',
+    105: 'i',
+    111: 'o',
+    117: 'u',
+  }
+  for (let code of a) {
+    if (obj.hasOwnProperty(code)) {
+      newArr.push(obj[code])
+    } else {
+      newArr.push(code)
+    }
+  }
+  return newArr
+}
