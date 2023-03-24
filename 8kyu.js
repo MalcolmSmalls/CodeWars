@@ -889,3 +889,12 @@ function excludingVatPrice(price) {
   let num = +(price / 1.15).toFixed(2)
   return num ? num : 0
 }
+
+// How good are you really?
+
+function betterThanAverage(classPoints, yourPoints) {
+  return (
+    yourPoints >
+    classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length
+  )
+}
