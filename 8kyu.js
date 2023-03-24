@@ -858,3 +858,9 @@ function dutyFree(normPrice, discount, hol) {
 function makeNegative(num) {
   return num < 0 ? num : -num
 }
+
+// Thinkful - Logic Drills: Traffic light
+function updateLight(current) {
+  const colorArr = ['green', 'yellow', 'red', 'green']
+  return colorArr[colorArr.indexOf(current) + 1]
+}
