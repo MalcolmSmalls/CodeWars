@@ -966,3 +966,19 @@ function equal5() {
 function getRealFloor(n) {
   return n <= 0 ? n : n > 13 ? n - 2 : n - 1
 }
+
+function weatherInfo(temp) {
+  var c = convertToCelsius(temp)
+  if (c < 0) {
+    return c + ' is freezing temperature'
+  } else {
+    return c + ' is above freezing temperature'
+  }
+}
+
+// Grasshopper - Debug
+
+function convertToCelsius(temperature) {
+  var celsius = (temperature - 32) * (5 / 9)
+  return celsius
+}
