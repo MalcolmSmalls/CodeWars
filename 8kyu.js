@@ -735,3 +735,16 @@ class Solution {
 function oddCount(n) {
   return Math.floor(n / 2)
 }
+
+// OOP: Object Oriented Piracy
+
+function Ship(draft, crew) {
+  this.draft = draft
+  this.crew = crew
+  this.isWorthIt = function () {
+    if (this.draft - this.crew * 1.5 > 20) {
+      return true
+    }
+    return false
+  }
+}
