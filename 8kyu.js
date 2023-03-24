@@ -795,3 +795,54 @@ function whatday(num) {
     return obj[num]
   }
 }
+
+// function sumOfDifferences(arr) {
+//   let newArr = []
+//   arr.sort((a, b) => b - a)
+//   if (arr.length % 2 !== 0) {
+//     arr.forEach((item, index) => {
+//       if (index % 2 !== 0) {
+//         newArr.push(item)
+//         newArr.push(item)
+//       } else {
+//         newArr.push(item)
+//       }
+//     })
+//   } else {
+//     newArr = [...arr]
+//   }
+//   let totalArr = []
+//   let left = 0
+//   let right = left + 1
+//   while (right < newArr.length) {
+//     totalArr.push(newArr[left] + newArr[right])
+//     left = left + 2
+//     right = right + 2
+//   }
+//   return totalArr.reduce((acc, curr) => acc - curr)
+// }
+
+function sumOfDifferences(arr) {
+  let newArr = []
+  let totalArr = []
+  arr.sort((a, b) => b - a)
+  if (arr.length % 2 !== 0) {
+    arr.forEach((item, index) => {
+      if (index % 2 !== 0) {
+        newArr.push(item)
+        newArr.push(item)
+      } else {
+        newArr.push(item)
+      }
+    })
+  }
+  console.log(newArr)
+  for (let i = 0; i < newArr.length; i = i + 2) {
+    totalArr.push(newArr.slice(i, i + 2))
+  }
+
+  return totalArr.reduce((acc, curr) => acc + curr)
+  console.log(totalArr)
+}
+
+console.log(sumOfDifferences([1, 2, 10]))
