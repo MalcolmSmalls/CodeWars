@@ -748,3 +748,8 @@ function Ship(draft, crew) {
     return false
   }
 }
+
+// MakeUpperCase
+function makeUpperCase(str) {
+  return str.toUpperCase()
+}
