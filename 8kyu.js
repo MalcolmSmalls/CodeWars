@@ -699,3 +699,19 @@ function basicOp(operation, value1, value2) {
 function doubleInteger(i) {
   return i + i
 }
+
+// Count of positives / sum of negatives
+
+function countPositivesSumNegatives(input) {
+  if (!input || input.length === 0) return []
+  let totalNeg = 0
+  let totalPos = 0
+  for (let num of input) {
+    if (num <= 0) {
+      totalNeg += num
+    } else {
+      totalPos += 1
+    }
+  }
+  return [totalPos, totalNeg]
+}
