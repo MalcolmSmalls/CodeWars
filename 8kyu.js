@@ -865,10 +865,13 @@ function updateLight(current) {
   return colorArr[colorArr.indexOf(current) + 1]
 }
 
+// Find the Remainder
 
-// 
-Find the Remainder
+function remainder(n, m) {
+  return Math.max(m, n) % Math.min(m, n)
+}
 
-function remainder(n, m){
-  return Math.max(m,n) % Math.min(m,n)
+// Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - sonYearsOld * 2)
 }
