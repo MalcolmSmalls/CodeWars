@@ -758,3 +758,20 @@ function makeUpperCase(str) {
 function first(arr, n = 1) {
   return arr.slice(0, n)
 }
+
+// Duck Duck Goose
+
+function duckDuckGoose(players, goose) {
+  if (goose >= players.length) {
+    goose = goose % players.length
+  }
+  let player = players.at(goose - 1)
+  let descriptor = Object.getOwnPropertyDescriptor(player, 'name')
+  return descriptor.value
+}
+
+// cleaner
+
+function duckDuckGoose(players, goose) {
+  return players[(goose - 1) % players.length].name
+}
