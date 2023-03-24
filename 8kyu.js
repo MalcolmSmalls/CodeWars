@@ -898,3 +898,8 @@ function betterThanAverage(classPoints, yourPoints) {
     classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length
   )
 }
+
+// No Loops 2 - You only need one
+function check(a, x) {
+  return a.includes(x)
+}
