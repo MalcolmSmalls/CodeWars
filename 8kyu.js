@@ -835,3 +835,7 @@ function findAverage(array) {
   if (!array.length) return 0
   return array.reduce((acc, curr) => acc + curr, 0) / array.length
 }
+
+function enough(cap, on, wait) {
+  return cap - on - wait > 0 ? 0 : Math.abs(cap - on - wait)
+}
