@@ -903,3 +903,15 @@ function betterThanAverage(classPoints, yourPoints) {
 function check(a, x) {
   return a.includes(x)
 }
+
+// Enumerable Magic - Does My List Include This?
+function include(arr, item) {
+  let map = new Map()
+  for (let i = 0; i < arr.length; i++) {
+    map.set(arr[i])
+    if (map.has(item)) {
+      return true
+    }
+  }
+  return false
+}
