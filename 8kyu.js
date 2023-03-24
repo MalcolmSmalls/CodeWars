@@ -881,3 +881,11 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 function maps(x) {
   return x.map((item) => item * 2)
 }
+
+// Calculate Price Excluding VAT
+
+function excludingVatPrice(price) {
+  if (price === null) return -1
+  let num = +(price / 1.15).toFixed(2)
+  return num ? num : 0
+}
