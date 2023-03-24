@@ -822,27 +822,16 @@ function whatday(num) {
 //   return totalArr.reduce((acc, curr) => acc - curr)
 // }
 
-function sumOfDifferences(arr) {
-  let newArr = []
-  let totalArr = []
-  arr.sort((a, b) => b - a)
-  if (arr.length % 2 !== 0) {
-    arr.forEach((item, index) => {
-      if (index % 2 !== 0) {
-        newArr.push(item)
-        newArr.push(item)
-      } else {
-        newArr.push(item)
-      }
-    })
-  }
-  console.log(newArr)
-  for (let i = 0; i < newArr.length; i = i + 2) {
-    totalArr.push(newArr.slice(i, i + 2))
-  }
+// Sum of differences in array
 
-  return totalArr.reduce((acc, curr) => acc + curr)
-  console.log(totalArr)
+function sumOfDifferences(arr) {
+  if (arr.length === 0) return 0
+  arr.sort((a, b) => b - a)
+  return arr[0] - arr[arr.length - 1]
 }
 
-console.log(sumOfDifferences([1, 2, 10]))
+// Calculate average
+function findAverage(array) {
+  if (!array.length) return 0
+  return array.reduce((acc, curr) => acc + curr, 0) / array.length
+}
