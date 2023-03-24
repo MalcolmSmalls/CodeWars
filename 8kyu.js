@@ -864,3 +864,11 @@ function updateLight(current) {
   const colorArr = ['green', 'yellow', 'red', 'green']
   return colorArr[colorArr.indexOf(current) + 1]
 }
+
+
+// 
+Find the Remainder
+
+function remainder(n, m){
+  return Math.max(m,n) % Math.min(m,n)
+}
