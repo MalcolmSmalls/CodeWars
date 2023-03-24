@@ -775,3 +775,23 @@ function duckDuckGoose(players, goose) {
 function duckDuckGoose(players, goose) {
   return players[(goose - 1) % players.length].name
 }
+
+// Return the day
+
+function whatday(num) {
+  const obj = {
+    1: 'Sunday',
+    2: 'Monday',
+    3: 'Tuesday',
+    4: 'Wednesday',
+    5: 'Thursday',
+    6: 'Friday',
+    7: 'Saturday',
+  }
+
+  if (num > 7 || num < 1) {
+    return 'Wrong, please enter a number between 1 and 7'
+  } else {
+    return obj[num]
+  }
+}
