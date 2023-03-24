@@ -961,3 +961,8 @@ function equal5() {
     b = v4 //set number value to b
   return a % b
 }
+
+// What's the real floor?
+function getRealFloor(n) {
+  return n <= 0 ? n : n > 13 ? n - 2 : n - 1
+}
