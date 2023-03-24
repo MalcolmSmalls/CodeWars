@@ -689,3 +689,8 @@ function quadratic(x1, x2) {
   let c = x1 * x2
   return [1, b, c]
 }
+
+//Basic Mathematical Operations
+function basicOp(operation, value1, value2) {
+  return eval(`${value1}${operation}${value2}`)
+}
