@@ -836,6 +836,14 @@ function findAverage(array) {
   return array.reduce((acc, curr) => acc + curr, 0) / array.length
 }
 
+//Will there be enough space?
 function enough(cap, on, wait) {
   return cap - on - wait > 0 ? 0 : Math.abs(cap - on - wait)
+}
+
+// Volume of a Cuboid
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height
+  }
 }
