@@ -721,3 +721,11 @@ function countPositivesSumNegatives(input) {
 function check(a, x) {
   return a.includes(x)
 }
+
+// Classic Hello World
+
+class Solution {
+  static main() {
+    console.log('Hello World!')
+  }
+}
