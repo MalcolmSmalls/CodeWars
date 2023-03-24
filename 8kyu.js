@@ -875,3 +875,9 @@ function remainder(n, m) {
 function twiceAsOld(dadYearsOld, sonYearsOld) {
   return Math.abs(dadYearsOld - sonYearsOld * 2)
 }
+
+// Beginner - Lost Without a Map
+
+function maps(x) {
+  return x.map((item) => item * 2)
+}
