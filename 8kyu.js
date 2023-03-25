@@ -1086,3 +1086,9 @@ function multiTable(number) {
 function typeOfSum(a, b) {
   return typeof(a+b)
 }
+
+
+// Convert to Binary
+function toBinary(n){
+  return +n.toString(2)
+}
