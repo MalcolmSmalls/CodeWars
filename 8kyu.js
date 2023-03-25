@@ -1158,3 +1158,19 @@ function pillars(numPill, dist, width) {
   if(numPill===1) return 0
   return ((numPill-1) * dist * 100) + ((numPill-2)*width)
 }
+
+
+// DNA to RNA Conversion
+function DNAtoRNA(dna) {
+  let str = ''
+  const obj = {
+    G: 'G',
+    C: 'C',
+    T: 'U',
+    A: "A"
+  }
+  for(let letter of dna){
+    str += obj[letter]
+  }
+  return str
+}
