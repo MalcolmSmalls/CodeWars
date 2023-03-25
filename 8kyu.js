@@ -1007,3 +1007,10 @@ function points(games) {
 
   return totalX
 }
+
+
+
+// Area or Perimeter
+const areaOrPerimeter = function(l , w) {
+  return l === w ? l * w : l + l + w + w
+};
