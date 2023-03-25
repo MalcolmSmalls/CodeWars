@@ -1125,3 +1125,12 @@ function padIt(str,n){
   }
   return newArr.join('')
 }
+
+
+// Expressions Matter
+
+function expressionMatter(a, b, c) {
+  const array = [a+b+c, a*b*c, (a+b)*c, (a*b)+c, a+(b*c), a*(b*c), a*(b+c)]
+  return Math.max.apply(null, array)
+  
+}
