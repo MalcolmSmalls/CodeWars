@@ -1140,3 +1140,14 @@ function expressionMatter(a, b, c) {
 function move (position, roll) {
   return roll * 2 + position
 }
+
+// Removing Elements
+function removeEveryOther(arr){
+  let newArr = []
+  arr.map((item, index) => {
+    if(index % 2 === 0){
+      newArr.push(item)
+    }
+  })
+  return newArr
+}
