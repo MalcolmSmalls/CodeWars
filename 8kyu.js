@@ -1111,3 +1111,17 @@ function howMuchILoveYou(nbPetals) {
   }
 return obj[nbPetals]
 }
+
+
+// Training JS #9: loop statement --while and do..while
+function padIt(str,n){
+  let newArr = [str]
+  while(n > 0){
+    newArr.unshift('*')
+    n--
+    if(n <= 0) break;
+    newArr.push('*')
+    n--
+  }
+  return newArr.join('')
+}
