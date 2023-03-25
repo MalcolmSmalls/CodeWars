@@ -1241,3 +1241,18 @@ function testEven(n) {
 function boolToWord( bool ){
   return bool ? 'Yes': 'No'
 }
+
+
+// Find the first non-consecutive number
+
+function firstNonConsecutive (arr) {
+  let pointer = 0
+  let copiedArr = [...arr]
+  let consecutiveArr = copiedArr.fill(arr[0]).map((item, index) => item+index)
+  for(let i = 0; i < arr.length; i++){
+    if(consecutiveArr[i] !== arr[i]) return arr[pointer];
+    pointer++
+
+  }
+  return null
+}
