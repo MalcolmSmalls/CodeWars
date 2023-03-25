@@ -982,3 +982,13 @@ function convertToCelsius(temperature) {
   var celsius = (temperature - 32) * (5 / 9)
   return celsius
 }
+
+
+// Sum Arrays
+
+// Sum Numbers
+function sum (numbers) {
+  return numbers.reduce((acc, curr) => acc + curr, 0)
+    
+    
+};
