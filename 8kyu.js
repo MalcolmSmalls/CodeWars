@@ -990,5 +990,20 @@ function convertToCelsius(temperature) {
 function sum (numbers) {
   return numbers.reduce((acc, curr) => acc + curr, 0)
     
-    
 };
+
+
+//Total amount of points
+
+function points(games) {
+  let totalX = 0
+  games.forEach(item => {
+    if(item[0] > item[2]){
+      totalX += 3
+    }else if(item[0] === item[2]){
+      totalX +=  1
+    }
+  })
+
+  return totalX
+}
