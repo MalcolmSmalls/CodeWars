@@ -1080,3 +1080,9 @@ function multiTable(number) {
   }
   return str.slice(0, str.length-1)
 }
+
+
+// Type of sum
+function typeOfSum(a, b) {
+  return typeof(a+b)
+}
