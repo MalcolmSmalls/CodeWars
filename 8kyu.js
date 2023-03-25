@@ -1235,3 +1235,9 @@ function evalObject(value){
 function testEven(n) {
   return n % 2 === 0
 }
+
+// Convert boolean values to strings 'Yes' or 'No'.
+
+function boolToWord( bool ){
+  return bool ? 'Yes': 'No'
+}
