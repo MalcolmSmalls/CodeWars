@@ -1226,3 +1226,12 @@ function evalObject(value){
   }
   return result;
 }
+
+
+
+
+// Is it even?
+
+function testEven(n) {
+  return n % 2 === 0
+}
