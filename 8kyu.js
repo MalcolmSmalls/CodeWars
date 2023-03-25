@@ -1092,3 +1092,22 @@ function typeOfSum(a, b) {
 function toBinary(n){
   return +n.toString(2)
 }
+
+
+//  I love you, a little , a lot, passionately ... not at all
+function howMuchILoveYou(nbPetals) {
+  let obj = {
+    0: "not at all",
+    1: 'I love you',
+    2: "a little",
+    3: "a lot",
+    4: "passionately",
+    5: "madly",
+    6: "not at all"
+  }
+  if(nbPetals > 6){
+    if(nbPetals)
+    return obj[nbPetals % 6]
+  }
+return obj[nbPetals]
+}
