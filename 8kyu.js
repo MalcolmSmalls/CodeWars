@@ -1014,3 +1014,19 @@ function points(games) {
 const areaOrPerimeter = function(l , w) {
   return l === w ? l * w : l + l + w + w
 };
+
+// Training JS #12: loop statement --for..in and for..of
+
+
+function giveMeFive(obj){
+  let newArr = []
+  for(let key in obj){
+    if(key.length === 5){
+      newArr.push(key)
+    }
+    if(obj[key].length === 5){
+      newArr.push(obj[key])
+    }
+  }
+  return newArr
+}
