@@ -1052,3 +1052,23 @@ function pickIt(arr){
 function feast(beast, dish) {
   return beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1]
 }
+
+// if(!isNaN(a) || !isNaN(b)) return -1
+// if(a.toUpperCase() === a && b.toUpperCase() === b || a.toLowerCase() === a && b.toLowerCase() === b){
+//   return 1
+// }else{
+//   return 0
+// }
+
+
+// Multiple of index
+function multipleOfIndex(array) {
+  let newArr = []
+  array.forEach((item, index) =>{
+    if(item % index === 0){
+      newArr.push(item)
+    }
+  })
+  return newArr
+}
+
