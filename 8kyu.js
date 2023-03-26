@@ -1552,3 +1552,9 @@ function contamination(text, char){
   const newArr = new Array(text.length)
   return newArr.fill(char,0).join('')
 }
+
+
+// Name Shuffler
+function nameShuffler(str){
+  return str.split(' ').reverse().join(' ')
+}
