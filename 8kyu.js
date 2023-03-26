@@ -1609,3 +1609,10 @@ function validateUsr(username) {
   let res =  /^[a-z1-9_]{4,16}$/
   return res.test(username)
 }
+
+
+// get character from ASCII Value
+
+function getChar(c){
+  return String.fromCharCode(c)
+}
