@@ -1386,3 +1386,11 @@ function rentalCarCost(d) {
   console.log(total)
   return d >= 7 ? total - 50 : d >= 3 ? total - 20 : total
 }
+
+
+// Do I get a bonus?
+
+
+function bonusTime(salary, bonus) { 
+  return bonus ? `£${salary * 10}` : `£${salary}`
+}
