@@ -1595,3 +1595,10 @@ function hexToDec(hexString){
 function derive(coefficient,exponent) {
   return `${coefficient*exponent}x^${exponent-1}`
 }
+
+
+// Get Nth Even Number
+
+function nthEven(n){
+  return n * 2 - 2
+}
