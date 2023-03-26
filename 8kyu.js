@@ -1558,3 +1558,15 @@ function contamination(text, char){
 function nameShuffler(str){
   return str.split(' ').reverse().join(' ')
 }
+
+// Double Char 
+
+function doubleChar(str) {
+  let newStr = ''
+  for(let letter of str){
+    newStr += letter
+    newStr += letter
+  }
+  return newStr
+  
+}
