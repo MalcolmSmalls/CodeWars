@@ -1337,3 +1337,23 @@ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
 function squareOrSquareRoot(array) {
   return array.map(item => Number.isInteger(Math.sqrt(item)) ? Math.sqrt(item) : item ** 2)
 }
+
+
+// Grasshopper - Grade book
+function getGrade (s1, s2, s3) {
+  let grade
+  let obj = {
+    90: 'A',
+    80: 'B',
+    70: 'C',
+    60: 'D',
+    0: 'F'
+  }
+  let avg = (s1 + s2 + s3) / 3
+  for(let key in obj){
+    if(avg >= key){
+      grade = obj[key]
+    }
+  }
+  return grade
+}
