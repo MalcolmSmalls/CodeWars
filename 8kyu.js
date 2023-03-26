@@ -1535,3 +1535,12 @@ function solution(a, b){
 function twoSort(s) {
   return s.sort()[0].split('').join('***')
 }
+
+
+// Sum of positive
+
+function positiveSum(arr) {
+  let total = 0
+  arr.forEach(item => item > 0 ? total += item: item)
+  return total
+}
