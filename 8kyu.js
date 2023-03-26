@@ -1589,3 +1589,9 @@ const reverseSeq = n => {
 function hexToDec(hexString){
   return parseInt(hexString, 16)
 }
+
+
+// Take the Derivative
+function derive(coefficient,exponent) {
+  return `${coefficient*exponent}x^${exponent-1}`
+}
