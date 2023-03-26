@@ -1445,3 +1445,9 @@ function typeValidation(variable, type) {
 function remove (string) {
   return string[string.length-1] === '!' ? string.slice(0,string.length-1) : string
 }
+
+// Opposite number
+
+function opposite(number) {
+  return(-number);
+}
