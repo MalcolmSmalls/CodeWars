@@ -1451,3 +1451,9 @@ function remove (string) {
 function opposite(number) {
   return(-number);
 }
+
+
+//Basic Training: Add item to an Array
+
+var websites = []
+websites.push('codewars')
