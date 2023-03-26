@@ -1497,3 +1497,12 @@ function between(a, b) {
   }
   return newArr
 }
+
+
+
+// Convert number to reversed array of digits
+
+
+function digitize(n) {
+  return n.toString().split('').map(item => Number(item)).reverse()
+}
