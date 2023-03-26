@@ -1544,3 +1544,11 @@ function positiveSum(arr) {
   arr.forEach(item => item > 0 ? total += item: item)
   return total
 }
+
+
+// Contamination #1 -String-
+
+function contamination(text, char){
+  const newArr = new Array(text.length)
+  return newArr.fill(char,0).join('')
+}
