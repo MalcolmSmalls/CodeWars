@@ -1457,3 +1457,6 @@ function opposite(number) {
 
 var websites = []
 websites.push('codewars')
+
+// Mr. Freeze
+Object.freeze(MrFreeze)
