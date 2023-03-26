@@ -1602,3 +1602,10 @@ function derive(coefficient,exponent) {
 function nthEven(n){
   return n * 2 - 2
 }
+
+
+// Simple validation of a username with regex
+function validateUsr(username) {
+  let res =  /^[a-z1-9_]{4,16}$/
+  return res.test(username)
+}
