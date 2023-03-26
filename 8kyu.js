@@ -1371,3 +1371,10 @@ function paperwork(n, m) {
 function arrayPlusArray(arr1, arr2) {
   return [...arr1, ...arr2].reduce((acc, curr) => acc+curr, 0)
 }
+
+
+//Grasshopper - Personalized Message
+
+function greet (name, owner) {
+  return name === owner ? `Hello boss` : 'Hello guest'
+}
