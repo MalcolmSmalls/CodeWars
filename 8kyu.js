@@ -1357,3 +1357,10 @@ function getGrade (s1, s2, s3) {
   }
   return grade
 }
+
+
+// Beginner Series #1 School Paperwork
+
+function paperwork(n, m) {
+  return n < 0 || m < 0 ? 0 : n * m
+}
