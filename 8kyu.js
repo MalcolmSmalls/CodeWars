@@ -1282,3 +1282,9 @@ function mouthSize(animal) {
   return animal.toLowerCase() === 'alligator' ? 'small' : 'wide'
 }
 
+
+// N-th Power
+
+function index(array, n){
+  return !array[n] ? -1 : array[n]**n
+}
