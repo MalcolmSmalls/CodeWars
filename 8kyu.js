@@ -1288,3 +1288,14 @@ function mouthSize(animal) {
 function index(array, n){
   return !array[n] ? -1 : array[n]**n
 }
+
+
+// Name on billboard
+
+function billboard(name, price = 30){
+  let total = 0
+  for(let key of name){
+    total += price
+  }
+  return total
+} 
