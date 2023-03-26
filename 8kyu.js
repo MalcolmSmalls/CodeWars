@@ -1478,3 +1478,10 @@ function countBy(x, n) {
 function stringToArray(string){
   return string.split(' ')
 }
+
+
+// Bin to Decimal
+
+function binToDec(bin){
+  return parseInt(bin, 2)
+}
