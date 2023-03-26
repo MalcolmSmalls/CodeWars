@@ -1378,3 +1378,11 @@ function arrayPlusArray(arr1, arr2) {
 function greet (name, owner) {
   return name === owner ? `Hello boss` : 'Hello guest'
 }
+
+
+// Transportation on vacation
+function rentalCarCost(d) {
+  let total = d * 40
+  console.log(total)
+  return d >= 7 ? total - 50 : d >= 3 ? total - 20 : total
+}
