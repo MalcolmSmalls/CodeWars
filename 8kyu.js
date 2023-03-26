@@ -1299,3 +1299,16 @@ function billboard(name, price = 30){
   }
   return total
 } 
+
+
+
+//  If you can't sleep, just count sheep!!
+var countSheep = function (num){
+  let str = ''
+  let i = 1
+  while(i <= num){
+    str += `${i} sheep...`
+    i++
+  }
+    return str
+}
