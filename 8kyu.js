@@ -1440,3 +1440,8 @@ function checkForFactor (base, factor) {
 function typeValidation(variable, type) {
   return typeof(variable) === type
 }
+
+// Exclamation marks series #1: Remove an exclamation mark from the end of string
+function remove (string) {
+  return string[string.length-1] === '!' ? string.slice(0,string.length-1) : string
+}
