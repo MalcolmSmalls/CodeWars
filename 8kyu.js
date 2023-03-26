@@ -1512,3 +1512,19 @@ function digitize(n) {
 function divisibleBy(numbers, divisor){
   return numbers.filter(item => item % divisor === 0)
 }
+
+// Short Long Short
+
+function solution(a, b){
+  const newArr = []
+  if(a.length > b.length){
+    newArr.push(a)
+    newArr.push(b)
+    newArr.unshift(b)
+  }else{
+    newArr.push(b)
+    newArr.push(a)
+    newArr.unshift(a)
+  }
+  return newArr.join('')
+}
