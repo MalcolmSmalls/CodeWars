@@ -1435,3 +1435,8 @@ function getPlanetName(id){
 function checkForFactor (base, factor) {
   return base % factor === 0
 }
+
+// For Twins: 1. Types
+function typeValidation(variable, type) {
+  return typeof(variable) === type
+}
