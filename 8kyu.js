@@ -1506,3 +1506,9 @@ function between(a, b) {
 function digitize(n) {
   return n.toString().split('').map(item => Number(item)).reverse()
 }
+
+
+// Find numbers which are divisible by given number
+function divisibleBy(numbers, divisor){
+  return numbers.filter(item => item % divisor === 0)
+}
