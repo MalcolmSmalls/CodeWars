@@ -1263,3 +1263,16 @@ function firstNonConsecutive (arr) {
 function greet(name){
   return `Hello, ${name} how are you doing today?`
 }
+
+
+// Remove duplicates from list
+function distinct(a) {
+  let newArr = []
+  for(let num of a){
+    if(!newArr.includes(num)){
+      newArr.push(num)
+    }
+  }
+  return newArr
+}
+
