@@ -1485,3 +1485,15 @@ function stringToArray(string){
 function binToDec(bin){
   return parseInt(bin, 2)
 }
+
+
+// What is between?
+
+function between(a, b) {
+  let newArr = []
+  while(a <= b){
+    newArr.push(a)
+    a++
+  }
+  return newArr
+}
