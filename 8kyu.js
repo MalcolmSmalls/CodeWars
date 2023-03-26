@@ -1330,3 +1330,10 @@ function checkAlive (health) {
 function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals
 }
+
+
+// To square(root) or not to square(root)
+
+function squareOrSquareRoot(array) {
+  return array.map(item => Number.isInteger(Math.sqrt(item)) ? Math.sqrt(item) : item ** 2)
+}
