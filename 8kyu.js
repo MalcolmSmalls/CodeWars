@@ -1364,3 +1364,10 @@ function getGrade (s1, s2, s3) {
 function paperwork(n, m) {
   return n < 0 || m < 0 ? 0 : n * m
 }
+
+
+// Array plus array
+
+function arrayPlusArray(arr1, arr2) {
+  return [...arr1, ...arr2].reduce((acc, curr) => acc+curr, 0)
+}
