@@ -1725,3 +1725,20 @@ var replaceDots = function(str) {
 var replaceDots = function(str) {
   return str.replace(/\./g,'-');
 }
+
+
+// They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite?
+function isOpposite(s1,s2){
+  let actualOpposite = ''
+  for(let char of s1){
+    if(char.toLowerCase() === char){
+      char = char.toUpperCase()
+    }else{
+      char = char.toLowerCase()
+    }
+    actualOpposite += char
+  }
+
+  return s1 && s2 ?  s2 === actualOpposite : false
+  
+}
