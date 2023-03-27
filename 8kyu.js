@@ -1663,3 +1663,11 @@ class SmallestIntegerFinder {
     return args.sort((a,b) => a-b)[0]
   }
 }
+
+
+// Capitalization and Mutability
+
+function capitalizeWord(word) {
+  word = word[0].toUpperCase() + word.slice(1);
+  return word;
+}
