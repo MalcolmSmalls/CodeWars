@@ -1671,3 +1671,10 @@ function capitalizeWord(word) {
   word = word[0].toUpperCase() + word.slice(1);
   return word;
 }
+
+
+// Well of Ideas - Easy Version
+function well(x){
+  let goodArrayLen = x.filter(item => item === 'good').length 
+  return  goodArrayLen > 2? 'I smell a series!' : goodArrayLen < 3 && goodArrayLen > 0 ? 'Publish!' : 'Fail!'
+}
