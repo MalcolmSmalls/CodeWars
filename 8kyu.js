@@ -1621,3 +1621,17 @@ function getChar(c){
 function sumMix(x){
   return x.map(item => Number(item)).reduce((acc, curr) => acc+curr,0)
 }
+
+
+// Is this my tail?
+function correctTail(bod, tail){
+  return bod[bod.length-1] === tail 
+}
+
+
+// Merge two sorted arrays into one
+  
+  function mergeArrays(arr1, arr2) {
+  let newSet = new Set([...arr1, ...arr2])
+  return [...newSet].sort((a,b) => a-b)
+}
