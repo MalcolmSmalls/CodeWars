@@ -1686,3 +1686,10 @@ function greet(name){
     return "Hello, my love!";
   return "Hello, " + name + "!";
 }
+
+
+//  Configure package json for a node application
+const configuration = {
+  "name": "your-pack-name",
+  "version": "6.1.3"
+};
