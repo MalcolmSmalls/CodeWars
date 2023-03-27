@@ -1706,3 +1706,22 @@ function playerRankUp (points) {
 const isReallyNaN = (val) => {
   return Number.isNaN(val)
 };
+
+
+// FIXME: Replace all dots
+
+
+var replaceDots = function(str) {
+  let newStr = ''
+  for(let char of str){
+    if(char === '.'){
+          char = '-' 
+    }
+  newStr += char
+  }
+  return newStr
+}
+
+var replaceDots = function(str) {
+  return str.replace(/\./g,'-');
+}
