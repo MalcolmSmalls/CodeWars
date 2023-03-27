@@ -1635,3 +1635,10 @@ function correctTail(bod, tail){
   let newSet = new Set([...arr1, ...arr2])
   return [...newSet].sort((a,b) => a-b)
 }
+
+
+// Thinkful - Number Drills: Blue and red marbles
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  let total = blueStart + redStart - bluePulled - redPulled
+  return (blueStart-bluePulled) / total
+}
