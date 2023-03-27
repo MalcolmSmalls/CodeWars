@@ -1742,3 +1742,9 @@ function isOpposite(s1,s2){
   return s1 && s2 ?  s2 === actualOpposite : false
   
 }
+
+// Find the position!
+
+function position(letter){
+  return `Position of alphabet: ${letter.charCodeAt(0) - 96}`
+}
