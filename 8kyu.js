@@ -1616,3 +1616,8 @@ function validateUsr(username) {
 function getChar(c){
   return String.fromCharCode(c)
 }
+
+// Sum Mixed Array
+function sumMix(x){
+  return x.map(item => Number(item)).reduce((acc, curr) => acc+curr,0)
+}
