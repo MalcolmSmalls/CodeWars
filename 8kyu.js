@@ -1678,3 +1678,11 @@ function well(x){
   let goodArrayLen = x.filter(item => item === 'good').length 
   return  goodArrayLen > 2? 'I smell a series!' : goodArrayLen < 3 && goodArrayLen > 0 ? 'Publish!' : 'Fail!'
 }
+
+
+// Jenny's secret message
+function greet(name){
+  if(name === "Johnny")
+    return "Hello, my love!";
+  return "Hello, " + name + "!";
+}
