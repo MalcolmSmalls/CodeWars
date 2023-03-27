@@ -1642,3 +1642,17 @@ function guessBlue(blueStart, redStart, bluePulled, redPulled) {
   let total = blueStart + redStart - bluePulled - redPulled
   return (blueStart-bluePulled) / total
 }
+
+
+// Fake Binary
+function fakeBin(x){
+  let newStr = ''
+  for(let num of x){
+    if(num >= 5){
+      newStr+='1'
+    }else{
+      newStr+='0'
+    }
+  }
+  return newStr
+}
