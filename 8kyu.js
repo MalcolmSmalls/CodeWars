@@ -1774,3 +1774,22 @@ class Cube {
     this.side = Math.abs(n);
   }
 }
+
+
+// Rock Paper Scissors!
+
+
+const rps = (p1, p2) => {
+  let beats = {
+    rock: 'scissors',
+    paper: 'rock',
+    scissors: 'paper'
+  }
+  if(beats[p1] === p2){
+    return 'Player 1 won!'
+  }else if(p1 === p2){
+    return 'Draw!'
+  }else{
+    return 'Player 2 won!'
+  }
+};
