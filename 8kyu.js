@@ -1753,3 +1753,24 @@ function position(letter){
 function hero(bullets, dragons){
   return bullets >= dragons * 2
 }
+
+
+// Playing with cubes II
+
+class Cube {
+  constructor(side){
+    if(!side){
+      this.side = 0
+    }else{
+        this.side = Math.abs(side)
+    }
+
+  }
+
+  getSide() {
+    return this.side; 
+  }
+  setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
