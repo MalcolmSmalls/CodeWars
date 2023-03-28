@@ -1824,3 +1824,23 @@ function warnTheSheep(queue) {
     return `Oi! Sheep number ${queue.length - (sheepSpot+1)}! You are about to be eaten by a wolf!`
   }
 }
+
+
+
+// Correct the mistakes of the character recognition software
+function correct(string){
+  let fixChars = {
+    0: 'O',
+    5: 'S',
+    1: 'I'
+  }
+  let newStr = ''
+  for(let char of string){
+    if(fixChars[char]){
+      newStr += fixChars[char]
+    }else{
+      newStr += char
+    }
+  }
+	return newStr
+}
