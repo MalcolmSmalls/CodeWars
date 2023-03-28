@@ -1813,3 +1813,14 @@ function closeCompare(a, b, margin = 0){
   const newArr = [a,b].sort((a,b) => b-a)
   return margin >= newArr[0] - newArr[1] ? 0 : a < b ? -1 : 1
 }
+
+
+// A wolf in sheep's clothing
+function warnTheSheep(queue) {
+  const sheepSpot = queue.indexOf('wolf')
+  if(sheepSpot === queue.length-1){
+    return "Pls go away and stop eating my sheep"
+  }else{
+    return `Oi! Sheep number ${queue.length - (sheepSpot+1)}! You are about to be eaten by a wolf!`
+  }
+}
