@@ -1748,3 +1748,8 @@ function isOpposite(s1,s2){
 function position(letter){
   return `Position of alphabet: ${letter.charCodeAt(0) - 96}`
 }
+
+// Is he gonna survive?
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
