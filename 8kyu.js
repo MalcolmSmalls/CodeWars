@@ -1799,3 +1799,9 @@ const rps = (p1, p2) => {
 function reverseList(list) {
   return list.reverse()
 }
+
+// L1: Set Alarm
+
+function setAlarm(employed, vacation){
+  return vacation || !employed ? false : true
+}
