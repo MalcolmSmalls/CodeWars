@@ -1805,3 +1805,11 @@ function reverseList(list) {
 function setAlarm(employed, vacation){
   return vacation || !employed ? false : true
 }
+
+
+// Compare within margin
+
+function closeCompare(a, b, margin = 0){
+  const newArr = [a,b].sort((a,b) => b-a)
+  return margin >= newArr[0] - newArr[1] ? 0 : a < b ? -1 : 1
+}
