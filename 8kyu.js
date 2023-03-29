@@ -1844,3 +1844,14 @@ function correct(string){
   }
 	return newStr
 }
+
+
+// Enumerable Magic #20 - Cascading Subsets
+
+function eachCons(array, n) {
+  const newArr = []
+  for(let i = 0; i < array.length; i++){
+    newArr.push(array.slice(i, i+n))
+  }
+	return newArr.filter(arr => arr.length === n)
+}
