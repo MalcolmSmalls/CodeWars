@@ -1879,3 +1879,22 @@ function howManyDalmatians(number){
   
   return respond;
 }
+
+//Define a card suit
+function defineSuit(card) {
+  const obj = {
+    '♣': 'clubs',
+    '♦': 'diamonds',
+    '♥': 'hearts',
+    '♠': 'spades'
+  }
+  return obj[card[card.length-1]]
+}
+
+// Freudian translator
+
+
+function toFreud(string) {
+  const reg = /[A-Z'a-z]+/gm
+return string.replace(reg, 'sex')
+}
