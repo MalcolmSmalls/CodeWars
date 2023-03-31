@@ -2001,3 +2001,11 @@ function wrap(value) {
 function usdcny(usd) {
   return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
 }
+
+
+
+// Is the date today
+function isToday(date) {
+  const d = new Date()
+  return date.getYear() === d.getYear()  && date.getDate() === d.getDate()
+}
