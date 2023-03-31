@@ -1898,3 +1898,11 @@ function toFreud(string) {
   const reg = /[A-Z'a-z]+/gm
 return string.replace(reg, 'sex')
 }
+
+
+// String cleaning
+function stringClean(s){
+  let reg = /[0-9]/gm
+  return s.replace(reg, '')
+}
+
