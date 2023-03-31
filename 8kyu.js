@@ -1933,3 +1933,31 @@ function subt(a,b){
   return a-b
 }
 
+
+// Stringy Strings
+function stringy(size) {
+  let newStr = ''
+  while(size > 0){
+    newStr+= 1 
+    size--
+    if(size === 0) break
+    newStr+= 0
+    size--
+  }
+  return newStr
+}
+
+
+// Help the Elite Squad of Brazilian forces BOPE
+
+function magNumber(info){
+  let obj = {
+    PT92: 17,
+    M4A1: 30,
+    M16A2: 30,
+    PSG1: 5
+  }
+
+  return Math.ceil((info[1] * 3) / obj[info[0]])
+  
+}
