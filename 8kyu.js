@@ -2016,3 +2016,15 @@ function isToday(date) {
 function smash (words) {
    return words.join(' ')
 };
+
+
+// Enumerable Magic #25 - Take the First N Elements
+function take(arr, n) {
+  let newArr = []
+  arr.map((item,index) => {
+    if(index < n){
+      newArr.push(item)
+    }
+  })
+  return newArr
+}
