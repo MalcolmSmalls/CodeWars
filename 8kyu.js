@@ -2009,3 +2009,10 @@ function isToday(date) {
   const d = new Date()
   return date.getYear() === d.getYear()  && date.getDate() === d.getDate()
 }
+
+
+// Sentence Smash
+
+function smash (words) {
+   return words.join(' ')
+};
