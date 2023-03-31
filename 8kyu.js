@@ -1988,3 +1988,9 @@ function aspectRatio(x,y){
   return [(Math.ceil(y * 16/9)),y]
 
 }
+
+
+// Semi-Optional
+function wrap(value) {
+  return {'value':value };
+}
