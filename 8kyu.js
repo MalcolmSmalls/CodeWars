@@ -1961,3 +1961,16 @@ function magNumber(info){
   return Math.ceil((info[1] * 3) / obj[info[0]])
   
 }
+
+// Lario and Muigi Pipe Problem
+
+function pipeFix(numbers){
+  let start = numbers[0]
+  let end = numbers[numbers.length-1]
+  let newArr = []
+  while(start <= end){
+    newArr.push(start)
+    start++
+  }
+  return newArr
+}
