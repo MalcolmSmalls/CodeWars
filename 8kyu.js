@@ -1981,3 +1981,10 @@ function pipeFix(numbers){
 function dBScale(intensity) {
   return 10 * Math.log10(intensity/ Math.pow(10, -12))
 }
+
+// Aspect Ratio Cropping - Part 1
+
+function aspectRatio(x,y){
+  return [(Math.ceil(y * 16/9)),y]
+
+}
