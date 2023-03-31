@@ -2028,3 +2028,10 @@ function take(arr, n) {
   })
   return newArr
 }
+
+
+// Hello, Name or World!
+
+function hello(name) {
+  return `Hello, ${name ? name[0].toUpperCase() + name.substring(1).toLowerCase() : 'World'}!`;
+}
