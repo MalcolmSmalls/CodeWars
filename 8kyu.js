@@ -2042,3 +2042,11 @@ function hello(name) {
 function isLockNessMonster(s) {
   return s.includes('tree fiddy') || s.includes('3.50') || s.includes('three fifty')
 }
+
+
+// Add new item (collections are passed by reference)
+function addExtra( listOfNumbers ){
+  let newArr = [...listOfNumbers]
+  newArr.push(1)
+  return newArr
+}
