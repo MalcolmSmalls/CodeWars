@@ -2079,3 +2079,15 @@ function remove (string) {
 function findNeedle(haystack) {
   return `found the needle at position ${haystack.indexOf('needle')}`
 }
+
+
+
+// Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+ 
+function remove (string) {  
+  let newStr = string
+  while(newStr.endsWith('!')){
+    newStr = newStr.slice(0, newStr.length-1)
+  }
+  return newStr
+}
