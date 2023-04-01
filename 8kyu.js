@@ -2115,3 +2115,22 @@ function finalGrade (exam, projects) {
 function sixToast(num) {
   return num > 6 ? num-6 : 6-num
 }
+
+
+// Drinks about
+
+function peopleWithAgeDrink(old) {
+  let str = ''
+  let ageLimits = {
+    10: 'drink toddy',
+    14: 'drink coke',
+    18: 'drink beer',
+    21: 'drink whisky'
+   }
+  for(let key in ageLimits){
+    if(old > key){
+      str = ageLimits[key]
+    }
+  }
+  return str;
+};
