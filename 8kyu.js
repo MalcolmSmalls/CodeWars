@@ -2091,3 +2091,22 @@ function remove (string) {
   }
   return newStr
 }
+
+// Student's Final Grade
+function finalGrade (exam, projects) {
+  if(projects > 10) return 100
+  if(exam > 90) return 100
+  let total = 0
+  const grades = {
+    100: [90, 10],
+    90: [75, 5],
+    75: [50, 2],
+  }
+  
+  for(let key in grades){
+    if(exam > grades[key][0] && projects >= grades[key][1]){
+      total = key
+    }
+  }
+  return Number(total)
+}
