@@ -2073,3 +2073,9 @@ function remove (string) {
   let reg = /!/gm
   return `${string.replace(reg, '')}!`
 }
+
+
+// A Needle in the Haystack
+function findNeedle(haystack) {
+  return `found the needle at position ${haystack.indexOf('needle')}`
+}
