@@ -2110,3 +2110,8 @@ function finalGrade (exam, projects) {
   }
   return Number(total)
 }
+
+// BASIC: Making Six Toast.
+function sixToast(num) {
+  return num > 6 ? num-6 : 6-num
+}
