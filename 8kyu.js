@@ -2050,3 +2050,17 @@ function addExtra( listOfNumbers ){
   newArr.push(1)
   return newArr
 }
+
+
+// Sum of Multiples
+function sumMul(n,m){
+  if(m<=n) return 'INVALID'
+  let total = n
+  const multiple = n
+  while(n < m ){
+    n += multiple
+    if(n > m ) break
+    total += n
+  }
+  return total
+}
