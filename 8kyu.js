@@ -2163,3 +2163,10 @@ function twoHighest(arr) {
 function twoHighest2(arr) {
   return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2)
 }
+
+// Kata Example Twist
+
+var websites = []
+while(websites.length !== 1000){
+  websites.push('codewars')
+}
