@@ -2170,3 +2170,10 @@ var websites = []
 while(websites.length !== 1000){
   websites.push('codewars')
 }
+
+
+// Did she say hallo?
+function validateHello(greetings) {
+  const res = /\b(hello|ciao|salut|hallo|hola|ahoj|czesc)\b/img.test(greetings)
+  return res
+}
