@@ -2177,3 +2177,8 @@ function validateHello(greetings) {
   const res = /\b(hello|ciao|salut|hallo|hola|ahoj|czesc)\b/img.test(greetings)
   return res
 }
+
+// Ensure question
+function ensureQuestion(s) {
+  return s[s.length-1] === "?" ? s : `${s}?`
+}
