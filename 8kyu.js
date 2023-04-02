@@ -2142,3 +2142,24 @@ var a = "dev"
 var b = "Lab"
 
 var name = a + b
+
+
+// Return Two Highest Values in List
+
+function twoHighest(arr) {
+  if(!arr.length) return []
+  const sortedArr = arr.sort((a,b) => a-b)
+  let resultsArr = [sortedArr[sortedArr.length-1]]
+  let index = sortedArr.length - 1
+  while(resultsArr.length === 1 && index >= 0){
+    if(sortedArr[index] !== resultsArr[0]){
+      resultsArr.push(sortedArr[index])
+    }      
+    index--
+  }
+  return resultsArr
+}
+
+function twoHighest2(arr) {
+  return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2)
+}
