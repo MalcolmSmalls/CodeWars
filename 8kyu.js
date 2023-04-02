@@ -2182,3 +2182,15 @@ function validateHello(greetings) {
 function ensureQuestion(s) {
   return s[s.length-1] === "?" ? s : `${s}?`
 }
+
+// How old will I be in 2099?
+function  calculateAge(birthYear, currentYear) {
+  if(birthYear > currentYear) {
+    const years = birthYear - currentYear
+    return `You will be born in ${years} year${years === 1 ? '' : 's'}.`
+  }
+  if(birthYear === currentYear) return 'You were born this very year!'
+  const years = currentYear - birthYear
+  return `You are ${years} year${years === 1 ? '' : 's'} old.`
+}
+
