@@ -2194,3 +2194,7 @@ function  calculateAge(birthYear, currentYear) {
   return `You are ${years} year${years === 1 ? '' : 's'} old.`
 }
 
+// Grasshopper - Function syntax debugging
+function main(verb, noun){
+  return verb + noun
+}
