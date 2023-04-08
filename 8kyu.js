@@ -2226,3 +2226,12 @@ function generateRange(min, max, step){
 function spEng(sentence){
   return sentence.match(/English/gi) ? true : false
 }
+
+
+
+// Swap Values
+function swapValues(args) {
+  var temp = args[0];
+  args[0] = args[1];
+  args[1] = temp;
+}
