@@ -2253,3 +2253,7 @@ function uefaEuro2016(teams, scores){
   
   return scores[0] > scores[1] ? obj.win : scores[0] < scores[1] ? obj.lose : obj.draw
 }
+
+
+// Incorrect division method
+const solve = (x, y) => x / y
