@@ -2257,3 +2257,17 @@ function uefaEuro2016(teams, scores){
 
 // Incorrect division method
 const solve = (x, y) => x / y
+
+
+// L1: Bartender, drinks!
+function getDrinkByProfession(param){
+  let obj = {
+    'jabroni': 'Patron Tequila',
+    'school counselor': 'Anything with Alcohol',
+    'programmer': 'Hipster Craft Beer',
+    'bike gang member': 'Moonshine',
+    'politician': 'Your tax dollars',
+    'rapper': 'Cristal'
+  }
+  return obj[param.toLowerCase()] ? obj[param.toLowerCase()]: 'Beer'
+}
