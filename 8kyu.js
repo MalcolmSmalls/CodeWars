@@ -2240,3 +2240,16 @@ function swapValues(args) {
 var TempleStrings = function(obj, feature) {
   return `${obj} are ${feature}`
 }
+
+
+//  UEFA EURO 2016
+
+function uefaEuro2016(teams, scores){
+  let obj = {
+    draw: `At match ${teams[0]} - ${teams[1]}, teams played draw.`,
+    win: `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`,
+    lose: `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`,
+  }
+  
+  return scores[0] > scores[1] ? obj.win : scores[0] < scores[1] ? obj.lose : obj.draw
+}
