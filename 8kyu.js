@@ -2210,3 +2210,13 @@ function array(arr){
   newArr.shift()
   return newArr.join(' ')
 }
+
+
+// Generate range of integers
+function generateRange(min, max, step){
+  const newArr = []
+  for(let i = min; i <= max; i = i+step){
+    newArr.push(i)
+  }
+  return newArr
+}
