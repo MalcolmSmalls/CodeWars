@@ -2235,3 +2235,8 @@ function swapValues(args) {
   args[0] = args[1];
   args[1] = temp;
 }
+
+// Template Strings
+var TempleStrings = function(obj, feature) {
+  return `${obj} are ${feature}`
+}
