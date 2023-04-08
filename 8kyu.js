@@ -2220,3 +2220,9 @@ function generateRange(min, max, step){
   }
   return newArr
 }
+
+// Do you speak "English"?
+
+function spEng(sentence){
+  return sentence.match(/English/gi) ? true : false
+}
