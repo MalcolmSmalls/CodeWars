@@ -2198,3 +2198,15 @@ function  calculateAge(birthYear, currentYear) {
 function main(verb, noun){
   return verb + noun
 }
+
+
+
+// Remove First and Last Character Part Two
+
+function array(arr){
+  const newArr = arr.split(',')
+  if(newArr.length < 3) return null
+  newArr.pop()
+  newArr.shift()
+  return newArr.join(' ')
+}
