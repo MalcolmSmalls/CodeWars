@@ -2340,3 +2340,28 @@ var rooms = {
   description:  {'room1': 'black', 'room2': 'pink', 'room3': 'cyan'},
   completed: {'room1': false, 'room2': true, 'room3': false}
 }
+
+
+// Polish alphabet
+function correctPolishLetters(string) {
+  let newStr = ''
+  let obj = {
+    ą: 'a',
+    ć: 'c',
+    ę: 'e',
+    ł: 'l',
+    ń: 'n',
+    ó: 'o',
+    ś: 's',
+    ź: 'z',
+    ż: 'z',
+  }
+  for (let letter of string) {
+    if (obj[letter]) {
+      newStr += obj[letter]
+    } else {
+      newStr += letter
+    }
+  }
+  return newStr
+}
