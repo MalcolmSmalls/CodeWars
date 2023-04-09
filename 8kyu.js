@@ -2324,3 +2324,11 @@ function formatMoney(amount){
  function sakuraFall(v) {
   return v < 1 ? 0 : 400 / v;
 }
+
+
+// SpeedCode #2 - Array Madness
+
+function arrayMadness(a, b) {
+  const helper = (arr) => arr.map(item => arr===a ? item ** 2 : item ** 3).reduce((acc, curr) => acc+curr, 0)
+  return helper(a) > helper(b)
+}
