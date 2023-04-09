@@ -2387,3 +2387,12 @@ function tripleTrouble(one, two, three){
   }
   return newStr
  }
+
+// No zeros for heros
+ function noBoringZeros(n) {
+  let index = n.toString().length-1
+  while(n.toString()[index] === '0'){
+    index--
+  }
+  return Number(n.toString().substring(0,index+1))
+}
