@@ -2288,3 +2288,17 @@ function nextId(ids){
   }
   return last+1;
 }
+
+// Better Solution
+function nextId(ids){
+  var x = 0;
+  while (ids.includes(x)) x++;
+  return x;
+}
+
+
+// Are arrow functions odd?
+function odds(values){
+  // arrow it
+  return values.filter( item => item % 2 !== 0);
+}
