@@ -2365,3 +2365,10 @@ function correctPolishLetters(string) {
   }
   return newStr
 }
+
+// Find the Difference in Age between Oldest and Youngest Family Members
+function differenceInAges(ages){
+  ages.sort((a,b) => a-b)
+  let newArr = [ages[0], ages[ages.length-1]]
+  return [...newArr, newArr[1] - newArr[0]]
+}
