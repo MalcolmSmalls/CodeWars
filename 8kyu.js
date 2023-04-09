@@ -2332,3 +2332,11 @@ function arrayMadness(a, b) {
   const helper = (arr) => arr.map(item => arr===a ? item ** 2 : item ** 3).reduce((acc, curr) => acc+curr, 0)
   return helper(a) > helper(b)
 }
+
+
+// Grasshopper - Create the rooms
+var rooms = {
+  name: {'room1': 'cool', 'room2': 'lasers', 'room3': 'gameroom'},
+  description:  {'room1': 'black', 'room2': 'pink', 'room3': 'cyan'},
+  completed: {'room1': false, 'room2': true, 'room3': false}
+}
