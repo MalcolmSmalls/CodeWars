@@ -2309,3 +2309,12 @@ function odds(values){
 function pointsPer48(ppg, mpg) {
   return Number((48 / mpg * ppg).toFixed(1)) || 0
 }
+
+
+// Dollars and Cents
+
+function formatMoney(amount){
+  return `$${(Math.round(amount * 100)/100).toFixed(2)}`
+}
+
+ 
