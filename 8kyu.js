@@ -2377,3 +2377,13 @@ function differenceInAges(ages){
 function getASCII(c){
   return c.charCodeAt(0)
 }
+
+// Triple Trouble
+
+function tripleTrouble(one, two, three){
+  let newStr = ''
+  for(let i = 0; i < one.length; i++){
+    newStr += `${one[i]}${two[i]}${three[i]}`
+  }
+  return newStr
+ }
