@@ -2271,3 +2271,20 @@ function getDrinkByProfession(param){
   }
   return obj[param.toLowerCase()] ? obj[param.toLowerCase()]: 'Beer'
 }
+
+// Smallest unused ID
+
+
+function nextId(ids){
+  let sortedArr = ids.sort((a,b) => a-b)
+  sortedArr = [...new Set(sortedArr)]
+  let uniqueId = 0
+  let last = sortedArr[sortedArr.length-1]
+  for(let i = 0; i <= last; i++){
+    if(sortedArr[i] !== i){
+      uniqueId = i
+      return uniqueId
+    }
+  }
+  return last+1;
+}
