@@ -2302,3 +2302,10 @@ function odds(values){
   // arrow it
   return values.filter( item => item % 2 !== 0);
 }
+
+
+
+// NBA full 48 minutes average
+function pointsPer48(ppg, mpg) {
+  return Number((48 / mpg * ppg).toFixed(1)) || 0
+}
