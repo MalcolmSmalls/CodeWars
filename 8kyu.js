@@ -2372,3 +2372,8 @@ function differenceInAges(ages){
   let newArr = [ages[0], ages[ages.length-1]]
   return [...newArr, newArr[1] - newArr[0]]
 }
+
+// get ascii value of character
+function getASCII(c){
+  return c.charCodeAt(0)
+}
