@@ -2396,3 +2396,16 @@ function tripleTrouble(one, two, three){
   }
   return Number(n.toString().substring(0,index+1))
 }
+
+// Tip Calculator
+
+function calculateTip(amount, rating) {
+  let tip = {
+    'terrible': 0,
+    'poor': .05,
+    'good': .10,
+    'great': .15,
+    'excellent': .20
+  }
+  return tip[rating.toLowerCase()] === undefined? 'Rating not recognised' : Math.ceil(amount * tip[rating.toLowerCase()])
+}
