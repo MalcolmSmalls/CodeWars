@@ -2447,3 +2447,23 @@ function getSize(width, height, depth){
   let volume = width * height * depth
   return [area, volume]
 }
+
+// 8kyu interpreters: HQ9+
+function HQ9(code) {
+  if(code === 'H') return 'Hello World!'
+  if(code === 'Q') return code
+  if(code !== '9') return
+  let newStr = ''
+  for(let i = 99; i > -1; i--){
+    if(i !== 0 && i !== 1 && i !== 2){
+      newStr += `${i} bottles of beer on the wall, ${i} bottles of beer.\nTake one down and pass it around, ${i-1} bottles of beer on the wall.\n`
+    }else if(i === 2){
+      newStr += `${i} bottles of beer on the wall, ${i} bottles of beer.\nTake one down and pass it around, ${i-1} bottle of beer on the wall.\n`
+    }else if(i === 1){
+      newStr += `${i} bottle of beer on the wall, ${i} bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\n`
+    }else{
+      newStr += `No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.`
+    }
+  }
+  return newStr
+}
