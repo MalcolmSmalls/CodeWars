@@ -2440,3 +2440,10 @@ var quote = function(fighter) {
 function integrate(coefficient, exponent) {
   return `${coefficient / (exponent+1)}x^${exponent+1}`
 }
+
+// Surface Area and Volume of a Box
+function getSize(width, height, depth){
+  let area = 2*(depth*width + depth*height + height*width)
+  let volume = width * height * depth
+  return [area, volume]
+}
