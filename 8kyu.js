@@ -2426,3 +2426,12 @@ function drawStairs(n) {
   }
   return newStr
 }
+
+// For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre
+var quote = function(fighter) {
+  let obj = {
+    'conor mcgregor': "I'd like to take this chance to apologize.. To absolutely NOBODY!",
+    'george saint pierre': "I am not impressed by your performance."  
+  }
+  return obj[fighter.toLowerCase()]
+};
