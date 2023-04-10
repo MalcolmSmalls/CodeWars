@@ -2467,3 +2467,9 @@ function HQ9(code) {
   }
   return newStr
 }
+
+
+// Grasshopper - Terminal game combat function
+function combat(health, damage) {
+  return damage > health ? 0 : health-damage
+}
