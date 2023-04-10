@@ -2409,3 +2409,20 @@ function calculateTip(amount, rating) {
   }
   return tip[rating.toLowerCase()] === undefined? 'Rating not recognised' : Math.ceil(amount * tip[rating.toLowerCase()])
 }
+
+// Draw stairs
+function drawStairs(n) {
+  let newStr = ''
+  let stair = 'I'
+  for(let i = 0; i < n; i++){
+    if((i === 0 && n === 1)){
+      newStr += 'I'
+    }else{
+      newStr += `${stair.padStart(i+1, ' ')}`
+      if(i !== n-1){
+        newStr+= '\n'
+      }
+    }
+  }
+  return newStr
+}
