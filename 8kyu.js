@@ -2479,3 +2479,24 @@ function combat(health, damage) {
 function whoIsPaying(name){
   return name.length > 2 ? [name, name.slice(0,2)] : [name]
 }
+
+
+// Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+function remove(s,n){
+  let newStr = ''
+  let count = 0
+  for(let i = 0; i < s.length; i++){
+    if(count >= n){
+      newStr += s[i]
+    }else{
+      if(s[i] === "!"){
+        count++        
+      }else{
+        newStr += s[i]
+      }
+    }
+
+  }
+  
+      return newStr
+}
