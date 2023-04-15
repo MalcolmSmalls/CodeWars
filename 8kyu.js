@@ -2508,3 +2508,8 @@ function animal(obj){
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
 }
 
+// Enumerable Magic #2 - True for Any?
+
+function any(arr, fun){
+  return arr.some(fun)
+}
