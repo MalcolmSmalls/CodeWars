@@ -2513,3 +2513,10 @@ function animal(obj){
 function any(arr, fun){
   return arr.some(fun)
 }
+
+// Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+function replace(s){
+  let reg = /[aeiou]/gi
+  return s.replace(reg, '!')
+  
+}
