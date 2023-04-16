@@ -2520,3 +2520,13 @@ function replace(s){
   return s.replace(reg, '!')
   
 }
+
+
+
+// Training JS #32: methods of Math---round() ceil() and floor()
+function roundIt(n){
+  let newArr = n.toString().split('.')
+  if(newArr[0].length === newArr[1].length) return Math.round(n)
+  if(Number(newArr[0]) < Number(newArr[1]) && newArr[1].length !== 1) return Math.ceil(n)
+  return Math.floor(n)
+}
