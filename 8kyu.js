@@ -2530,3 +2530,8 @@ function roundIt(n){
   if(Number(newArr[0]) < Number(newArr[1]) && newArr[1].length !== 1) return Math.ceil(n)
   return Math.floor(n)
 }
+
+// easy logs
+function logs(x , a, b){
+  return (Math.log(a) / Math.log(x)) + (Math.log(b) / Math.log(x))
+}
