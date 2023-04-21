@@ -2559,3 +2559,9 @@ function sc(floor){
   if (floor <= 1) return ''
   return `${'Aa~ '.repeat(floor-1)}Pa! Aa!`
 } 
+
+
+// Sleigh Authentication
+Sleigh.prototype.authenticate = function(name, password) {
+  return name === 'Santa Claus' && password === 'Ho Ho Ho!'
+};
