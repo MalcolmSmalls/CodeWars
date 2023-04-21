@@ -2580,4 +2580,10 @@ function cookie(x){
 
 function helloWorld(name){
   return 'Hello ' * name 
+
+}
+
+// Potenciation
+function power(x,y){
+  return x ** y
 }
