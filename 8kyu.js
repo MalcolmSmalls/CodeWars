@@ -2552,3 +2552,10 @@ function quadrant(x, y) {
   }
 }
 
+// Coding 3min : Jumping Dutch act
+
+function sc(floor){
+  if(floor > 6) return `${'Aa~ '.repeat(floor-1)}Pa!`
+  if (floor <= 1) return ''
+  return `${'Aa~ '.repeat(floor-1)}Pa! Aa!`
+} 
