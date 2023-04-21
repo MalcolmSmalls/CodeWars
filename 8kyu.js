@@ -2535,3 +2535,20 @@ function roundIt(n){
 function logs(x , a, b){
   return (Math.log(a) / Math.log(x)) + (Math.log(b) / Math.log(x))
 }
+
+// Quadrants
+function quadrant(x, y) {
+  let obj = {
+    1: [1, 1],
+    2: [-1, 1],
+    3: [-1, -1],
+    4: [1, -1]
+  }
+  for(let key in obj){
+
+    if(Math.sign(x) === Math.sign(obj[key][0]) && Math.sign(y) === Math.sign(obj[key][1])){
+      return Number(key)
+    }
+  }
+}
+
