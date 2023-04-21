@@ -2573,4 +2573,11 @@ function cookie(x){
   if(typeof x === 'string') return helper('Zach')
   if(typeof x === 'number') return helper('Monica')
   return helper('the dog')
+
+
+}
+
+
+function helloWorld(name){
+  return 'Hello ' * name 
 }
