@@ -2565,3 +2565,12 @@ function sc(floor){
 Sleigh.prototype.authenticate = function(name, password) {
   return name === 'Santa Claus' && password === 'Ho Ho Ho!'
 };
+
+// Who Ate The Cookie?
+
+function cookie(x){
+  const helper = name => `Who ate the last cookie? It was ${name}!`
+  if(typeof x === 'string') return helper('Zach')
+  if(typeof x === 'number') return helper('Monica')
+  return helper('the dog')
+}
