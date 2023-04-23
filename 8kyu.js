@@ -2630,3 +2630,6 @@ class God{
 function circleArea(circle){
   return Math.PI * circle.radius ** 2
 }
+
+// !a == a ?!
+const a = []
