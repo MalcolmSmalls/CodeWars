@@ -2587,3 +2587,9 @@ function helloWorld(name){
 function power(x,y){
   return x ** y
 }
+
+// Remove the time
+
+function shortenToDate(longDate) {
+  return longDate.split(',')[0]
+}
