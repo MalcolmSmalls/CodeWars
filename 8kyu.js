@@ -2600,3 +2600,28 @@ function shortenToDate(longDate) {
 function circleCircumference(circle) {
   return (2 * circle.radius * Math.PI)
 }
+
+
+// Basic subclasses - Adam and Eve
+
+class Human{
+  
+}
+
+class Man extends Human {
+  
+}
+
+class Woman extends Human{
+  
+}
+
+class God{
+/**
+ * @returns Human[]
+ */
+  static create(){
+  return [new Man, new Woman]
+  }
+}
+// code
