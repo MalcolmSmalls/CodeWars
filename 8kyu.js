@@ -2593,3 +2593,10 @@ function power(x,y){
 function shortenToDate(longDate) {
   return longDate.split(',')[0]
 }
+
+
+// Geometry Basics: Circle Circumference in 2D
+
+function circleCircumference(circle) {
+  return (2 * circle.radius * Math.PI)
+}
