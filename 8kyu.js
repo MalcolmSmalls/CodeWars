@@ -2654,3 +2654,10 @@ function main () {
   buyHealth()
   printStatus()
 }
+
+
+// simple calculator
+function calculator(a,b,sign){
+  const signs = ['+', '-', '*', '/']
+  return signs.includes(sign) && typeof a === 'number' && typeof b === 'number'? eval(`${a}${sign}${b}`) : 'unknown value' 
+}
