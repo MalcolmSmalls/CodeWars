@@ -2742,3 +2742,10 @@ function doTurn () {
 function multiply(number){
   return number * (5 ** Math.abs(number).toString().length)
 }
+
+
+// Evil or Odious
+function evil(n) {
+  let count = n.toString(2).split('').filter(item => item === '1').length
+  return count % 2 === 0 ? "It's Evil!" : "It's Odious!"
+}
