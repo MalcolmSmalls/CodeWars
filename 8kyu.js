@@ -2726,3 +2726,14 @@ Counter.prototype.getValue = function(){
 Counter.prototype.reset = function(){
   this.value = 0;
 };
+
+
+// Grasshopper - Terminal Game Turn Function
+function doTurn () {
+  rollDice()
+  move()
+  combat()
+  getCoins()
+  buyHealth()
+  printStatus()
+}
