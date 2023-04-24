@@ -2661,3 +2661,18 @@ function calculator(a,b,sign){
   const signs = ['+', '-', '*', '/']
   return signs.includes(sign) && typeof a === 'number' && typeof b === 'number'? eval(`${a}${sign}${b}`) : 'unknown value' 
 }
+
+
+// Classy Classes
+
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+  
+  get info(){
+    return `${this.name}s age is ${this.age}`
+  }
+
+}
