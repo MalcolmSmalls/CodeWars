@@ -2691,3 +2691,20 @@ function datingRange(age){
   }
   return `${min}-${max}`
 }
+
+
+// Grader
+function grader(score) {
+  let obj = {
+    0.9 : "A",
+    0.8 :"B",
+    0.7 : "C",
+    0.6 : "D"
+  }
+  for(let key in obj){
+    if(score >= key && score <= 1){
+      return obj[key]
+    }
+  }
+  return 'F'
+}
