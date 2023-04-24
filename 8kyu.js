@@ -2749,3 +2749,10 @@ function evil(n) {
   let count = n.toString(2).split('').filter(item => item === '1').length
   return count % 2 === 0 ? "It's Evil!" : "It's Odious!"
 }
+
+// Simple Fun #261: Whose Move
+
+function whoseMove(lastPlayer, win) {
+  return win === true ? lastPlayer : lastPlayer === 'white' ? 'black' : 'white' 
+  
+}
