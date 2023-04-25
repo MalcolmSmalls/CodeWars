@@ -2798,3 +2798,11 @@ function getNumberFromString(s) {
   const numsArray = s.split('').filter(item => Number(item) ||  item === '0')
   return Number(numsArray.join(''))
 }
+
+
+// validate code with simple regex
+
+
+function validateCode (code) {
+  return /^[123]/.test(code)
+}
