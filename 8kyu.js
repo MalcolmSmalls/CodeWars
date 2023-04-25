@@ -2822,3 +2822,9 @@ function trueOrFalse(val){
 function add(a, b){
 	return a == b
 }
+
+
+// Grasshopper - Combine strings
+function combineNames(first, last){
+  return `${first} ${last}`
+}
