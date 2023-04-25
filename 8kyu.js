@@ -2806,3 +2806,13 @@ function getNumberFromString(s) {
 function validateCode (code) {
   return /^[123]/.test(code)
 }
+
+// Training JS #6: Basic data types--Boolean and conditional statements if..else
+
+function trueOrFalse(val){
+  if (val){
+    return 'true'
+  }else{
+    return 'false';
+  }
+}
