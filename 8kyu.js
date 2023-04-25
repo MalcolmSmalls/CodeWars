@@ -2845,3 +2845,9 @@ function yearDays(year){
     return `${year} has 365 days`
   }
 }
+
+
+// Formatting decimal places #0
+function twoDecimalPlaces(n) {
+  return Number(n.toFixed(2))
+}
