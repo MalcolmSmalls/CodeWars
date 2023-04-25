@@ -2856,3 +2856,22 @@ function twoDecimalPlaces(n) {
 function printArray(array){
   return array.join(',')
 }
+
+// Fuel Calculator: Total Cost
+
+function fuelPrice(litres, pricePerLitre) {
+  const discounts = {
+    2: .05,
+    4: .10,
+    6: .15,
+    8: .20,
+    10: .25
+  }
+  let discount
+  for(let key in discounts){
+    if(litres >= key){
+      discount = discounts[key]
+    }
+  }
+  return Number(((pricePerLitre - discount) * litres).toFixed(2))
+}
