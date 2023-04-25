@@ -2851,3 +2851,8 @@ function yearDays(year){
 function twoDecimalPlaces(n) {
   return Number(n.toFixed(2))
 }
+
+// Printing Array elements with Comma delimiters
+function printArray(array){
+  return array.join(',')
+}
