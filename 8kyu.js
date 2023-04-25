@@ -2792,3 +2792,9 @@ function myFirstKata(a, b) {
     return (a % b) + (b % a);
   }
 }
+
+// Get number from string
+function getNumberFromString(s) {
+  const numsArray = s.split('').filter(item => Number(item) ||  item === '0')
+  return Number(numsArray.join(''))
+}
