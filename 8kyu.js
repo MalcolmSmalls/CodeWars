@@ -2816,3 +2816,9 @@ function trueOrFalse(val){
     return 'false';
   }
 }
+
+// Simple Comparison?
+
+function add(a, b){
+	return a == b
+}
