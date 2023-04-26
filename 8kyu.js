@@ -2947,3 +2947,9 @@ function fiveLine(s){
   }
   return newStr
 }
+
+// Training JS #17: Methods of String object--indexOf(), lastIndexOf() and search()
+function firstToLast(str,c){
+  if(str.indexOf(c) < 0) return -1
+  return str.lastIndexOf(c) - str.indexOf(c)
+}
