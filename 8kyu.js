@@ -2960,3 +2960,22 @@ function cutIt(arr){
   arr.forEach(item => item.length < smallest ? smallest = item.length : null)
   return arr.map(item => item.slice(0, smallest))
 }
+
+
+// Training JS #14: Methods of Number object--toString() and toLocaleString()
+function colorOf(r,g,b){
+  let str = '' 
+  Array.from([r,g,b]).forEach((element, index) => {
+    if(element.toString(16).length === 1){
+      if(index === 5){
+        str += `${element.toString(16)}`
+      }else{
+        str += `0${element.toString(16)}`
+      }
+    }else{
+      str += `${element.toString(16)}`
+    }
+  })
+
+  return `#${str}`
+}
