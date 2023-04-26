@@ -2897,3 +2897,16 @@ function slope(points){
   const results = (points[3] - points[1]) / (points[2] - points[0])
   return isFinite(results) ? `${results}` : 'undefined'
 }
+
+// Arguments to Binary addition
+
+
+function arr2bin(arr){
+  let sum = 0
+  arr.forEach(element => {
+    if(typeof element === 'number'){
+      sum += element
+    }
+  })
+  return sum.toString(2)
+}
