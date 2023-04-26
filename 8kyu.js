@@ -2910,3 +2910,10 @@ function arr2bin(arr){
   })
   return sum.toString(2)
 }
+
+
+// Training JS #34: methods of Math---pow() sqrt() and cbrt()
+
+function cutCube(volume,n){
+  return Number.isInteger(Math.cbrt(n)) && volume % n === 0 && Number.isInteger(Math.cbrt(volume))
+}
