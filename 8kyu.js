@@ -2890,3 +2890,10 @@ function leo(oscar){
         return 'When will you give Leo an Oscar?'
   }
 }
+
+// Find the Slope
+
+function slope(points){
+  const results = (points[3] - points[1]) / (points[2] - points[0])
+  return isFinite(results) ? `${results}` : 'undefined'
+}
