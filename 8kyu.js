@@ -3005,3 +3005,11 @@ function grabDoll(dolls){
   }
   return bag
 }
+
+
+// Training JS #15: Methods of Number object--toFixed(), toExponential() and toPrecision()
+function howManySmaller(arr,n){
+  let total = 0
+  arr.forEach(item => item.toFixed(2) < n ? total++ : null)
+  return total
+}
