@@ -2934,3 +2934,16 @@ function bigToSmall(arr){
   const newArr = [].concat(...arr)
   return newArr.sort((a,b) => b-a).join('>')
 }
+
+
+// Training JS #21: Methods of String object--trim() and the string template
+function fiveLine(s){
+  let newStr = ""
+  for(let i = 1; i <= 5; i++){
+    if(i > 1){
+      newStr += '\n'
+    }
+    newStr += `${s.trim().repeat(i)}`
+  }
+  return newStr
+}
