@@ -2953,3 +2953,10 @@ function firstToLast(str,c){
   if(str.indexOf(c) < 0) return -1
   return str.lastIndexOf(c) - str.indexOf(c)
 }
+
+// Training JS #16: Methods of String object--slice(), substring() and substr()
+function cutIt(arr){
+  let smallest = Infinity
+  arr.forEach(item => item.length < smallest ? smallest = item.length : null)
+  return arr.map(item => item.slice(0, smallest))
+}
