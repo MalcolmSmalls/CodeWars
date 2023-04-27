@@ -3239,3 +3239,8 @@ function validate(username, password){
   var database = new Database();
   return database.login(username, password);
 }
+
+// Grasshopper - Array Mean
+var findAverage = function (nums) {
+  return nums.reduce((acc, curr) => acc+curr, 0) / nums.length
+}
