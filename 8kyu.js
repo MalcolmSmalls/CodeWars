@@ -3257,3 +3257,9 @@ var Person = function(){
   }
   return person;
 }
+
+
+// Are there any arrows left?
+function anyArrows(arrows){
+  return arrows.some(item => !item.damaged );
+}
