@@ -3121,3 +3121,24 @@ function sumSquares(array) {
 function squaresOnly(array) {
   return array.filter(num => Number.isInteger(Math.sqrt(num)))
 }
+
+
+// SpeedCode #3 × Fun with ES6 Classes #5 - Dogs and Classes
+
+
+class Labrador extends Dog {
+  constructor(name, age, gender, master) {
+    super(name, age, gender)
+      this.size = "Large"
+      this.species = "Labrador"
+      this.loyal = true
+      this.master = master
+  }
+
+}
+
+class Labrador extends Dog {
+  constructor(name, age, gender, master) {
+    super(name, age, gender, "Labrador", "Large", master, true);
+  }
+}
