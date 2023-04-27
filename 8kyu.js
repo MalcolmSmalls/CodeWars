@@ -3110,3 +3110,8 @@ circular.self = circular;
 function generateLink(user) {
   return `http://www.codewars.com/users/${encodeURIComponent(user)}`
 }
+
+// Be Concise III - Sum Squares
+function sumSquares(array) {
+  return array.reduce((acc, curr) => acc + curr ** 2, 0)
+}
