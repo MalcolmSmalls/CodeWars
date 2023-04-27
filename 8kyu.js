@@ -3226,3 +3226,9 @@ yourFutureCareer();
 function orderOperations () {
   return (2 + 2) * (2 + 2) * 2
 }
+
+// Find variable which breaks strict comparison!
+
+function findStrangeValue() {
+  return NaN
+}
