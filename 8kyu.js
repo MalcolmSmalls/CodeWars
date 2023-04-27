@@ -3263,3 +3263,8 @@ var Person = function(){
 function anyArrows(arrows){
   return arrows.some(item => !item.damaged );
 }
+
+// Take an Arrow to the knee, Functionally
+var ArrowFunc = function(arr) {
+  return arr.map(element => String.fromCharCode(element) ).join(''); //Complete this function
+}
