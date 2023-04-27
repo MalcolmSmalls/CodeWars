@@ -3142,3 +3142,13 @@ class Labrador extends Dog {
     super(name, age, gender, "Labrador", "Large", master, true);
   }
 }
+
+
+// Do something "n.times" (Simplifying "for" loops)
+
+
+Number.prototype.times = function (f) {
+  for(let i = 0; i < Number(this); i++){
+    f(i)
+  }
+}
