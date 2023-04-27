@@ -3094,3 +3094,8 @@ function countWords(str) {
   if(str.includes('﻿')) return str.trim().split('﻿').filter(item => item.length > 0).length
   return str.trim().split(' ').filter(item => item.length > 0).length
 }
+
+
+// Not so black box
+
+JSopenSesame();
