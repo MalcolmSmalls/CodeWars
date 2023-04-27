@@ -3191,3 +3191,38 @@ function match(candidate, job) {
 Math.roundTo = function (number, precision) {
   return +number.toFixed(precision)
 }
+
+
+// Regex count lowercase letters
+function lowercaseCount(str){
+  let count = 0
+  for(let key of str){
+    if(key.charCodeAt(0) > 96 && key.charCodeAt(0) < 123){
+      count++
+    }
+  }
+return count
+}
+
+
+
+// A bugs trilogy: Episode 1 - "Let Math.Random(); decide your future"
+
+function yourFutureCareer() {
+	var career = Math.random()
+		if (career <= 0.32) {
+			return 'FrontEnd Developer'
+		} else if (career <= 0.65) {
+			return 'BackEnd Developer'
+		} else {
+			return 'Full-Stack Developer'
+		}
+}
+
+yourFutureCareer();
+
+
+// Grasshopper - Order of operations
+function orderOperations () {
+  return (2 + 2) * (2 + 2) * 2
+}
