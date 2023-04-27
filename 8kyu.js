@@ -3013,3 +3013,8 @@ function howManySmaller(arr,n){
   arr.forEach(item => item.toFixed(2) < n ? total++ : null)
   return total
 }
+
+//  noobCode 02: TRICKY QUESTIONS ( primitives and operator precedence)
+function greaterThanLessThan (a,b,c) {
+  return a < b < c
+}
