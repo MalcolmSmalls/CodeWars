@@ -3185,3 +3185,9 @@ function match(candidate, job) {
   if(!candidate.minSalary || !job.maxSalary) throw new Error
   return job.maxSalary >= candidate.minSalary - (candidate.minSalary * .10)
 }
+
+// Improving Math.round(x)
+
+Math.roundTo = function (number, precision) {
+  return +number.toFixed(precision)
+}
