@@ -3152,3 +3152,11 @@ Number.prototype.times = function (f) {
     f(i)
   }
 }
+
+
+// Implement Array.prototype.filter()
+Array.prototype.filter = function (func) {
+  let newArr = []
+  this.forEach(item => func(item) ? newArr.push(item) : null )
+  return newArr
+}
