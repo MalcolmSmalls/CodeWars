@@ -3358,3 +3358,8 @@ function howMuchWater(water, load, clothes){
   if(clothes < load) return 'Not enough clothes'
   return +(water * 1.1 ** (clothes - load)).toFixed(2)
 }
+
+// Training JS #18: Methods of String object--concat() split() and its good friend join()
+function splitAndMerge(string, separator) {
+  return string.split(' ').map(item => item.split('').join(separator)).join(' ')
+}
