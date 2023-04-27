@@ -3085,3 +3085,12 @@ function rainAmount(mm){
        return "Your plant has had more than enough water for today!"
   };
 }
+
+
+
+// Count words
+
+function countWords(str) {
+  if(str.includes('﻿')) return str.trim().split('﻿').filter(item => item.length > 0).length
+  return str.trim().split(' ').filter(item => item.length > 0).length
+}
