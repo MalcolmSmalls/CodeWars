@@ -3292,3 +3292,21 @@ function NameMe(first, last) {
   this.lastName = last;
   this.name = `${first} ${last}`
 }
+
+
+// Hello Happy Codevarrior!
+function Warrior(n){
+  this.name = function(name){
+    if(name){
+      n = name
+      return name
+    }else{
+      return n
+    }
+
+  }
+}
+  
+Warrior.prototype.toString = function(){
+    return "Hi! my name's "+this.name();
+}
