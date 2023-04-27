@@ -3115,3 +3115,9 @@ function generateLink(user) {
 function sumSquares(array) {
   return array.reduce((acc, curr) => acc + curr ** 2, 0)
 }
+
+
+// Be Concise II - I Need Squares
+function squaresOnly(array) {
+  return array.filter(num => Number.isInteger(Math.sqrt(num)))
+}
