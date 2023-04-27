@@ -3244,3 +3244,16 @@ function validate(username, password){
 var findAverage = function (nums) {
   return nums.reduce((acc, curr) => acc+curr, 0) / nums.length
 }
+
+// Lexical this
+
+var Person = function(){
+  var person = {
+    _name: "Leroy",
+    _friends: [],
+    fillFriends(f) {
+      this._friends = [].concat(...arguments)
+    }
+  }
+  return person;
+}
