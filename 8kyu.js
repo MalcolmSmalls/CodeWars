@@ -3069,3 +3069,9 @@ function answer3(){
   //the answer should be "yes" or "no"
   return "yes";
 }
+
+// Blood-Alcohol Content
+function bloodAlcoholContent(drinks, weight, sex, time){
+  const multiplier = sex === 'male' ? .73 : .66
+  return Number((((drinks['ounces'] * drinks['abv']) * 5.14 / weight * multiplier) - .015 * time).toFixed(4))
+}
