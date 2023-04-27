@@ -3310,3 +3310,11 @@ function Warrior(n){
 Warrior.prototype.toString = function(){
     return "Hi! my name's "+this.name();
 }
+
+
+// Color Ghost
+
+var Ghost = function() {
+  this.colors = ['white', 'yellow', 'purple', 'red']
+  this.color = this.colors[Math.floor(Math.random() * 5)]
+};
