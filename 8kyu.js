@@ -3232,3 +3232,10 @@ function orderOperations () {
 function findStrangeValue() {
   return NaN
 }
+
+// Invalid Login - Bug Fixing #11
+function validate(username, password){
+  if(/[/|]/g.test(password)) return 'Wrong username or password!'
+  var database = new Database();
+  return database.login(username, password);
+}
