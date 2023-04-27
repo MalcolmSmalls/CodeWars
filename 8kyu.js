@@ -3178,3 +3178,10 @@ var rooms = {
     }
   }
 }
+
+// Job Matching #1
+
+function match(candidate, job) {
+  if(!candidate.minSalary || !job.maxSalary) throw new Error
+  return job.maxSalary >= candidate.minSalary - (candidate.minSalary * .10)
+}
