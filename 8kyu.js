@@ -3104,3 +3104,9 @@ JSopenSesame();
 // Circular Objects #1 - Running around in circles
 circular = {value: 'Hello World'}
 circular.self = circular;
+
+
+// Generate user links
+function generateLink(user) {
+  return `http://www.codewars.com/users/${encodeURIComponent(user)}`
+}
