@@ -3371,3 +3371,10 @@ function elevator(left, right, call){
   if(!right && !left) return 'right'
   return (Math.abs(call-left) < Math.abs(call-right)) ? 'left' : 'right'
 }
+
+
+
+// Is your period late?
+function periodIsLate(last, today, cycleLength) {
+  return today - last > cycleLength * 86400000
+}
