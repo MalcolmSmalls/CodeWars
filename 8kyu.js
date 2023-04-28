@@ -3363,3 +3363,11 @@ function howMuchWater(water, load, clothes){
 function splitAndMerge(string, separator) {
   return string.split(' ').map(item => item.split('').join(separator)).join(' ')
 }
+
+
+// Closest elevator
+
+function elevator(left, right, call){
+  if(!right && !left) return 'right'
+  return (Math.abs(call-left) < Math.abs(call-right)) ? 'left' : 'right'
+}
