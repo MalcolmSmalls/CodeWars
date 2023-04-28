@@ -3378,3 +3378,17 @@ function elevator(left, right, call){
 function periodIsLate(last, today, cycleLength) {
   return today - last > cycleLength * 86400000
 }
+
+
+// Simple Change Machine
+
+function changeMe(moneyIn){
+  let obj = {
+    '20p': ['10p', '10p'],
+    '50p': ['20p', '20p', '10p'],
+    '£1' : ['20p', '20p', '20p', '20p', '20p'],
+    '£2' : ['20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p'],
+    '£5' : ['20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p', '20p','20p', '20p', '20p', '20p', '20p' ]
+  }
+  return obj[moneyIn] ? obj[moneyIn].join(' ') : moneyIn
+}
