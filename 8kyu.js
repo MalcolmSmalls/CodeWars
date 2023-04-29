@@ -3443,3 +3443,25 @@ function changeMe(moneyIn){
   if(sharkDistance > pontoonDistance) return 'Alive!'
   return 'Shark Bait!'
 }
+
+// Check same case
+
+function sameCase(a, b){
+  let aCase
+  let bCase
+  let obj = {
+    'aTest': a.charCodeAt(0),
+    'bTest': b.charCodeAt(0),
+    'A': 65,
+    'Z': 90,
+    'a': 97,
+    'z': 122,
+  }
+  if(obj['aTest'] >= obj['a'] && obj['aTest'] <= obj['z']) aCase = 'lowercase'
+  if(obj['bTest'] >= obj['a'] && obj['bTest'] <= obj['z']) bCase = 'lowercase'
+  if(obj['aTest'] >= obj['A'] && obj['aTest'] <= obj['Z']) aCase = 'uppercase'
+  if(obj['bTest'] >= obj['A'] && obj['bTest'] <= obj['Z']) bCase = 'uppercase'
+  if(aCase && bCase && aCase === bCase) return 1
+  if(aCase && bCase) return 0
+  return -1
+}
