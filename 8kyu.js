@@ -3425,3 +3425,21 @@ function changeMe(moneyIn){
   function SubtractSum(n){
     return "apple"
   }
+
+
+
+
+
+
+// Holiday VI - Shark Pontoon
+  function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  if(!pontoonDistance || !sharkSpeed) return 'Alive!'
+  if(!sharkDistance || !youSpeed) return 'Shark Bait!'
+  if(dolphin) sharkSpeed = sharkSpeed / 2
+  while(pontoonDistance > 0 && sharkDistance > 0){
+    pontoonDistance = pontoonDistance - youSpeed
+    sharkDistance = sharkDistance - sharkSpeed
+  }
+  if(sharkDistance > pontoonDistance) return 'Alive!'
+  return 'Shark Bait!'
+}
