@@ -3527,3 +3527,12 @@ function all( arr, fun ){
   })
   return results
 }
+
+
+
+// Is it a number?
+function isDigit(s) {
+  if(s === ' ') return false
+  if(s.length === 0) return false
+  return !isNaN(+s.trim())
+}
