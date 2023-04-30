@@ -3472,3 +3472,13 @@ function seatsInTheater(nCols, nRows, col, row) {
   return (nCols - (col-1)) * (nRows - row)
   
 }
+
+
+// Sum without highest and lowest number
+
+function sumArray(array) {
+  if(!array || array.length < 3) return 0
+  array.sort((a,b) => a-b).pop()
+  array.shift()
+  return array.reduce((acc, curr) => acc + curr, 0)
+}
