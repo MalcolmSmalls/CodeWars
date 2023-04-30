@@ -3499,3 +3499,15 @@ function animals(heads, legs){
   if(!Number.isInteger(cows) || cows < 0 || heads-cows < 0) return 'No solutions'
   return [heads-cows, cows]
 }
+
+
+// Pirates!! Are the Cannons ready!??
+const cannonsReady = (gunners) => {
+  for(let key in gunners){
+    if(gunners[key] !== 'aye'){
+      return 'Shiver me timbers!'
+    } 
+  }
+  return 'Fire!'
+}
+
