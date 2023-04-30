@@ -3511,3 +3511,19 @@ const cannonsReady = (gunners) => {
   return 'Fire!'
 }
 
+
+// Enumerable Magic #1 - True for All?
+function all( arr, fun ){
+  if(!arr.length) return true
+  let results
+  arr.every(item => {
+    if(!fun(item)){
+      results = false
+      return false
+    }else{
+      results = true
+      return true
+    }
+  })
+  return results
+}
