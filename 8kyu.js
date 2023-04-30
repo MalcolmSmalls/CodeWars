@@ -3482,3 +3482,11 @@ function sumArray(array) {
   array.shift()
   return array.reduce((acc, curr) => acc + curr, 0)
 }
+
+// How many stairs will Suzuki climb in 20 years?
+
+function stairsIn20(s){
+  let totalStairs = [...s[0], ...s[1], ...s[2], ...s[3], ...s[4], ...s[5], ...s[6]]
+  const yearlyStairs = totalStairs.reduce((a,b) => a+b, 0)
+  return yearlyStairs * 20
+}
