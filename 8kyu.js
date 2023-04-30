@@ -3490,3 +3490,12 @@ function stairsIn20(s){
   const yearlyStairs = totalStairs.reduce((a,b) => a+b, 0)
   return yearlyStairs * 20
 }
+
+
+// Heads and Legs
+
+function animals(heads, legs){
+  let cows = (legs - (2 * heads))/ 2
+  if(!Number.isInteger(cows) || cows < 0 || heads-cows < 0) return 'No solutions'
+  return [heads-cows, cows]
+}
