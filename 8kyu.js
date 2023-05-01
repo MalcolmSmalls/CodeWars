@@ -3560,3 +3560,27 @@ function isValid(formula){
   }
   return false
 }
+
+
+// Logical calculator
+
+function logicalCalc(array, op){
+  let i = 0
+  let results = array[i]
+  while(i < array.length - 1){
+    if(op === 'AND'){
+      if(results === false){
+        results = false
+      }else{  
+        results = results === array[i+1]
+      }
+    }else if(op === 'OR'){
+      results = results || array[i+1]
+    }else{
+      results = (!results && array[i+1]) || (results && !array[i+1])
+    }
+    i++
+  }
+  return results
+}
+
