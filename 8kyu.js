@@ -3536,3 +3536,9 @@ function isDigit(s) {
   if(s.length === 0) return false
   return !isNaN(+s.trim())
 }
+
+// Parse float
+
+function parseF(s) {
+  return isNaN(Number.parseFloat(s)) ? null : Number.parseFloat(s)
+}
