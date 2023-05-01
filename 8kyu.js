@@ -3542,3 +3542,21 @@ function isDigit(s) {
 function parseF(s) {
   return isNaN(Number.parseFloat(s)) ? null : Number.parseFloat(s)
 }
+
+
+// Simple Fun #352: Reagent Formula
+function isValid(formula){
+  let func = input => formula.includes(input)
+  if(func(1) && func(2)){
+    return false
+  } else if (func(3) && func(4)){
+    return false
+  }else if(func(5) && !func(6) || !func(5) && func(6)){
+    return false
+  }else if (func(5) && func(6)){
+    return true
+  }else if(func(7) || func(8)){
+    return true
+  }
+  return false
+}
