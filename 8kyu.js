@@ -3588,3 +3588,10 @@ function logicalCalc(array, op){
 function squareArea(A){
   return Math.pow(2 * A / Math.PI, 2)
 }
+
+
+// Regexp Basics - is it a digit?
+String.prototype.digit = function() {
+  const reggie = /^[0-9]$/
+  return reggie.test(this)
+};
