@@ -3595,3 +3595,9 @@ String.prototype.digit = function() {
   const reggie = /^[0-9]$/
   return reggie.test(this)
 };
+
+// Total pressure calculation
+
+solution= (m1, m2, M1, M2, v, t) => {
+  return (M1/m1 + M2/m2) * 0.082 * (t + 273.15) / v
+}
