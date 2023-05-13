@@ -54,3 +54,17 @@ function outed(meet, boss){
   }
   return total / Object.keys(meet).length <= 5 ? 'Get Out Now!' : 'Nice Work Champ!'
 }
+
+// Playing Cards Draw Order – Part 1
+
+const draw = (deck) => {
+	const drawnCards = [];
+  let i = 0
+  while(deck[0] !== undefined){
+    drawnCards.push(deck[i])
+    deck.push(deck[i+1])
+    deck.splice(0, 1)
+    i++
+  }
+	return drawnCards.filter(item => item);
+};
