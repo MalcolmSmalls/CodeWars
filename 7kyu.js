@@ -91,3 +91,21 @@ function makeValley(arr) {
   rightArr.sort((a,b) => a-b)
   return [...leftArr, ...rightArr].filter(item => item !== undefined)
 }
+
+
+// The Span Function
+
+function span(arr, predicate) {
+  const newArr = [...arr]
+  const leftArr = []
+  const rightArr = []
+  arr.every(item => {
+    if(predicate(item)){
+      leftArr.push(newArr.shift())
+      return true
+    }else{
+      return false
+    }
+  })
+  return [[...leftArr], [...newArr]]
+}
