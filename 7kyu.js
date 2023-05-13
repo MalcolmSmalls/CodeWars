@@ -68,3 +68,26 @@ const draw = (deck) => {
   }
 	return drawnCards.filter(item => item);
 };
+
+
+// How Green Is My Valley?
+function makeValley(arr) {
+  arr.sort((a,b) => b-a)
+  const mid = (arr.length / 2) 
+  const leftArr = []
+  const rightArr = []
+    for(let i = 0; leftArr.length < mid; i++){
+      if(arr[i] === arr[i+1]){
+        leftArr.push(arr.shift())
+        rightArr.push(arr.shift())
+        i++
+      }else{
+        leftArr.push(arr.shift())
+        rightArr.push(arr.shift())
+        i++
+      }   
+    }
+  leftArr.sort((a,b) => b-a)
+  rightArr.sort((a,b) => a-b)
+  return [...leftArr, ...rightArr].filter(item => item !== undefined)
+}
