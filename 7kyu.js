@@ -23,3 +23,20 @@ Array.prototype.remove_ = function(integer_list, values_list){
     })
   return compoundedStr.slice(0, compoundedStr.length - 1)
 }
+
+
+// Likes Vs Dislikes
+
+function likeOrDislike(buttons) {
+  let status = 'Nothing'
+  buttons.forEach(item => {
+    if(status === 'Nothing'){
+      status = item
+    }else if(status === item){
+      status = 'Nothing'
+    }else{
+      status = item
+    }
+  })
+  return status
+}
