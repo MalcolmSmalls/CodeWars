@@ -109,3 +109,15 @@ function span(arr, predicate) {
   })
   return [[...leftArr], [...newArr]]
 }
+
+// Adding Arrays
+
+function arrAdder(arr) {
+  let newArr = new Array(arr[0].length)
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[0].length; j++){
+      newArr[j] += arr[i][j]
+    }
+  }
+  return newArr.join('').split('undefined').join(' ').trim()
+}
