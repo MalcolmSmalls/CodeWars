@@ -137,3 +137,25 @@ function dropWhile(arr, pred) {
   })
   return arr.slice(failIndex)
 }
+
+
+// Vowel Count
+function getCount(str) {
+  let total = 0
+  let obj = {
+    'a': 0,
+    'e': 0,
+    'i': 0,
+    'o': 0,
+    'u': 0,
+  }
+  for(let letter of str){
+    if(obj[letter] === 0 || obj[letter]){
+      obj[letter]++
+    }
+  }
+  for(let key in obj){
+    total += obj[key]
+  }
+  return total;
+}
