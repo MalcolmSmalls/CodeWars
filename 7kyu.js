@@ -121,3 +121,19 @@ function arrAdder(arr) {
   }
   return newArr.join('').split('undefined').join(' ').trim()
 }
+
+
+// The dropWhile Function
+
+function dropWhile(arr, pred) {
+  let failIndex = arr.length
+  arr.every((item, index) => {
+    if(pred(item)){
+      return true
+    }else{
+      failIndex = index
+      return false
+    }
+  })
+  return arr.slice(failIndex)
+}
