@@ -194,3 +194,16 @@ function squareDigits(num){
   let arr = num.toString().split('')
   return +arr.map(item => item * item).join('')
 }
+
+
+// Highest and Lowest
+function highAndLow(numbers){
+  let lowest = Infinity
+  let highest = -Infinity
+  let arr = [highest, lowest]
+  numbers.split(' ').forEach(item => {
+    arr[0] = Math.max(arr[0], item)
+    arr[1] = Math.min(arr[1], item)
+  })
+  return `${arr[0]} ${arr[1]}`
+}
