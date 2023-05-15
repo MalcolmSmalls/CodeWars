@@ -176,3 +176,21 @@ function mostLikely(prob1,prob2){
   const nums2 = prob2.split(':')
   return (nums1[0]/nums1[1] > nums2[0] / nums2[1])
 }
+
+
+// Length and two values.
+function alternate(n, firstValue, secondValue){
+  const arr = []
+  for(let i = 0; i < n/2; i++){
+    arr.push(firstValue)
+    arr.push(secondValue)
+  }
+  return arr.length > n ? arr.slice(0,n) : arr
+}
+
+// Digit*Digit
+
+function squareDigits(num){
+  let arr = num.toString().split('')
+  return +arr.map(item => item * item).join('')
+}
