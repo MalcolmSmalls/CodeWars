@@ -168,3 +168,11 @@ function disemvowel(str) {
   let regex = /([aeiou])+/gi
   return str.replace(regex, '')
 }
+
+// Most Likely
+
+function mostLikely(prob1,prob2){
+  const nums1 = prob1.split(':')
+  const nums2 = prob2.split(':')
+  return (nums1[0]/nums1[1] > nums2[0] / nums2[1])
+}
