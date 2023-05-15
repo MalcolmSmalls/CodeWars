@@ -207,3 +207,8 @@ function highAndLow(numbers){
   })
   return `${arr[0]} ${arr[1]}`
 }
+
+// Descending Order
+function descendingOrder(n){
+  return +n.toString().split('').sort((a,b) => b-a).join('')
+}
