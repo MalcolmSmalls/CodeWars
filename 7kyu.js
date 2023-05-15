@@ -212,3 +212,10 @@ function highAndLow(numbers){
 function descendingOrder(n){
   return +n.toString().split('').sort((a,b) => b-a).join('')
 }
+
+
+// Get the Middle Character
+function getMiddle(s){
+  let mid = Math.floor(s.length / 2)
+  return s.length % 2 === 0 ? `${s[mid-1]}${s[mid]}` : `${s[mid]}`
+}
