@@ -377,3 +377,12 @@ function nbYear(p0, percent, aug, p) {
 
   return yearsNeeded
 }
+
+
+// Regex validate PIN code
+
+function validatePIN (pin) {
+  if(pin.length !== 4 && pin.length !== 6) return false
+  if((/^\d+$/).test(pin)) return true
+  return false
+}
