@@ -219,3 +219,17 @@ function getMiddle(s){
   let mid = Math.floor(s.length / 2)
   return s.length % 2 === 0 ? `${s[mid-1]}${s[mid]}` : `${s[mid]}`
 }
+
+// Mumbling
+
+function accum(s) {
+	let str = ''
+  let i = 0
+  for(let letter of s){
+    str += letter.toUpperCase()
+    str += letter.toLowerCase().repeat(i)
+    str+= '-'
+    i++
+  }
+  return str.slice(0,str.length-1)
+}
