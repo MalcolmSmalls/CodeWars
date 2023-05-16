@@ -269,3 +269,9 @@ function XO(str) {
   const os = str.toLowerCase().split('').filter(item => item === 'o')
   return xs.length === os.length
 }
+
+
+// Jaden Casing Strings
+String.prototype.toJadenCase = function () {
+  return this.split(' ').map(item => item[0].toUpperCase() + item.substring(1)).join(' ')
+};
