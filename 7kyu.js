@@ -299,3 +299,15 @@ function DNAStrand(dna){
   }
   return str
 }
+
+
+
+// Credit Card Mask
+function maskify(cc) {
+  if(cc.length > 4){
+    let str = '#'.repeat(cc.length-4)
+    str += cc.substring(cc.length-4)
+    return str
+  }
+  return cc
+}
