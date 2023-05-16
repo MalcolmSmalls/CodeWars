@@ -335,3 +335,9 @@ function longest(s1, s2) {
 }
 
 // const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+
+// Friend or Foe?
+function friend(friends){
+  return friends.filter(item => item.length === 4)
+}
