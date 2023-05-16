@@ -261,3 +261,11 @@ function isIsogram(str){
   }
   return true
 }
+
+
+// Exes and Ohs
+function XO(str) {
+  const xs = str.toLowerCase().split('').filter(item => item === 'x')
+  const os = str.toLowerCase().split('').filter(item => item === 'o')
+  return xs.length === os.length
+}
