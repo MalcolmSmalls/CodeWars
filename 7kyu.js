@@ -283,3 +283,19 @@ function findShort(s){
   arr.forEach(item => item.length < least ? least = item.length : null)
   return least
 }
+
+
+// Complementary DNA
+function DNAStrand(dna){
+  let obj = {
+    'A' : 'T',
+    'T' : 'A',
+    'G' : 'C',
+    'C' : 'G'
+  }
+  let str = ''
+  for(let key of dna){
+    str += obj[key]
+  }
+  return str
+}
