@@ -363,3 +363,17 @@ function findNextSquare(sq) {
   }
   return -1;
 }
+
+
+// Growth of a Population
+
+function nbYear(p0, percent, aug, p) {
+    let yearsNeeded = 0
+    while(p0 < p){
+      console.log(p0, p, yearsNeeded)
+      p0 = p0 + Math.floor((p0 * (percent * .01))) + aug
+      yearsNeeded++
+    }
+
+  return yearsNeeded
+}
