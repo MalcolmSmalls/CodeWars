@@ -386,3 +386,9 @@ function validatePIN (pin) {
   if((/^\d+$/).test(pin)) return true
   return false
 }
+
+
+// Binary Addition
+function addBinary(a,b) {
+  return (a+b).toString(2)
+}
