@@ -341,3 +341,17 @@ function longest(s1, s2) {
 function friend(friends){
   return friends.filter(item => item.length === 4)
 }
+
+
+// Categorize New Member
+function openOrSenior(data){
+  const newArr = []
+  data.forEach(item => {
+    if(item[0] >= 55 && item[1] > 7){
+      newArr.push('Senior')
+    }else{
+      newArr.push('Open')
+    }
+  })
+  return newArr
+}
