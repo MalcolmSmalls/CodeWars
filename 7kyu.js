@@ -233,3 +233,8 @@ function accum(s) {
   }
   return str.slice(0,str.length-1)
 }
+
+// You're a square!
+var isSquare = function(n){
+  return Math.sqrt(n) >= 0 && Number.isInteger(Math.sqrt(n)) ? true : false 
+}
