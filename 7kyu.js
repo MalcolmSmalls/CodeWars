@@ -275,3 +275,11 @@ function XO(str) {
 String.prototype.toJadenCase = function () {
   return this.split(' ').map(item => item[0].toUpperCase() + item.substring(1)).join(' ')
 };
+
+// Shortest Word
+function findShort(s){
+  let arr = s.split(' ')
+  let least = arr[0].length
+  arr.forEach(item => item.length < least ? least = item.length : null)
+  return least
+}
