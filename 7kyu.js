@@ -244,3 +244,20 @@ var isSquare = function(n){
 function filter_list(l) {
   return l.filter(item => typeof item !== 'string')
 }
+
+
+// Isograms
+
+function isIsogram(str){
+  let obj = {
+  }
+  for(let letter of str.toLowerCase()){
+    obj[letter] = (obj[letter] || 0 )+ 1
+  }
+  for(let key in obj){
+    if(obj[key] > 1){
+      return false
+    }
+  }
+  return true
+}
