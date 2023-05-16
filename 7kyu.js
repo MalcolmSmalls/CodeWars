@@ -317,3 +317,21 @@ function sumTwoSmallestNumbers(numbers) {
   numbers.sort((a,b) => a-b)
   return numbers[0] + numbers[1]
 }
+
+// Beginner Series #3 Sum of Numbers
+function getSum(a, b){
+  let arr = [Math.min(a,b), Math.max(a,b)]
+  let newArr = []
+  for(let i = arr[0]; i <= arr[1]; i++){
+    newArr.push(i)
+  }
+  return newArr.reduce((acc, curr) => acc + curr, 0)
+}
+
+
+// Two to One
+function longest(s1, s2) {
+  return [...new Set([...s1, ...s2])].sort().join('')
+}
+
+// const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
