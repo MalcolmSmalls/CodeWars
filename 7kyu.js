@@ -238,3 +238,9 @@ function accum(s) {
 var isSquare = function(n){
   return Math.sqrt(n) >= 0 && Number.isInteger(Math.sqrt(n)) ? true : false 
 }
+
+
+// List Filtering
+function filter_list(l) {
+  return l.filter(item => typeof item !== 'string')
+}
