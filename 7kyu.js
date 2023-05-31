@@ -404,3 +404,9 @@ function isTriangle(a,b,c){
 const binaryArrayToNumber = arr => {
   return parseInt(arr.join(''), 2)
 };
+
+// String ends with?
+
+function solution(str, ending){
+  return str.endsWith(ending)
+}
