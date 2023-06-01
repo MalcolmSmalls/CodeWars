@@ -410,3 +410,11 @@ const binaryArrayToNumber = arr => {
 function solution(str, ending){
   return str.endsWith(ending)
 }
+
+
+// Number of People in the Bus
+var number = function(busStops){
+  let total = 0
+  busStops.flat().forEach((item, index) => index % 2 === 0 ? total += item : total -= item)
+  return total
+}
