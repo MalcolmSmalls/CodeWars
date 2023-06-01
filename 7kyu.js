@@ -418,3 +418,10 @@ var number = function(busStops){
   busStops.flat().forEach((item, index) => index % 2 === 0 ? total += item : total -= item)
   return total
 }
+
+// Reverse words
+function reverseWords(str) {
+  const newArr = []
+  str.split('').forEach(item => newArr.unshift(item))
+  return newArr.join('').split(' ').reverse().join(' ')
+}
