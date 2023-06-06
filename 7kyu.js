@@ -425,3 +425,9 @@ function reverseWords(str) {
   str.split('').forEach(item => newArr.unshift(item))
   return newArr.join('').split(' ').reverse().join(' ')
 }
+
+// Odd or Even?
+function oddOrEven(array) {
+  const total = array.reduce((acc,curr) => acc + curr, 0)
+  return total % 2 === 0 ? 'even' : 'odd'
+}
