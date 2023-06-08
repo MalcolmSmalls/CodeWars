@@ -443,3 +443,19 @@ function divisors(integer) {
   }
   return !arr[0] ? `${integer} is prime` : arr
 };
+
+
+// Sum of the first nth term of Series
+
+function SeriesSum(n){
+  if(n === 0) return '0.00'
+  let total = 1
+  let i = 1
+  let z = 0
+  while(i < n){
+    i++
+    total += 1/(i*2 + z)
+    z++
+  }
+  return total.toFixed(2)
+}
