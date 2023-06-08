@@ -431,3 +431,15 @@ function oddOrEven(array) {
   const total = array.reduce((acc,curr) => acc + curr, 0)
   return total % 2 === 0 ? 'even' : 'odd'
 }
+
+
+// Find the divisors!
+function divisors(integer) {
+  const arr = []
+  for(let i = 2; i < integer; i++){
+    if(integer % i === 0){
+      arr.push(i)
+    }
+  }
+  return !arr[0] ? `${integer} is prime` : arr
+};
