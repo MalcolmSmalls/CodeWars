@@ -459,3 +459,14 @@ function SeriesSum(n){
   }
   return total.toFixed(2)
 }
+
+// Remove the minimum
+
+function removeSmallest(numbers) {
+  let lowest = Infinity
+  numbers.forEach(item => lowest = Math.min(item, lowest))
+  const lowestIndx = numbers.indexOf(lowest)
+  const lower = numbers.slice(0, lowestIndx)
+  const higher = numbers.slice(lowestIndx+1)
+  return [...lower, ...higher];
+}
