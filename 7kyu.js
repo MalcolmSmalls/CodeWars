@@ -470,3 +470,10 @@ function removeSmallest(numbers) {
   const higher = numbers.slice(lowestIndx+1)
   return [...lower, ...higher];
 }
+
+
+// Testing 1-2-3
+
+var number=function(array){
+  return array.map((item, index) => `${index+1}: ${item}`)
+}
