@@ -477,3 +477,10 @@ function removeSmallest(numbers) {
 var number=function(array){
   return array.map((item, index) => `${index+1}: ${item}`)
 }
+
+
+// The highest profit wins!
+function minMax(arr){
+  arr.sort((a,b) => a-b)
+  return [arr[0],arr[arr.length-1]]; // fix me!
+}
