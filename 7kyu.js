@@ -484,3 +484,15 @@ function minMax(arr){
   arr.sort((a,b) => a-b)
   return [arr[0],arr[arr.length-1]]; // fix me!
 }
+
+// Don't Give Me Five
+function dontGiveMeFive(start, end)
+{
+  const arr = []
+  for(let i = start; i <= end; i++){
+    if(!i.toString().includes('5')){
+      arr.push(i)
+    }
+  }
+  return arr.length
+}
