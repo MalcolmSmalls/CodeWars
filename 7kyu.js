@@ -496,3 +496,12 @@ function dontGiveMeFive(start, end)
   }
   return arr.length
 }
+
+// Find the stray number
+function stray(numbers) {
+  if(numbers.slice(1).includes(numbers[0])){
+    return numbers.filter(item => item !== numbers[0])[0]
+  }else{
+    return numbers[0]
+  }
+}
