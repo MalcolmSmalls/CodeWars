@@ -505,3 +505,16 @@ function stray(numbers) {
     return numbers[0]
   }
 }
+
+
+// Count the divisors of a number
+function getDivisorsCnt(n){
+  if(n===1) return 1
+    let count = 0
+    for(let i = 1; i < Math.sqrt(n); i++){
+      if(!(n % i)){
+        count++
+      }
+    }
+  return Number.isInteger(Math.sqrt(n)) ? count * 2 + 1 : count * 2
+}
