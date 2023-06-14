@@ -518,3 +518,15 @@ function getDivisorsCnt(n){
     }
   return Number.isInteger(Math.sqrt(n)) ? count * 2 + 1 : count * 2
 }
+
+// Money, Money, Money
+
+function calculateYears(principal, interest, tax, desired) {
+  let investment = principal
+  let y = 0
+  while(investment < desired){
+    investment = investment + (investment * interest) - (investment * interest * tax)
+    y++
+  }
+  return y
+}
