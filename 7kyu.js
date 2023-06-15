@@ -530,3 +530,10 @@ function calculateYears(principal, interest, tax, desired) {
   }
   return y
 }
+
+
+
+// Breaking chocolate problem
+function breakChocolate(n,m) {
+  return !n || !m ? 0 : n * m - 1
+}
