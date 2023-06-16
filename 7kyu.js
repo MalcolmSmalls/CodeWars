@@ -537,3 +537,10 @@ function calculateYears(principal, interest, tax, desired) {
 function breakChocolate(n,m) {
   return !n || !m ? 0 : n * m - 1
 }
+
+
+
+// Sort array by string length
+function sortByLength (array) {
+  return array.sort((a,b) => a.length - b.length)
+};
