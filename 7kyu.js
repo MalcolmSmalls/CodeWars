@@ -544,3 +544,22 @@ function breakChocolate(n,m) {
 function sortByLength (array) {
   return array.sort((a,b) => a.length - b.length)
 };
+
+// Count the Digit
+
+function nbDig(n, d) {
+  let arr = []
+  let count = 0
+  for(let i = 0; i <= n; i++){
+    arr.push(`${i**2}`)
+  }
+  for(const item of arr){
+    for(const digit of item){
+      if(+digit === d){
+        count++
+      }
+    }
+  }
+return count
+}
+
