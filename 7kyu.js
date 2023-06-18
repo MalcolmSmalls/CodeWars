@@ -563,3 +563,15 @@ function nbDig(n, d) {
 return count
 }
 
+
+// Make a function that does arithmetic!
+
+function arithmetic(a, b, operator){
+  const obj = {
+    'add': a + b,
+    'subtract': a - b,
+    'multiply': a * b,
+    'divide': a / b
+  }
+  return obj[operator]
+}
