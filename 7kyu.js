@@ -575,3 +575,10 @@ function arithmetic(a, b, operator){
   }
   return obj[operator]
 }
+
+// Find the middle element
+function gimme (triplet) {
+  let arr = [...triplet]
+  const num = arr.sort((a,b) => a-b)[1]
+  return triplet.indexOf(num)
+}
