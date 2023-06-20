@@ -582,3 +582,11 @@ function gimme (triplet) {
   const num = arr.sort((a,b) => a-b)[1]
   return triplet.indexOf(num)
 }
+
+// Round up to the next multiple of 5
+function roundToNext5(n){
+  while(n % 5 !== 0){
+    n++
+  }
+  return n
+}
