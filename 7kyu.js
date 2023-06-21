@@ -590,3 +590,15 @@ function roundToNext5(n){
   }
   return n
 }
+
+//Sum of a sequence
+
+
+const sequenceSum = (begin, end, step) => {
+  const newArr = []
+  while(begin <= end){
+    newArr.push(begin)
+    begin += step
+  }
+  return newArr.reduce((acc, curr) => acc+curr, 0)
+};
