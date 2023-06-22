@@ -602,3 +602,24 @@ const sequenceSum = (begin, end, step) => {
   }
   return newArr.reduce((acc, curr) => acc+curr, 0)
 };
+
+
+// Anagram Detection
+
+var isAnagram = function(test, original) {
+  if(test.length !== original.length) return false
+  let obj1 = {}
+  let obj2 = {}
+  for(let key of test.toLowerCase()){
+    obj1[key] = (obj1[key] || 0) + 1
+  }
+  for(let key of original.toLowerCase()){
+    obj2[key] = (obj2[key] || 0) + 1 
+  }
+  for(let key in obj1){
+    if(obj1[key] !== obj2[key]){
+      return false
+    }
+  }
+  return true
+};
