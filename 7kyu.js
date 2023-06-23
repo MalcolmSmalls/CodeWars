@@ -623,3 +623,11 @@ var isAnagram = function(test, original) {
   }
   return true
 };
+
+
+
+// Sort Numbers
+
+function solution(nums){
+  return nums ? nums.sort((a,b) => a-b) : []
+}
