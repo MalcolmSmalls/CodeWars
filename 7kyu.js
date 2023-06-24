@@ -631,3 +631,9 @@ var isAnagram = function(test, original) {
 function solution(nums){
   return nums ? nums.sort((a,b) => a-b) : []
 }
+
+
+// Alternating between three values
+function f(x, cc) { 
+  return cc['a'] === x ? cc['b'] : cc['b'] === x ? cc['c'] : cc['a']
+}
