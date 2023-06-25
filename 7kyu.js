@@ -637,3 +637,10 @@ function solution(nums){
 function f(x, cc) { 
   return cc['a'] === x ? cc['b'] : cc['b'] === x ? cc['c'] : cc['a']
 }
+
+// Remove anchor from URL
+
+function removeUrlAnchor(url){
+  const index = url.indexOf('#')
+  return index >= 0 ? url.split('').splice(0, index).join('') : url
+}
