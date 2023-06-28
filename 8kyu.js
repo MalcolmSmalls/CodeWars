@@ -3610,3 +3610,11 @@ function solution([m1,m2,d],[um1,um2,ud]) {
                      } ;
   return G * m1 * conversion[um1] * m2 * conversion[um2] / ( d * conversion[ud] ) ** 2 ;
 }
+
+
+// Find the capitals
+var capitals = function (word) {
+	const newArr = []
+  word.split('').forEach((item, index) => item.toUpperCase() === item ? newArr.push(index) : null)
+  return newArr
+};
