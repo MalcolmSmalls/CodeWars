@@ -656,3 +656,27 @@ function twoOldestAges(ages){
 function smallEnough(a, limit){
   return a.every(item => item <= limit)
 }
+
+
+
+// Two fighters, one winner.
+
+function declareWinner(fighter1, fighter2, firstAttacker) {
+  while(fighter1.health > 0 && fighter2.health > 0){
+    if(fighter1.name === firstAttacker && fighter1.health){
+      fighter2.health -= fighter1.damagePerAttack
+    }else if(fighter2.name === firstAttacker && fighter2.health){
+      fighter1.health -= fighter2.damagePerAttack
+    }
+    if(fighter1.health <= 0 || fighter2.health <= 0){
+      break
+    }else{
+        if(fighter1.name !== firstAttacker && fighter1.health){
+          fighter2.health -= fighter1.damagePerAttack
+        }else if(fighter2.name !== firstAttacker && fighter2.health){
+          fighter1.health -= fighter2.damagePerAttack
+        }
+    }
+  }
+  return fighter1.health <= 0 ? fighter2.name : fighter1.name
+}
