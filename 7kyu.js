@@ -680,3 +680,18 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
   }
   return fighter1.health <= 0 ? fighter2.name : fighter1.name
 }
+
+
+// Simple Fun #176: Reverse Letter
+function reverseLetter(str) {
+  let newArr = [...str.matchAll(/[a-zA-Z]/gm)]
+  let returnArr = []
+  newArr.forEach((item, index) => {
+    if(item[0] === item[0].toUpperCase()){
+      returnArr.push(item[0].toLowerCase())
+    }else if(item[0]){
+      returnArr.push(item[0])
+    }
+  })
+  return returnArr.reverse().join('')
+}
