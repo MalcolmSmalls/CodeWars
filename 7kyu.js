@@ -695,3 +695,20 @@ function reverseLetter(str) {
   })
   return returnArr.reverse().join('')
 }
+
+// Simple Fun #74: Growing Plant
+
+function growingPlant(upSpeed, downSpeed, desiredHeight) {
+  let day = 0
+  let growth = 0
+  while(growth < desiredHeight){
+    growth += upSpeed
+    day++
+    if(growth >= desiredHeight){
+      break
+    }else{
+      growth -= downSpeed
+    }
+  }
+  return day
+}
