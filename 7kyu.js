@@ -727,3 +727,16 @@ function checkExam(array1, array2) {
   }
   return score > 0 ? score : 0
 }
+
+// Summing a number's digits
+
+function sumDigits(number) {
+  let total = 0
+  number.toString().split('').map(item => {
+    if(!isNaN(+item)){
+      total += +item
+    }
+  })
+    return total
+  }
+
