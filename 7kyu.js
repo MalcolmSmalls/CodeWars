@@ -740,3 +740,10 @@ function sumDigits(number) {
     return total
   }
 
+// Maximum Multiple
+  function maxMultiple(divisor, bound){
+    while(bound % divisor !== 0){
+      bound--
+    }
+    return bound
+  }
