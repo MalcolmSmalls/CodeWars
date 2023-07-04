@@ -747,3 +747,15 @@ function sumDigits(number) {
     }
     return bound
   }
+
+ // Fix string case
+  function solve(s){
+    if(s.toUpperCase() === s || s.toLowerCase() === s) return s
+    const lowerReg = /[a-z]/g
+    const upperReg = /[A-Z]/g
+    if(s.match(lowerReg).length >= s.match(upperReg).length){
+      return s.toLowerCase()
+    }else{
+      return s.toUpperCase()
+    }
+}
