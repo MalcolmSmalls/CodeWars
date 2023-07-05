@@ -759,3 +759,10 @@ function sumDigits(number) {
       return s.toUpperCase()
     }
 }
+
+// Factorial
+function factorial(n){
+  if(n > 12 || n < 0) throw new RangeError
+  if(n === 0) return 1
+  return n * factorial(n - 1)
+}
