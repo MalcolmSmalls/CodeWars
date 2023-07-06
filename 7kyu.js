@@ -766,3 +766,8 @@ function factorial(n){
   if(n === 0) return 1
   return n * factorial(n - 1)
 }
+
+// Form The Minimum
+function minValue(values){
+  return Number([...new Set(values)].sort((a,b) => a-b).join(''))
+}
