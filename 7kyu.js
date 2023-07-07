@@ -771,3 +771,20 @@ function factorial(n){
 function minValue(values){
   return Number([...new Set(values)].sort((a,b) => a-b).join(''))
 }
+
+
+// Alternate capitalization
+function capitalize(s){
+  let wordOne = ""
+  let wordTwo = ""
+  s.split('').forEach((item, index) => {
+    if(index % 2 === 0){
+      wordOne += item.toUpperCase()
+      wordTwo += item   
+    }else{
+      wordTwo += item.toUpperCase()
+      wordOne += item
+    }
+  })
+   return [wordOne, wordTwo]
+ };
