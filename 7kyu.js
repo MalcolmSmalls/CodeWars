@@ -775,3 +775,9 @@ function solution(digits) {
   }
   return Number(newArr.sort()[newArr.length - 1].join(''))
 }
+
+// Are the numbers in order?
+function inAscOrder(arr) {
+  const newArr = [...arr].sort((a, b) => a - b)
+  return arr.every((item, index) => item === newArr[index])
+}
