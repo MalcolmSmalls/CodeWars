@@ -781,3 +781,14 @@ function inAscOrder(arr) {
   const newArr = [...arr].sort((a, b) => a - b)
   return arr.every((item, index) => item === newArr[index])
 }
+
+// Power of 4
+
+function powerOf4(n) {
+  let total = 1
+  while (total <= n) {
+    if (total === n) return true
+    total *= 4
+  }
+  return false
+}
