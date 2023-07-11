@@ -792,3 +792,9 @@ function powerOf4(n) {
   }
   return false
 }
+
+// Leap Years
+function isLeapYear(year) {
+  if ((!(year % 100) && year % 400) || year % 4) return false
+  return true
+}
