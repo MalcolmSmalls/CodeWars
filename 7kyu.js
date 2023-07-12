@@ -798,3 +798,11 @@ function isLeapYear(year) {
   if ((!(year % 100) && year % 400) || year % 4) return false
   return true
 }
+
+// Sum of Minimums!
+
+function sumOfMinimums(arr) {
+  let total = 0
+  arr.forEach((item) => (total += item.sort((a, b) => a - b)[0]))
+  return total
+}
