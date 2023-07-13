@@ -799,6 +799,11 @@ function isLeapYear(year) {
   return true
 }
 
+// Flatten and sort an array
+function flattenAndSort(array) {
+  return array.flat().sort((a, b) => a - b)
+}
+
 // Sum of Minimums!
 
 function sumOfMinimums(arr) {
