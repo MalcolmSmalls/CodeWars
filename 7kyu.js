@@ -811,3 +811,36 @@ function sumOfMinimums(arr) {
   arr.forEach((item) => (total += item.sort((a, b) => a - b)[0]))
   return total
 }
+
+// The Coupon Code
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  let obj = {
+    January: 1,
+    Feburary: 2,
+    March: 3,
+    April: 4,
+    May: 5,
+    June: 6,
+    July: 7,
+    August: 8,
+    September: 9,
+    October: 10,
+    November: 11,
+    December: 12,
+  }
+  if (enteredCode !== correctCode) return false
+  let curr = currentDate.replace(',', '').split(' ')
+  let exp = expirationDate.replace(',', '').split(' ')
+  if (+curr[2] > +exp[2]) return false
+  if (obj[curr[0]] > obj[exp[0]] && +curr[2] > +exp[2]) return false
+  if (curr[0] === exp[0] && curr[2] === exp[2] && +curr[1] > +exp[1])
+    return false
+  return true
+}
+
+// DONT FORGET YOU CAN PARSE DATES
+
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+//   return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+// }
