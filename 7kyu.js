@@ -844,3 +844,14 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
 // function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 //   return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
 // }
+
+// Row Weights
+function rowWeights(array) {
+  let team1 = []
+  let team2 = []
+  const getTotal = (arr) => arr.reduce((acc, curr) => acc + curr, 0)
+  array.forEach((item, index) =>
+    index % 2 === 0 ? team1.push(item) : team2.push(item)
+  )
+  return [getTotal(team1), getTotal(team2)]
+}
