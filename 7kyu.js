@@ -855,3 +855,12 @@ function rowWeights(array) {
   )
   return [getTotal(team1), getTotal(team2)]
 }
+
+// Remove duplicate words
+
+function removeDuplicateWords(s) {
+  const set = new Set([...s.split(' ')])
+  return [...set].join(' ')
+}
+
+///// You can do [...new Set()] in one go.
