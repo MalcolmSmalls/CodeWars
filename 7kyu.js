@@ -870,3 +870,8 @@ function factorial(n) {
   if (!n) return 1
   return n * factorial(n - 1)
 }
+
+// JavaScript Array Filter
+function getEvenNumbers(numbersArray) {
+  return numbersArray.filter((item) => !(item % 2))
+}
