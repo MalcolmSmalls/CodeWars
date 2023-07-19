@@ -875,3 +875,11 @@ function factorial(n) {
 function getEvenNumbers(numbersArray) {
   return numbersArray.filter((item) => !(item % 2))
 }
+
+// Love vs friendship
+
+function wordsToMarks(string) {
+  let total = 0
+  string.split('').forEach((item) => (total += item.charCodeAt(0) - 96))
+  return total
+}
