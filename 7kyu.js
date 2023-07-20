@@ -883,3 +883,15 @@ function wordsToMarks(string) {
   string.split('').forEach((item) => (total += item.charCodeAt(0) - 96))
   return total
 }
+
+// Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+function countDevelopers(list) {
+  let total = 0
+  list.forEach((item) =>
+    item['language'] === 'JavaScript' && item['continent'] === 'Europe'
+      ? total++
+      : null
+  )
+  return total
+}
