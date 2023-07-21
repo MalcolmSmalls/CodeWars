@@ -895,3 +895,10 @@ function countDevelopers(list) {
   )
   return total
 }
+
+// Largest pair sum in array
+
+function largestPairSum(numbers) {
+  numbers.sort((a, b) => b - a)
+  return numbers[0] + numbers[1]
+}
