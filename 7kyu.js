@@ -902,3 +902,15 @@ function largestPairSum(numbers) {
   numbers.sort((a, b) => b - a)
   return numbers[0] + numbers[1]
 }
+
+// Sorted? yes? no? how?
+
+function isSortedAndHow(array) {
+  let descendingArr = [...array].sort((a, b) => b - a)
+  let ascendingArr = [...array].sort((a, b) => a - b)
+  if (array.every((item, index) => item === ascendingArr[index]))
+    return 'yes, ascending'
+  if (array.every((item, index) => item === descendingArr[index]))
+    return 'yes, descending'
+  return 'no'
+}
