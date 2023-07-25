@@ -914,3 +914,8 @@ function isSortedAndHow(array) {
     return 'yes, descending'
   return 'no'
 }
+
+// No oddities here
+function noOdds(values) {
+  return values.filter((item) => item % 2 === 0)
+}
