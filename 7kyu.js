@@ -919,3 +919,10 @@ function isSortedAndHow(array) {
 function noOdds(values) {
   return values.filter((item) => item % 2 === 0)
 }
+
+// Predict your age!
+function predictAge(...args) {
+  let total = 0
+  args.forEach((item) => (total += item * item))
+  return Math.floor(Math.sqrt(total) / 2)
+}
