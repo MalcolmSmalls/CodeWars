@@ -926,3 +926,34 @@ function predictAge(...args) {
   args.forEach((item) => (total += item * item))
   return Math.floor(Math.sqrt(total) / 2)
 }
+
+// Alphabet war
+function alphabetWar(fight) {
+  let leftLetters = {
+    w: 4,
+    p: 3,
+    b: 2,
+    s: 1,
+  }
+
+  let rightLetters = {
+    m: 4,
+    q: 3,
+    d: 2,
+    z: 1,
+  }
+  let leftTotal = 0
+  let rightTotal = 0
+  for (let letter of fight) {
+    if (leftLetters[letter]) {
+      leftTotal += leftLetters[letter]
+    } else if (rightLetters[letter]) {
+      rightTotal += rightLetters[letter]
+    }
+  }
+  return rightTotal > leftTotal
+    ? 'Right side wins!'
+    : rightTotal < leftTotal
+    ? 'Left side wins!'
+    : "Let's fight again!"
+}
