@@ -957,3 +957,16 @@ function alphabetWar(fight) {
     ? 'Left side wins!'
     : "Let's fight again!"
 }
+
+// Even numbers in an array
+function evenNumbers(array, number) {
+  let newArr = []
+  let i = array.length
+  while (newArr.length < number && i >= 0) {
+    if (array[i] % 2 === 0) {
+      newArr.unshift(array[i])
+    }
+    i--
+  }
+  return newArr
+}
