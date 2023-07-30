@@ -970,3 +970,10 @@ function evenNumbers(array, number) {
   }
   return newArr
 }
+
+// Bumps in the Road
+
+function bump(x) {
+  let total = x.split('').filter((item) => item === 'n').length
+  return total <= 15 ? 'Woohoo!' : 'Car Dead'
+}
