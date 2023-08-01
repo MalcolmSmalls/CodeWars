@@ -977,3 +977,10 @@ function bump(x) {
   let total = x.split('').filter((item) => item === 'n').length
   return total <= 15 ? 'Woohoo!' : 'Car Dead'
 }
+
+// esreveR
+const reverse = function (array) {
+  const reversedArr = []
+  array.forEach((item) => reversedArr.unshift(item))
+  return reversedArr
+}
