@@ -984,3 +984,20 @@ const reverse = function (array) {
   array.forEach((item) => reversedArr.unshift(item))
   return reversedArr
 }
+
+// Fizz Buzz
+function fizzbuzz(n) {
+  const newArr = []
+  for (let i = 1; i <= n; i++) {
+    if (!(i % 3) && !(i % 5)) {
+      newArr.push('FizzBuzz')
+    } else if (!(i % 3)) {
+      newArr.push('Fizz')
+    } else if (!(i % 5)) {
+      newArr.push('Buzz')
+    } else {
+      newArr.push(i)
+    }
+  }
+  return newArr
+}
