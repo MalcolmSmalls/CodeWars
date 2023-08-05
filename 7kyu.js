@@ -1001,3 +1001,14 @@ function fizzbuzz(n) {
   }
   return newArr
 }
+
+// Maximum Product
+function adjacentElementsProduct(array) {
+  let max = -Infinity
+  let i = 0
+  while (i < array.length - 1) {
+    max = Math.max(max, array[i] * array[i + 1])
+    i++
+  }
+  return max
+}
