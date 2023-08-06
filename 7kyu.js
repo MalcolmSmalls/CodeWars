@@ -1012,3 +1012,18 @@ function adjacentElementsProduct(array) {
   }
   return max
 }
+
+// Greet Me
+
+var greet = function (name) {
+  let newArr = []
+  name
+    .toLowerCase()
+    .split('')
+    .forEach((item, index) =>
+      index === 0
+        ? newArr.push(item.toUpperCase())
+        : newArr.push(item.toLowerCase())
+    )
+  return `Hello ${newArr.join('')}!`
+}
