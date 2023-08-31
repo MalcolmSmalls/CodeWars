@@ -1038,3 +1038,21 @@ function printerError(s) {
   })
   return `${errorCount}/${s.length}`
 }
+
+// Maximum Length Difference
+function mxdiflg(a1, a2) {
+  if (a1.length < 1 || a2.length < 1) return -1
+  let maxX = -Infinity
+  let maxY = -Infinity
+  let lowestX = Infinity
+  let lowestY = Infinity
+  a1.forEach((item) => {
+    maxX = Math.max(maxX, item.length)
+    lowestX = Math.min(lowestX, item.length)
+  })
+  a2.forEach((item) => {
+    maxY = Math.max(maxY, item.length)
+    lowestY = Math.min(lowestY, item.length)
+  })
+  return Math.max(Math.abs(lowestX - maxY), Math.abs(lowestY - maxX))
+}
