@@ -1027,3 +1027,14 @@ var greet = function (name) {
     )
   return `Hello ${newArr.join('')}!`
 }
+
+// Printer Errors
+function printerError(s) {
+  let errorCount = 0
+  s.split('').forEach((item) => {
+    if (item.charCodeAt(0) > 109) {
+      errorCount++
+    }
+  })
+  return `${errorCount}/${s.length}`
+}
