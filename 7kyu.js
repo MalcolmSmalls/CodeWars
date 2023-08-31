@@ -1056,3 +1056,18 @@ function mxdiflg(a1, a2) {
   })
   return Math.max(Math.abs(lowestX - maxY), Math.abs(lowestY - maxX))
 }
+
+// Find the vowels
+function vowelIndices(word) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+  const endResults = []
+  word
+    .toLowerCase()
+    .split('')
+    .forEach((item, index) => {
+      if (vowels.includes(item)) {
+        endResults.push(index + 1)
+      }
+    })
+  return endResults
+}
