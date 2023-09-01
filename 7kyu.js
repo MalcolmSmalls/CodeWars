@@ -1071,3 +1071,20 @@ function vowelIndices(word) {
     })
   return endResults
 }
+
+// Sum of odd numbers
+
+function rowSumOddNumbers(n) {
+  let i = 1
+  let startN = n * (n - 1) + 1
+  let total = 0
+  let step = startN
+  while (i <= n) {
+    if (step % 2 !== 0) {
+      i++
+      total += step
+      step += 2
+    }
+  }
+  return total
+}
