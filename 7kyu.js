@@ -1088,3 +1088,10 @@ function rowSumOddNumbers(n) {
   }
   return total
 }
+
+// Sum of angles
+
+function angle(n) {
+  const interiorAngle = ((n - 2) * 180) / n
+  return Math.round(interiorAngle * n)
+}
