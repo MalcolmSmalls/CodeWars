@@ -1095,3 +1095,15 @@ function angle(n) {
   const interiorAngle = ((n - 2) * 180) / n
   return Math.round(interiorAngle * n)
 }
+
+// Deodorant Evaporator
+
+function evaporator(content, evap_per_day, threshold) {
+  let volume = content
+  let days = 0
+  while (volume >= content * (threshold / 100)) {
+    volume -= volume * (evap_per_day / 100)
+    days++
+  }
+  return days
+}
