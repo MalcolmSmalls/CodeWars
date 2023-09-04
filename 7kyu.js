@@ -1107,3 +1107,16 @@ function evaporator(content, evap_per_day, threshold) {
   }
   return days
 }
+
+// Most digits
+
+function findLongest(array) {
+  const newArr = array.map((item) => item.toString())
+  let longest = newArr[0]
+  newArr.forEach((item) => {
+    if (item.length > longest.length) {
+      longest = item
+    }
+  })
+  return +longest
+}
