@@ -1120,3 +1120,15 @@ function findLongest(array) {
   })
   return +longest
 }
+
+// Power of two
+
+function isPowerOfTwo(n) {
+  if (n === 1) return true
+  if (n === 0) return false
+  let runningProduct = 2
+  while (runningProduct < n) {
+    runningProduct *= 2
+  }
+  return runningProduct === n
+}
