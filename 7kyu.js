@@ -1132,3 +1132,14 @@ function isPowerOfTwo(n) {
   }
   return runningProduct === n
 }
+
+// Sum of Cubes
+function sumCubes(n) {
+  let runningProduct = 0
+  let startingNumber = 1
+  while (startingNumber <= n) {
+    runningProduct += Math.pow(startingNumber, 3)
+    startingNumber++
+  }
+  return runningProduct
+}
