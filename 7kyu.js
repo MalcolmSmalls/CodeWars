@@ -1143,3 +1143,8 @@ function sumCubes(n) {
   }
   return runningProduct
 }
+
+//  Number of Decimal Digits
+function digits(n) {
+  return n.toString().length
+}
