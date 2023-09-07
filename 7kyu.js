@@ -1148,3 +1148,9 @@ function sumCubes(n) {
 function digits(n) {
   return n.toString().length
 }
+
+// Reverse a number
+function reverseNumber(n) {
+  const reversedNum = Math.abs(n).toString().split('').reverse().join('')
+  return Number(reversedNum) * Math.sign(n)
+}
