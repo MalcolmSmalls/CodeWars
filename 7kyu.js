@@ -1154,3 +1154,18 @@ function reverseNumber(n) {
   const reversedNum = Math.abs(n).toString().split('').reverse().join('')
   return Number(reversedNum) * Math.sign(n)
 }
+
+// Minimize Sum Of Array (Array Series #1)
+
+function minSum(arr) {
+  arr.sort((a, b) => a - b)
+  let runningProduct = 0
+  let i = 0
+  let j = arr.length - 1
+  while (i < j) {
+    runningProduct += arr[i] * arr[j]
+    i++
+    j--
+  }
+  return runningProduct
+}
