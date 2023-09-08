@@ -1169,3 +1169,18 @@ function minSum(arr) {
   }
   return runningProduct
 }
+
+// Parts of a list
+
+function partlist(arr) {
+  const arrLength = arr.length - 1
+  let shiftedWords = []
+  let mainArray = []
+  let i = 0
+  while (i < arrLength) {
+    shiftedWords.push(arr.shift())
+    mainArray.push([shiftedWords.join(' '), arr.join(' ')])
+    i++
+  }
+  return mainArray
+}
