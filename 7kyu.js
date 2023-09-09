@@ -1184,3 +1184,20 @@ function partlist(arr) {
   }
   return mainArray
 }
+
+// Sum of Triangular Numbers
+
+function sumTriangularNumbers(n) {
+  if (n < 0) return 0
+  let sum = 0
+  let startingN = 1
+  let interval = 2
+  let i = 1
+  while (i <= n) {
+    sum += startingN
+    startingN = startingN + interval
+    interval++
+    i++
+  }
+  return sum
+}
