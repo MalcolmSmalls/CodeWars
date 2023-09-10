@@ -1201,3 +1201,10 @@ function sumTriangularNumbers(n) {
   }
   return sum
 }
+
+// Area of a Circle
+
+function circleArea(radius) {
+  if (radius < 1) throw new Error()
+  return Math.PI * Math.pow(radius, 2)
+}
