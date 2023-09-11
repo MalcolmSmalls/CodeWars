@@ -1208,3 +1208,19 @@ function circleArea(radius) {
   if (radius < 1) throw new Error()
   return Math.PI * Math.pow(radius, 2)
 }
+
+// Switcheroo
+
+function switcheroo(x) {
+  let newStr = ''
+  x.split('').forEach((item) => {
+    if (item === 'a') {
+      newStr += 'b'
+    } else if (item === 'b') {
+      newStr += 'a'
+    } else {
+      newStr += 'c'
+    }
+  })
+  return newStr
+}
