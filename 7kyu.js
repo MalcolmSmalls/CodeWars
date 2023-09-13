@@ -1225,19 +1225,33 @@ function switcheroo(x) {
   return newStr
 }
 
-
-
-
 // Build a Square
 
-function generateShape(integer){
+function generateShape(integer) {
   let newStr = ''
-  for(let i = 0; i < integer * integer; i++){
-    if(i % integer === 0 && i !== 0){
+  for (let i = 0; i < integer * integer; i++) {
+    if (i % integer === 0 && i !== 0) {
       newStr += '\n+'
-    }else{
+    } else {
       newStr += '+'
     }
   }
   return newStr
+}
+
+// Moves in squared strings (I)
+function vertMirror(strng) {
+  const newArr = []
+  strng
+    .split('\n')
+    .forEach((item) => newArr.push(item.split('').reverse().join('')))
+  return newArr.join('\n')
+}
+function horMirror(strng) {
+  const newArr = []
+  strng.split('\n').forEach((item) => newArr.unshift(item))
+  return newArr.join('\n')
+}
+function oper(fct, s) {
+  return fct(s)
 }
