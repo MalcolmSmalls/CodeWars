@@ -1224,3 +1224,20 @@ function switcheroo(x) {
   })
   return newStr
 }
+
+
+
+
+// Build a Square
+
+function generateShape(integer){
+  let newStr = ''
+  for(let i = 0; i < integer * integer; i++){
+    if(i % integer === 0 && i !== 0){
+      newStr += '\n+'
+    }else{
+      newStr += '+'
+    }
+  }
+  return newStr
+}
