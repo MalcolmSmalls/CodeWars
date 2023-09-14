@@ -1255,3 +1255,9 @@ function horMirror(strng) {
 function oper(fct, s) {
   return fct(s)
 }
+
+// Sort the Gift Code
+
+function sortGiftCode(code) {
+  return code.split('').sort().join('')
+}
