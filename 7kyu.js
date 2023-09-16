@@ -1276,3 +1276,25 @@ function charConcat(string) {
   }
   return newArr.join('')
 }
+
+// Numbers in strings
+function solve(s) {
+  let number = -Infinity
+  const numberArr = []
+  const newArr = s.split('')
+  let numSeq = ''
+  newArr.forEach((item, index) => {
+    if (!isNaN(item)) {
+      while (isNaN(newArr[index]) !== true) {
+        numSeq += newArr[index]
+        index++
+      }
+      if (numSeq) {
+        numberArr.push(numSeq)
+      } else {
+        numberArr.push(item)
+      }
+    }
+  })
+  return numberArr
+}
