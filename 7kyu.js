@@ -1261,3 +1261,18 @@ function oper(fct, s) {
 function sortGiftCode(code) {
   return code.split('').sort().join('')
 }
+
+// Character Concatenation
+function charConcat(string) {
+  const newArr = []
+  let i = 0
+  let j = string.length - 1
+  while (i < j) {
+    newArr.push(string[i])
+    newArr.push(string[j])
+    newArr.push(i + 1)
+    i++
+    j--
+  }
+  return newArr.join('')
+}
