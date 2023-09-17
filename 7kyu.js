@@ -1291,10 +1291,11 @@ function solve(s) {
       }
       if (numSeq) {
         numberArr.push(numSeq)
+        numSeq = ''
       } else {
         numberArr.push(item)
       }
     }
   })
-  return numberArr
+  return +numberArr.sort((a, b) => a - b)[numberArr.length - 1]
 }
