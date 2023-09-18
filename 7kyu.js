@@ -1299,3 +1299,8 @@ function solve(s) {
   })
   return +numberArr.sort((a, b) => a - b)[numberArr.length - 1]
 }
+
+// Convert an array of strings to array of numbers
+function toNumberArray(stringarray) {
+  return stringarray.map((item) => +item)
+}
