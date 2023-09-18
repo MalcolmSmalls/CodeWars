@@ -1304,3 +1304,16 @@ function solve(s) {
 function toNumberArray(stringarray) {
   return stringarray.map((item) => +item)
 }
+
+// Divide and Conquer
+function divCon(x) {
+  let total = 0
+  x.forEach((item) => {
+    if (typeof item === 'string') {
+      total -= +item
+    } else {
+      total += item
+    }
+  })
+  return total
+}
