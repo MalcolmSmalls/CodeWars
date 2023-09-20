@@ -1317,3 +1317,22 @@ function divCon(x) {
   })
   return total
 }
+
+// Alphabet symmetry
+function solve(arr) {
+  const newArr = []
+  let total = 0
+  arr.forEach((item) => {
+    item
+      .toLowerCase()
+      .split('')
+      .forEach((letter, index) => {
+        if (letter.charCodeAt(0) - 97 === index) {
+          total++
+        }
+      })
+    newArr.push(total)
+    total = 0
+  })
+  return newArr
+}
