@@ -1336,3 +1336,15 @@ function solve(arr) {
   })
   return newArr
 }
+
+// Sum even numbers
+
+function sumEvenNumbers(input) {
+  let total = 0
+  input.forEach((item) => {
+    if (item % 2 === 0) {
+      total += item
+    }
+  })
+  return total
+}
