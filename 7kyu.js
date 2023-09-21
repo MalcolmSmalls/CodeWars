@@ -1348,3 +1348,9 @@ function sumEvenNumbers(input) {
   })
   return total
 }
+
+// All unique
+
+function hasUniqueChars(str) {
+  return [...new Set(str)].length === str.split('').length
+}
