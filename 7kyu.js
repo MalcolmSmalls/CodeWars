@@ -1354,3 +1354,13 @@ function sumEvenNumbers(input) {
 function hasUniqueChars(str) {
   return [...new Set(str)].length === str.split('').length
 }
+
+// Halving Sum
+function halvingSum(n) {
+  let total = n
+  while (n > 0) {
+    total += Math.floor(n / 2)
+    n = Math.floor(n / 2)
+  }
+  return total
+}
