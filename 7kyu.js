@@ -1364,3 +1364,15 @@ function halvingSum(n) {
   }
   return total
 }
+
+// Palindrome chain length
+
+var palindromeChainLength = function (n) {
+  let total = n
+  let steps = 0
+  while (total.toString() !== total.toString().split('').reverse().join('')) {
+    total = total + Number(total.toString().split('').reverse().join(''))
+    steps++
+  }
+  return steps
+}
