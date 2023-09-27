@@ -1376,3 +1376,14 @@ var palindromeChainLength = function (n) {
   }
   return steps
 }
+
+// Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+function isRubyComing(list) {
+  let status = false
+  for (const key in list) {
+    if (list[key].language === 'Ruby') {
+      status = true
+    }
+  }
+  return status
+}
