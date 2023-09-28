@@ -1387,3 +1387,16 @@ function isRubyComing(list) {
   }
   return status
 }
+
+// Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+
+function greetDevelopers(list) {
+  const newArr = []
+  list.forEach((item) => {
+    newArr.push({
+      ...item,
+      greeting: `Hi ${item.firstName}, what do you like the most about ${item.language}?`,
+    })
+  })
+  return newArr
+}
