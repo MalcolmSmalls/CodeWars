@@ -1400,3 +1400,24 @@ function greetDevelopers(list) {
   })
   return newArr
 }
+
+// Sum of numbers from 0 to N
+var SequenceSum = (function () {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function (count) {
+    let total = 0
+    let i = 0
+    let newArr = []
+    if (count < 0) return `${count}<0`
+    if (count === 0) return '0=0'
+    while (i <= count) {
+      total += i
+      newArr.push(i)
+      i++
+    }
+    return `${newArr.join('+')} = ${total}`
+  }
+
+  return SequenceSum
+})()
