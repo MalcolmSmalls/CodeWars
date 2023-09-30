@@ -1421,3 +1421,14 @@ var SequenceSum = (function () {
 
   return SequenceSum
 })()
+
+// Filter the number
+var filterString = function (value) {
+  const numbs = []
+  value.split('').forEach((item) => {
+    if (!isNaN(+item)) {
+      numbs.push(+item)
+    }
+  })
+  return +numbs.join('')
+}
