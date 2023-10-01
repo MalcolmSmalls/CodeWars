@@ -1432,3 +1432,16 @@ var filterString = function (value) {
   })
   return +numbs.join('')
 }
+
+// Number-Star ladder
+function pattern(n) {
+  var output = ''
+  let i = 1
+  let star = ''
+  while (i <= n) {
+    output += `1${star}${i > 1 ? i : ''}${i === n ? '' : '\n'}`
+    star += '*'
+    i++
+  }
+  return output
+}
