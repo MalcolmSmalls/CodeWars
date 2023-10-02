@@ -1445,3 +1445,16 @@ function pattern(n) {
   }
   return output
 }
+
+// Ordered Count of Characters
+
+const orderedCount = function (text) {
+  const copyArr = text.split('')
+  const settedArr = new Set([...copyArr])
+  let completedArr = []
+  settedArr.forEach((item) => {
+    let tempArrLength = copyArr.filter((letter) => letter === item).length
+    completedArr.push([item, tempArrLength])
+  })
+  return completedArr
+}
