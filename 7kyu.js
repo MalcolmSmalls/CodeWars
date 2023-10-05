@@ -1464,3 +1464,21 @@ const orderedCount = function (text) {
 function cookingTime(eggs) {
   return Math.ceil(eggs / 8) * 5
 }
+
+// Simple remove duplicates
+
+function solve(arr) {
+  const newArr = [...new Set(arr)]
+  const holderArr = []
+  const blankArr = []
+  newArr.forEach((item) => {
+    let i = arr.lastIndexOf(item)
+    holderArr[i] = item
+  })
+  holderArr.map((item) => {
+    if (item !== undefined) {
+      blankArr.push(item)
+    }
+  })
+  return blankArr
+}
