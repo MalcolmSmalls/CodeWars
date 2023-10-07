@@ -1487,3 +1487,19 @@ function solve(arr) {
 function countRedBeads(n) {
   return n === 0 ? 0 : (n - 1) * 2
 }
+
+// Nickname Generator
+function nicknameGenerator(name) {
+  if (name.length < 4) return 'Error: Name too short'
+  const newArr = name.split('')
+  const vowelsArr = ['a', 'e', 'i', 'o', 'u']
+  let name4Letters = false
+  vowelsArr.forEach((item) => {
+    if (item === newArr[2]) {
+      name4Letters = true
+    }
+  })
+  return name4Letters
+    ? newArr.slice(0, 4).join('')
+    : newArr.slice(0, 3).join('')
+}
