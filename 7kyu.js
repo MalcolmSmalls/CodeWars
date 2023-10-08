@@ -1503,3 +1503,10 @@ function nicknameGenerator(name) {
     ? newArr.slice(0, 4).join('')
     : newArr.slice(0, 3).join('')
 }
+
+// max diff - easy
+function maxDiff(list) {
+  if (list.length <= 1) return 0
+  list.sort((a, b) => a - b)
+  return list[list.length - 1] - list[0]
+}
