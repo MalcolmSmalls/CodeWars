@@ -1510,3 +1510,14 @@ function maxDiff(list) {
   list.sort((a, b) => a - b)
   return list[list.length - 1] - list[0]
 }
+
+// Lost number in number sequence
+function findDeletedNumber(arr, mixArr) {
+  let tempNum = 0
+  arr.forEach((item) => {
+    if (!mixArr.includes(item)) {
+      tempNum = item
+    }
+  })
+  return tempNum
+}
