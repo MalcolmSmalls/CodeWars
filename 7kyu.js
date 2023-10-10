@@ -1521,3 +1521,19 @@ function findDeletedNumber(arr, mixArr) {
   })
   return tempNum
 }
+
+// Consecutive letters
+function solve(s) {
+  let newArr = []
+  let status = true
+  for (let letter in s) {
+    newArr.push(s[letter].charCodeAt(0))
+  }
+  newArr.sort((a, b) => a - b)
+  for (let i = 0; i < newArr.length - 1; i++) {
+    if (!(newArr[i] + 1 === newArr[i + 1])) {
+      status = false
+    }
+  }
+  return status
+}
