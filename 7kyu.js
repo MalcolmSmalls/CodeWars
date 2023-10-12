@@ -1537,3 +1537,18 @@ function solve(s) {
   }
   return status
 }
+
+// Odd-Even String Sort
+
+function sortMyString(S) {
+  let evenStr = ''
+  let oddStr = ''
+  S.split('').forEach((item, index) => {
+    if (index % 2 === 0) {
+      evenStr += item
+    } else {
+      oddStr += item
+    }
+  })
+  return `${evenStr} ${oddStr}`
+}
