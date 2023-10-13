@@ -1552,3 +1552,18 @@ function sortMyString(S) {
   })
   return `${evenStr} ${oddStr}`
 }
+
+// Sum of Odd Cubed Numbers
+function cubeOdd(arr) {
+  let total = 0
+  let strInput = false
+  arr.forEach((number) => {
+    if (typeof number !== 'number') {
+      strInput = true
+    }
+    if (number % 2 !== 0) {
+      total += number ** 3
+    }
+  })
+  return strInput ? undefined : total
+}
