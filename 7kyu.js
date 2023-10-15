@@ -1567,3 +1567,24 @@ function cubeOdd(arr) {
   })
   return strInput ? undefined : total
 }
+
+// My Language Skills
+
+function myLanguages(results) {
+  let numHolder = []
+  let sortedArr = []
+  for (let key in results) {
+    if (results[key] >= 60) {
+      numHolder.push(results[key])
+    }
+  }
+  numHolder.sort((a, b) => b - a)
+  numHolder.forEach((item, index) => {
+    for (let key in results) {
+      if (item === results[key]) {
+        sortedArr[index] = key
+      }
+    }
+  })
+  return sortedArr
+}
