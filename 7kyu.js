@@ -1588,3 +1588,15 @@ function myLanguages(results) {
   })
   return sortedArr
 }
+
+// function myLanguages(results) {
+//   return Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
+// }
+
+// Find the nth Digit of a Number
+var findDigit = function (num, nth) {
+  if (nth <= 0) return -1
+  if (nth > Math.abs(num).toString().length) return 0
+  const numArray = num.toString().split('')
+  return +numArray[numArray.length - nth]
+}
