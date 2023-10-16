@@ -1600,3 +1600,17 @@ var findDigit = function (num, nth) {
   const numArray = num.toString().split('')
   return +numArray[numArray.length - nth]
 }
+
+// Sum of array singles
+function repeats(arr) {
+  let i = 0
+  let total = 0
+  arr.sort((a, b) => a - b)
+  while (i < arr.length) {
+    if (arr[i] !== arr[i + 1] && arr[i] !== arr[i - 1]) {
+      total += arr[i]
+    }
+    i++
+  }
+  return total
+}
