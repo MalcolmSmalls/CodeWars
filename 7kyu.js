@@ -1614,3 +1614,12 @@ function repeats(arr) {
   }
   return total
 }
+
+// Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+
+function getFirstPython(list) {
+  const found = list.find((item) => item['language'] === 'Python')
+  return found
+    ? `${found['firstName']}, ${found['country']}`
+    : 'There will be no Python developers'
+}
