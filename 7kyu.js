@@ -1623,3 +1623,8 @@ function getFirstPython(list) {
     ? `${found['firstName']}, ${found['country']}`
     : 'There will be no Python developers'
 }
+
+// Nth Smallest Element (Array Series #4)
+function nthSmallest(arr, pos) {
+  return arr.sort((a, b) => a - b)[pos - 1]
+}
