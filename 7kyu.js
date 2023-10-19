@@ -1628,3 +1628,21 @@ function getFirstPython(list) {
 function nthSmallest(arr, pos) {
   return arr.sort((a, b) => a - b)[pos - 1]
 }
+
+// Nth Smallest Element (Array Series #4)
+
+function automorphic(n) {
+  const squareValue = (n * n).toString()
+  let nStrung = n.toString()
+  let i = squareValue.length - 1
+  let x = nStrung.length - 1
+  while (x >= 0) {
+    if (squareValue[i] === nStrung[x]) {
+      x--
+      i--
+    } else {
+      return 'Not!!'
+    }
+  }
+  return 'Automorphic'
+}
