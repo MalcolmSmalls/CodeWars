@@ -1646,3 +1646,11 @@ function automorphic(n) {
   }
   return 'Automorphic'
 }
+
+// Simple Fun #152: Invite More Women?
+
+function inviteMoreWomen(L) {
+  let womenArr = L.filter((num) => num === -1)
+  let menArr = L.filter((num) => num === 1)
+  return menArr.length > womenArr.length ? true : false
+}
