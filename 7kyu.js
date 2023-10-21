@@ -1654,3 +1654,13 @@ function inviteMoreWomen(L) {
   let menArr = L.filter((num) => num === 1)
   return menArr.length > womenArr.length ? true : false
 }
+
+// Spacify
+function spacify(str) {
+  let spacedStr = ''
+  str.split('').forEach((item) => {
+    spacedStr += item
+    spacedStr += ' '
+  })
+  return spacedStr.trim()
+}
