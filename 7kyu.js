@@ -1664,3 +1664,15 @@ function spacify(str) {
   })
   return spacedStr.trim()
 }
+
+// Tidy Number (Special Numbers Series #9)
+function tidyNumber(n) {
+  const tidedNumber = Number(
+    n
+      .toString()
+      .split('')
+      .sort((a, b) => a - b)
+      .join('')
+  )
+  return tidedNumber === n ? true : false
+}
