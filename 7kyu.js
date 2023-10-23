@@ -1676,3 +1676,15 @@ function tidyNumber(n) {
   )
   return tidedNumber === n ? true : false
 }
+
+// Digits explosion
+
+function explode(s) {
+  let str = ''
+  let i = 0
+  while (i < s.length) {
+    str += s[i].repeat(s[i])
+    i++
+  }
+  return str
+}
