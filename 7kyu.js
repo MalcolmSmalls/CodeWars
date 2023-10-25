@@ -1688,3 +1688,14 @@ function explode(s) {
   }
   return str
 }
+
+// Greatest common divisor
+function mygcd(x, y) {
+  let tempX = x
+  let tempY = y
+  while (tempX !== tempY && tempX > 0) {
+    tempX = Math.max(tempX, tempY) - Math.min(tempX, tempY)
+    tempY = Math.max(tempX, tempY) - Math.min(tempX, tempY)
+  }
+  return tempX
+}
