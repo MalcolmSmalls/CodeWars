@@ -1699,3 +1699,21 @@ function mygcd(x, y) {
   }
   return tempX
 }
+
+// Head, Tail, Init and Last
+
+const head = (arr) => {
+  return arr[0]
+}
+
+const last = (arr) => {
+  return arr[arr.length - 1]
+}
+
+const tail = (arr) => {
+  return arr.slice(1)
+}
+
+const init = (arr) => {
+  return arr.slice(0, arr.length - 1)
+}
