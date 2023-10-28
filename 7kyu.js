@@ -1717,3 +1717,24 @@ const tail = (arr) => {
 const init = (arr) => {
   return arr.slice(0, arr.length - 1)
 }
+
+// Currying functions: multiply all elements in an array
+function multiplyAll(array) {
+  return function multiply(n) {
+    return array.map((item) => item * n)
+  }
+}
+
+// 16+18=214
+function add(num1, num2) {
+  let total = []
+  let n1 = Math.min(num1, num2).toString()
+  let n2 = Math.max(num1, num2).toString()
+  n1 = n1.padStart(n2.length, 0)
+  let i = n1.length - 1
+  while (i >= 0) {
+    total.unshift(+n1[i] + +n2[i])
+    i--
+  }
+  return +total.join('')
+}
