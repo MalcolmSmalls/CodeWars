@@ -1738,3 +1738,9 @@ function add(num1, num2) {
   }
   return +total.join('')
 }
+
+// Flatten
+var flatten = function (array) {
+  const arr = []
+  return array.flat()
+}
