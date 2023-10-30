@@ -1744,3 +1744,8 @@ var flatten = function (array) {
   const arr = []
   return array.flat()
 }
+
+// Largest Square Inside A Circle
+function areaLargestSquare(r) {
+  return r * r * 2
+}
