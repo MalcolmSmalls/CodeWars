@@ -1749,3 +1749,9 @@ var flatten = function (array) {
 function areaLargestSquare(r) {
   return r * r * 2
 }
+
+// Merging sorted integer arrays (without duplicates)
+
+function mergeArrays(a, b) {
+  return [...new Set([...a, ...b])].sort((a, b) => a - b)
+}
