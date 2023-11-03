@@ -1755,3 +1755,10 @@ function areaLargestSquare(r) {
 function mergeArrays(a, b) {
   return [...new Set([...a, ...b])].sort((a, b) => a - b)
 }
+
+// Triangular Treasure
+
+function triangular(n) {
+  if (n <= 0) return 0
+  return (n * (n + 1)) / 2
+}
