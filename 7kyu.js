@@ -1771,3 +1771,43 @@ function min(arr, toReturn) {
     return arr.indexOf(Math.min(...arr))
   }
 }
+
+/* 
+
+Other Solution
+
+Instead of using ... (the spread operator) you can use .apply. This is so Math.min returns one index rather than the whole arr. Null is the first argument, and the array or list is the second variable.
+
+function min(arr, toReturn) {
+  var val = Math.min.apply(null, arr)
+  return toReturn == 'value' ? val : arr.indexOf(val)
+}
+
+*/
+
+// Unique In Order
+
+var uniqueInOrder = function (iterable) {
+  const newArr = []
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] !== iterable[i - 1]) {
+      newArr.push(iterable[i])
+    }
+  }
+  return newArr
+}
+
+/* 
+
+Other Solutions
+
+
+var uniqueInOrder=function(iterable){
+    return [...iterable].filter((a, i) => a !== iterable[i-1])
+}
+
+
+Spreads iterable into an array. Iterable sometimes isn't array and isntead is a string 'AABBCCC' spreading it like this automatically splits each character into an array. It returns a filtered array. The filtered array will only contain items that fits the conditional. If item a does not equal item b (index - 1 of the original iterable or should I say the item before item a) then it'll be in this returned array.
+
+
+*/
